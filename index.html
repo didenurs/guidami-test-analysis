@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guidami Test Analiz & LLM Evaluation Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-primary: #0b0f19;
             --bg-card: #151e32;
+            --bg-card-hover: #1c2742;
             --text-primary: #f8fafc;
             --text-muted: #94a3b8;
             --accent-green: #10b981;
@@ -16,34 +20,40 @@
             --accent-amber: #f59e0b;
             --accent-purple: #a855f7;
             --border-color: #1e293b;
+            --card-border: rgba(255, 255, 255, 0.07);
         }
+        * { box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: var(--bg-primary);
             color: var(--text-primary);
             margin: 0;
-            padding: 2.5rem;
+            padding: 2.5rem 1.5rem;
             line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
         }
-        .container { max-width: 1200px; margin: 0 auto; }
+        .container { max-width: 1240px; margin: 0 auto; }
         .header {
             border-bottom: 1px solid var(--border-color);
-            padding-bottom: 1.5rem;
+            padding-bottom: 1.75rem;
             margin-bottom: 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 1.25rem;
         }
-        .header h1 { margin: 0; font-size: 1.8rem; font-weight: 700; color: #fff; }
-        .header p { margin: 0.3rem 0 0 0; color: var(--text-muted); font-size: 0.9rem; }
+        .header h1 { margin: 0; font-size: 1.85rem; font-weight: 800; color: #fff; letter-spacing: -0.02em; }
+        .header p { margin: 0.4rem 0 0 0; color: var(--text-muted); font-size: 0.92rem; }
         .badge {
             background: linear-gradient(135deg, #2563eb, #38bdf8);
             color: white;
-            padding: 0.5rem 1.2rem;
+            padding: 0.6rem 1.4rem;
             border-radius: 9999px;
             font-weight: 700;
-            font-size: 1rem;
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            font-size: 1.05rem;
+            box-shadow: 0 4px 16px rgba(37, 99, 235, 0.35);
+            letter-spacing: -0.01em;
         }
         .stats-grid {
             display: grid;
@@ -53,23 +63,24 @@
         }
         .card {
             background-color: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 0.85rem;
-            padding: 1.5rem;
+            border: 1px solid var(--card-border);
+            border-radius: 1rem;
+            padding: 1.6rem;
             margin-bottom: 1.75rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(8px);
         }
         .card h2 {
             margin-top: 0;
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
             font-size: 1.25rem;
-            color: #e2e8f0;
+            color: #f1f5f9;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.6rem;
         }
-        .card-title { color: var(--text-muted); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
-        .card-value { font-size: 2.25rem; font-weight: 800; }
+        .card-title { color: var(--text-muted); font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.5rem; }
+        .card-value { font-size: 2.3rem; font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; }
         .card-value.green { color: var(--accent-green); }
         .card-value.red { color: var(--accent-red); }
         .card-value.blue { color: var(--accent-blue); }
@@ -81,22 +92,37 @@
         }
         th, td {
             text-align: left;
-            padding: 0.85rem 1rem;
+            padding: 0.9rem 1.1rem;
             border-bottom: 1px solid var(--border-color);
+            font-size: 0.92rem;
         }
-        th { background-color: rgba(0,0,0,0.25); color: var(--text-muted); font-weight: 600; font-size: 0.85rem; }
+        th { background-color: rgba(0,0,0,0.3); color: var(--text-muted); font-weight: 600; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        tr:last-child td { border-bottom: none; }
         tr:hover { background-color: rgba(255,255,255,0.02); }
         .tag {
-            display: inline-block;
-            padding: 0.25rem 0.65rem;
-            border-radius: 6px;
+            display: inline-flex;
+            align-items: center;
+            padding: 0.3rem 0.75rem;
+            border-radius: 9999px;
             font-size: 0.8rem;
             font-weight: 600;
         }
-        .tag-pass { background: rgba(16, 185, 129, 0.15); color: var(--accent-green); }
-        .tag-fail { background: rgba(244, 63, 94, 0.15); color: var(--accent-red); }
-        .tag-warn { background: rgba(245, 158, 11, 0.15); color: var(--accent-amber); }
-        .tag-core { background: rgba(239, 68, 68, 0.2); color: #fca5a5; border: 1px solid rgba(239,68,68,0.4); }
+        .tag-pass { background: rgba(16, 185, 129, 0.15); color: var(--accent-green); border: 1px solid rgba(16, 185, 129, 0.3); }
+        .tag-fail { background: rgba(244, 63, 94, 0.15); color: var(--accent-red); border: 1px solid rgba(244, 63, 94, 0.3); }
+        .tag-warn { background: rgba(245, 158, 11, 0.15); color: var(--accent-amber); border: 1px solid rgba(245, 158, 11, 0.3); }
+        .disclaimer-card {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(148, 163, 184, 0.15);
+            border-radius: 0.85rem;
+            padding: 1.25rem 1.5rem;
+            margin-top: 2rem;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+        .disclaimer-card strong {
+            color: #cbd5e1;
+        }
     </style>
 </head>
 <body>
@@ -104,27 +130,27 @@
         <div class="header">
             <div>
                 <h1>🤖 Guidami Test Analiz & LLM Evaluation Dashboard</h1>
-                <p>Kapsam: Trendyol (Tam Envanter), Hepsiburada, Vegan | Gerçek Şirket Verisi</p>
+                <p>Kapsam: Trendyol (Kapsamlı Aksiyon Envanteri), Vegan Pazaryeri, Hepsiburada (Test Aşamasında) | Bağımsız Kullanıcı Deneyimi Simülasyonu</p>
             </div>
-            <div class="badge">Genel Başarı: %60.95</div>
+            <div class="badge">Genel Başarı: %60.15</div>
         </div>
 
         <div class="stats-grid">
             <div class="card">
                 <div class="card-title">Toplam Test</div>
-                <div class="card-value">390</div>
+                <div class="card-value">376</div>
             </div>
             <div class="card">
                 <div class="card-title">Başarılı (PASS)</div>
-                <div class="card-value green">167</div>
+                <div class="card-value green">157</div>
             </div>
             <div class="card">
                 <div class="card-title">Başarısız (FAIL)</div>
-                <div class="card-value red">107</div>
+                <div class="card-value red">104</div>
             </div>
             <div class="card">
                 <div class="card-title">Atlanan (SKIP)</div>
-                <div class="card-value blue">116</div>
+                <div class="card-value blue">115</div>
             </div>
         </div>
 
@@ -143,14 +169,6 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Hepsiburada</strong></td>
-                        <td>14</td>
-                        <td style="color: var(--accent-green); font-weight: 600;">10</td>
-                        <td style="color: var(--accent-red); font-weight: 600;">3</td>
-                        <td>1</td>
-                        <td><strong>%76.92</strong></td>
-                    </tr>
-                    <tr>
                         <td><strong>Trendyol</strong></td>
                         <td>188</td>
                         <td style="color: var(--accent-green); font-weight: 600;">68</td>
@@ -165,6 +183,14 @@
                         <td style="color: var(--accent-red); font-weight: 600;">22</td>
                         <td>77</td>
                         <td><strong>%80.18</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hepsiburada</strong></td>
+                        <td style="color: var(--text-muted);">-</td>
+                        <td style="color: var(--text-muted);">-</td>
+                        <td style="color: var(--text-muted);">-</td>
+                        <td style="color: var(--text-muted);">-</td>
+                        <td><span class="tag tag-warn">⏳ Test Aşamasında</span></td>
                     </tr>
                 </tbody>
             </table>
@@ -257,14 +283,6 @@
                         <td><strong style="color: var(--accent-amber);">%66.67</strong></td>
                     </tr>
                     <tr>
-                        <td><strong>Genel</strong></td>
-                        <td>14</td>
-                        <td style="color: var(--accent-green);">10</td>
-                        <td style="color: var(--accent-red);">3</td>
-                        <td>1</td>
-                        <td><strong style="color: var(--accent-amber);">%76.92</strong></td>
-                    </tr>
-                    <tr>
                         <td><strong>Sepet Aksiyonları</strong></td>
                         <td>30</td>
                         <td style="color: var(--accent-green);">16</td>
@@ -306,6 +324,12 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
+
+        <div class="disclaimer-card">
+            <strong>ℹ️ Yasal Bilgilendirme ve Metodoloji Notu:</strong><br>
+            Bu dashboard ve test analiz verileri; e-ticaret platformlarındaki sesli asistan arayüzlerini ve görme engelli erişilebilirlik kullanıcı akışlarını ölçümlemek amacıyla bağımsız simülasyon testleriyle hazırlanmıştır. İncelenen ilgili markalarla (Trendyol, Hepsiburada vb.) herhangi bir resmi/kurumsal bağ, veri ortaklığı ya da ticari bir ilişki bulunmamaktadır. Tüm marka adları ve tescilli haklar ilgili kurumlara aittir.<br>
+            <em>* Hepsiburada test senaryoları çalışma aşamasında olup kesin test sonuçları tamamlandığında sisteme entegre edilecektir.</em>
         </div>
     </div>
 </body>
