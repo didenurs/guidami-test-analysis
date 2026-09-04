@@ -72,12 +72,20 @@
         }
         .card h2 {
             margin-top: 0;
-            margin-bottom: 1.2rem;
+            margin-bottom: 0.6rem;
             font-size: 1.25rem;
             color: #f1f5f9;
             display: flex;
             align-items: center;
             gap: 0.6rem;
+        }
+        .card-hint {
+            font-size: 0.84rem;
+            color: var(--text-muted);
+            margin: 0 0 1.2rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
         }
         .card-title { color: var(--text-muted); font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.5rem; }
         .card-value { font-size: 2.3rem; font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; }
@@ -92,13 +100,108 @@
         }
         th, td {
             text-align: left;
-            padding: 0.9rem 1.1rem;
+            padding: 0.95rem 1.1rem;
             border-bottom: 1px solid var(--border-color);
             font-size: 0.92rem;
         }
         th { background-color: rgba(0,0,0,0.3); color: var(--text-muted); font-weight: 600; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.05em; }
         tr:last-child td { border-bottom: none; }
-        tr:hover { background-color: rgba(255,255,255,0.02); }
+        
+        /* Akordeon & Drill-Down Stilleri */
+        .mp-row {
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .mp-row:hover {
+            background-color: rgba(56, 189, 248, 0.08) !important;
+        }
+        .mp-title {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-weight: 700;
+        }
+        .expand-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--accent-blue);
+            font-size: 0.65rem;
+            transition: transform 0.25s ease, background 0.2s ease;
+        }
+        .mp-row:hover .expand-icon {
+            background: rgba(56, 189, 248, 0.25);
+            color: #fff;
+        }
+        .details-row {
+            display: none;
+        }
+        .details-row.active {
+            display: table-row;
+        }
+        .drilldown-container {
+            background: rgba(11, 15, 25, 0.75);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            border-radius: 0.85rem;
+            padding: 1.25rem 1.5rem;
+            margin: 0.6rem 0.8rem 1.25rem 0.8rem;
+            box-shadow: inset 0 2px 10px rgba(0,0,0,0.5);
+            animation: fadeIn 0.25s ease-in-out;
+        }
+        .drilldown-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.85rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .drilldown-header h4 {
+            margin: 0;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #38bdf8;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .badge-mini {
+            font-size: 0.75rem;
+            background: rgba(56, 189, 248, 0.15);
+            color: var(--accent-blue);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            padding: 0.2rem 0.6rem;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+        .drilldown-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 0.4rem;
+        }
+        .drilldown-table th {
+            background: rgba(0, 0, 0, 0.45);
+            font-size: 0.78rem;
+            padding: 0.65rem 0.85rem;
+        }
+        .drilldown-table td {
+            padding: 0.65rem 0.85rem;
+            font-size: 0.85rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .drilldown-table tr:hover {
+            background-color: rgba(255,255,255,0.02);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         .tag {
             display: inline-flex;
             align-items: center;
@@ -156,6 +259,9 @@
 
         <div class="card">
             <h2>🛒 Pazaryeri Performans Kıyaslama</h2>
+            <div class="card-hint">
+                <span>💡</span> <span>Kategori ve bölüm bazlı detaylı kırılımı açıp kapatmak için aşağıdaki pazaryeri satırlarına tıklayın.</span>
+            </div>
             <table>
                 <thead>
                     <tr>
@@ -168,36 +274,335 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><strong>Trendyol</strong></td>
+                    <tr class="mp-row" onclick="toggleMarketplaceDetails('trendyol')" id="row-trendyol">
+                        <td>
+                            <div class="mp-title">
+                                <span>Trendyol</span>
+                                <span class="expand-icon" id="icon-trendyol">▼</span>
+                            </div>
+                        </td>
                         <td>188</td>
                         <td style="color: var(--accent-green); font-weight: 600;">68</td>
                         <td style="color: var(--accent-red); font-weight: 600;">82</td>
                         <td>38</td>
                         <td><strong>%45.33</strong></td>
                     </tr>
-                    <tr>
-                        <td><strong>Vegan</strong></td>
+                    <tr id="details-trendyol" class="details-row">
+                        <td colspan="6" style="padding: 0; background: rgba(0,0,0,0.15);">
+                            <div class="drilldown-container">
+                                <div class="drilldown-header">
+                                    <h4>📊 Trendyol — Kategori & Bölüm Bazında Test Dağılımı</h4>
+                                    <span class="badge-mini">Trendyol Özel Kırılım</span>
+                                </div>
+                                <table class="drilldown-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Bölüm / Kategori</th>
+                                            <th>Toplam Test</th>
+                                            <th>PASS</th>
+                                            <th>FAIL</th>
+                                            <th>SKIP</th>
+                                            <th>Başarı Oranı</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Yorum ve Soru-Cevap</strong></td>
+                                            <td>18</td>
+                                            <td style="color: var(--accent-green); font-weight: 600;">0</td>
+                                            <td style="color: var(--accent-red); font-weight: 600;">10</td>
+                                            <td>8</td>
+                                            <td><strong style="color: var(--accent-red);">%0.0</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Bildirim ve Takip</strong></td>
+                                            <td>4</td>
+                                            <td style="color: var(--accent-green); font-weight: 600;">0</td>
+                                            <td style="color: var(--accent-red); font-weight: 600;">0</td>
+                                            <td>4</td>
+                                            <td><strong style="color: var(--accent-red);">%0.0</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Müşteri Hizmetleri</strong></td>
+                                            <td>5</td>
+                                            <td style="color: var(--accent-green); font-weight: 600;">0</td>
+                                            <td style="color: var(--accent-red); font-weight: 600;">3</td>
+                                            <td>2</td>
+                                            <td><strong style="color: var(--accent-red);">%0.0</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Hata ve İstisna Akışları</strong></td>
+                                            <td>12</td>
+                                            <td style="color: var(--accent-green); font-weight: 600;">0</td>
+                                            <td style="color: var(--accent-red); font-weight: 600;">1</td>
+                                            <td>11</td>
+                                            <td><strong style="color: var(--accent-red);">%0.0</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Ödeme (Checkout)</strong></td>
+                                            <td>20</td>
+                                            <td style="color: var(--accent-green); font-weight: 600;">3</td>
+                                            <td style="color: var(--accent-red); font-weight: 600;">17</td>
+                                            <td>0</td>
+                                            <td><strong style="color: var(--accent-red);">%15.0</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Ürün Detay</strong></td>
+                                            <td>30</td>
+                                            <td style="color: var(--accent-green); font-weight: 600;">5</td>
+                                            <td style="color: var(--accent-red); font-weight: 600;">25</td>
+                                            <td>0</td>
+                                            <td><strong style="color: var(--accent-red);">%16.67</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Hesap ve Kimlik</strong></td>
+                                            <td>12</td>
+                                            <td style="color: var(--accent-green); font-weight: 600;">4</td>
+                                            <td style="color: var(--accent-red); font-weight: 600;">7</td>
+                                            <td>1</td>
+                                            <td><strong style="color: var(--accent-red);">%36.36</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Favoriler ve Listeler</strong></td>
+                                            <td>7</td>
+                                            <td style="color: var(--accent-green); font-weight: 600;">3</td>
+                                            <td style="color: var(--accent-red); font-weight: 600;">4</td>
+                                            <td>0</td>
+                                            <td><strong style="color: var(--accent-red);">%42.86</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Sepet Aksiyonları</strong></td>
+                                            <td>15</td>
+                                            <td style="color: var(--accent-green); font-weight: 600;">7</td>
+                                            <td style="color: var(--accent-red); font-weight: 600;">4</td>
+                                            <td>4</td>
+                                            <td><strong style="color: var(--accent-amber);">%63.64</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Asistan Kontrol</strong></td>
+                                            <td>12</td>
+                                            <td style="color: var(--accent-green); font-weight: 600;">8</td>
+                                            <td style="color: var(--accent-red); font-weight: 600;">4</td>
+                                            <td>0</td>
+                                            <td><strong style="color: var(--accent-amber);">%66.67</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Navigasyon</strong></td>
+                                            <td>13</td>
+                                            <td style="color: var(--accent-green); font-weight: 600;">10</td>
+                                            <td style="color: var(--accent-red); font-weight: 600;">3</td>
+                                            <td>0</td>
+                                            <td><strong style="color: var(--accent-amber);">%76.92</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Erişilebilirlik</strong></td>
+                                            <td>9</td>
+                                            <td style="color: var(--accent-green); font-weight: 600;">7</td>
+                                            <td style="color: var(--accent-red); font-weight: 600;">2</td>
+                                            <td>0</td>
+                                            <td><strong style="color: var(--accent-amber);">%77.78</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Sipariş Yönetimi</strong></td>
+                                            <td>13</td>
+                                            <td style="color: var(--accent-green); font-weight: 600;">4</td>
+                                            <td style="color: var(--accent-red); font-weight: 600;">1</td>
+                                            <td>8</td>
+                                            <td><strong style="color: var(--accent-green);">%80.0</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Arama ve Keşif</strong></td>
+                                            <td>18</td>
+                                            <td style="color: var(--accent-green); font-weight: 600;">17</td>
+                                            <td style="color: var(--accent-red); font-weight: 600;">1</td>
+                                            <td>0</td>
+                                            <td><strong style="color: var(--accent-green);">%94.44</strong></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="mp-row" onclick="toggleMarketplaceDetails('vegan-pazaryeri')" id="row-vegan-pazaryeri">
+                        <td>
+                            <div class="mp-title">
+                                <span>Vegan Pazaryeri</span>
+                                <span class="expand-icon" id="icon-vegan-pazaryeri">▼</span>
+                            </div>
+                        </td>
                         <td>188</td>
                         <td style="color: var(--accent-green); font-weight: 600;">89</td>
                         <td style="color: var(--accent-red); font-weight: 600;">22</td>
                         <td>77</td>
                         <td><strong>%80.18</strong></td>
                     </tr>
-                    <tr>
-                        <td><strong>Hepsiburada</strong></td>
+                    <tr id="details-vegan-pazaryeri" class="details-row">
+                        <td colspan="6" style="padding: 0; background: rgba(0,0,0,0.15);">
+                            <div class="drilldown-container">
+                                <div class="drilldown-header">
+                                    <h4>📊 Vegan Pazaryeri — Kategori & Bölüm Bazında Test Dağılımı</h4>
+                                    <span class="badge-mini">Vegan Pazaryeri Özel Kırılım</span>
+                                </div>
+                                <table class="drilldown-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Bölüm / Kategori</th>
+                                            <th>Toplam Test</th>
+                                            <th>PASS</th>
+                                            <th>FAIL</th>
+                                            <th>SKIP</th>
+                                            <th>Başarı Oranı</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Bildirim ve Takip</strong></td>
+                                            <td>4</td>
+                                            <td style="color: var(--accent-green); font-weight: 600;">0</td>
+                                            <td style="color: var(--accent-red); font-weight: 600;">0</td>
+                                            <td>4</td>
+                                            <td><strong style="color: var(--accent-red);">%0.0</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Hata ve İstisna Akışları</strong></td>
+                                            <td>12</td>
+                                            <td style="color: var(--accent-green); font-weight: 600;">0</td>
+                                            <td style="color: var(--accent-red); font-weight: 600;">0</td>
+                                            <td>12</td>
+                                            <td><strong style="color: var(--accent-red);">%0.0</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Yorum ve Soru-Cevap</strong></td>
+                                            <td>18</td>
+                                            <td style="color: var(--accent-green); font-weight: 600;">1</td>
+                                            <td style="color: var(--accent-red); font-weight: 600;">3</td>
+                                            <td>14</td>
+                                            <td><strong style="color: var(--accent-red);">%25.0</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Ürün Detay</strong></td>
+                                            <td>30</td>
+                                            <td style="color: var(--accent-green); font-weight: 600;">8</td>
+                                            <td style="color: var(--accent-red); font-weight: 600;">14</td>
+                                            <td>8</td>
+                                            <td><strong style="color: var(--accent-red);">%36.36</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Asistan Kontrol</strong></td>
+                                            <td>12</td>
+                                            <td style="color: var(--accent-green); font-weight: 600;">6</td>
+                                            <td style="color: var(--accent-red); font-weight: 600;">5</td>
+                                            <td>1</td>
+                                            <td><strong style="color: var(--accent-amber);">%54.55</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Navigasyon</strong></td>
+                                            <td>13</td>
+                                            <td style="color: var(--accent-green); font-weight: 600;">12</td>
+                                            <td style="color: var(--accent-red); font-weight: 600;">0</td>
+                                            <td>1</td>
+                                            <td><strong style="color: var(--accent-green);">%100.0</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Arama ve Keşif</strong></td>
+                                            <td>18</td>
+                                            <td style="color: var(--accent-green); font-weight: 600;">15</td>
+                                            <td style="color: var(--accent-red); font-weight: 600;">0</td>
+                                            <td>3</td>
+                                            <td><strong style="color: var(--accent-green);">%100.0</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Sepet Aksiyonları</strong></td>
+                                            <td>15</td>
+                                            <td style="color: var(--accent-green); font-weight: 600;">9</td>
+                                            <td style="color: var(--accent-red); font-weight: 600;">0</td>
+                                            <td>6</td>
+                                            <td><strong style="color: var(--accent-green);">%100.0</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Ödeme (Checkout)</strong></td>
+                                            <td>20</td>
+                                            <td style="color: var(--accent-green); font-weight: 600;">10</td>
+                                            <td style="color: var(--accent-red); font-weight: 600;">0</td>
+                                            <td>10</td>
+                                            <td><strong style="color: var(--accent-green);">%100.0</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Hesap ve Kimlik</strong></td>
+                                            <td>12</td>
+                                            <td style="color: var(--accent-green); font-weight: 600;">8</td>
+                                            <td style="color: var(--accent-red); font-weight: 600;">0</td>
+                                            <td>4</td>
+                                            <td><strong style="color: var(--accent-green);">%100.0</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Sipariş Yönetimi</strong></td>
+                                            <td>13</td>
+                                            <td style="color: var(--accent-green); font-weight: 600;">7</td>
+                                            <td style="color: var(--accent-red); font-weight: 600;">0</td>
+                                            <td>6</td>
+                                            <td><strong style="color: var(--accent-green);">%100.0</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Favoriler ve Listeler</strong></td>
+                                            <td>7</td>
+                                            <td style="color: var(--accent-green); font-weight: 600;">5</td>
+                                            <td style="color: var(--accent-red); font-weight: 600;">0</td>
+                                            <td>2</td>
+                                            <td><strong style="color: var(--accent-green);">%100.0</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Müşteri Hizmetleri</strong></td>
+                                            <td>5</td>
+                                            <td style="color: var(--accent-green); font-weight: 600;">2</td>
+                                            <td style="color: var(--accent-red); font-weight: 600;">0</td>
+                                            <td>3</td>
+                                            <td><strong style="color: var(--accent-green);">%100.0</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Erişilebilirlik</strong></td>
+                                            <td>9</td>
+                                            <td style="color: var(--accent-green); font-weight: 600;">6</td>
+                                            <td style="color: var(--accent-red); font-weight: 600;">0</td>
+                                            <td>3</td>
+                                            <td><strong style="color: var(--accent-green);">%100.0</strong></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="mp-row" onclick="toggleMarketplaceDetails('hepsiburada')" id="row-hepsiburada">
+                        <td>
+                            <div class="mp-title">
+                                <span>Hepsiburada</span>
+                                <span class="expand-icon" id="icon-hepsiburada">▼</span>
+                            </div>
+                        </td>
                         <td style="color: var(--text-muted);">-</td>
                         <td style="color: var(--text-muted);">-</td>
                         <td style="color: var(--text-muted);">-</td>
                         <td style="color: var(--text-muted);">-</td>
                         <td><span class="tag tag-warn">⏳ Test Aşamasında</span></td>
                     </tr>
+                    <tr id="details-hepsiburada" class="details-row">
+                        <td colspan="6" style="padding: 0; background: rgba(0,0,0,0.15);">
+                            <div class="drilldown-container" style="text-align: center; padding: 1.75rem 1.25rem;">
+                                <p style="margin: 0; font-size: 0.92rem; color: var(--text-muted);">
+                                    ⏳ <strong>Hepsiburada</strong> test senaryoları çalışma aşamasındadır. Kesin test sonuçları sisteme girildiğinde kategori bazlı detaylı kırılım otomatik olarak bu alanda listelenecektir.
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
 
         <div class="card">
-            <h2>📁 Kategori / Bölüm Bazında Başarı Oranları</h2>
+            <h2>📁 Genel Kategori / Bölüm Bazında Başarı Oranları</h2>
+            <div class="card-hint">
+                <span>🌐</span> <span>Tüm test edilmiş pazaryerlerinin birleşik kategori ortalamaları ve başarı oranları.</span>
+            </div>
             <table>
                 <thead>
                     <tr>
@@ -332,5 +737,30 @@
             <em>* Hepsiburada test senaryoları çalışma aşamasında olup kesin test sonuçları tamamlandığında sisteme entegre edilecektir.</em>
         </div>
     </div>
+
+    <script>
+        function toggleMarketplaceDetails(slug) {
+            const detailsRow = document.getElementById('details-' + slug);
+            const icon = document.getElementById('icon-' + slug);
+            if (!detailsRow) return;
+
+            const isHidden = detailsRow.style.display === 'none' || detailsRow.style.display === '';
+            if (isHidden) {
+                detailsRow.style.display = 'table-row';
+                if (icon) {
+                    icon.style.transform = 'rotate(180deg)';
+                    icon.style.background = 'rgba(56, 189, 248, 0.35)';
+                    icon.style.color = '#fff';
+                }
+            } else {
+                detailsRow.style.display = 'none';
+                if (icon) {
+                    icon.style.transform = 'rotate(0deg)';
+                    icon.style.background = 'rgba(56, 189, 248, 0.12)';
+                    icon.style.color = 'var(--accent-blue)';
+                }
+            }
+        }
+    </script>
 </body>
 </html>
