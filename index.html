@@ -555,16 +555,12 @@
         .fail-table tr:last-child td {
             border-bottom: none;
         }
-        .fail-table tr:hover {
-            background: rgba(244, 63, 94, 0.06);
-        }
-        .fail-table th.col-id, .fail-table td.col-id { width: 85px; white-space: nowrap; }
-        .fail-table th.col-mp, .fail-table td.col-mp { width: 180px; white-space: nowrap; }
+        .fail-table th.col-id, .fail-table td.col-id { width: 85px; white-space: nowrap; text-align: center; }
+        .fail-table th.col-mp, .fail-table td.col-mp { width: 175px; white-space: nowrap; }
         .fail-table th.col-sec, .fail-table td.col-sec { width: 160px; white-space: nowrap; }
-        .fail-table th.col-action, .fail-table td.col-action { min-width: 190px; }
-        .fail-table th.col-cmd, .fail-table td.col-cmd { min-width: 190px; }
-        .fail-table th.col-type, .fail-table td.col-type { width: 240px; white-space: nowrap; }
-        .fail-table th.col-reason, .fail-table td.col-reason { min-width: 340px; }
+        .fail-table th.col-action, .fail-table td.col-action { min-width: 200px; }
+        .fail-table th.col-type, .fail-table td.col-type { width: 230px; white-space: nowrap; }
+        .fail-table th.col-reason, .fail-table td.col-reason { min-width: 380px; }
 
         .disclaimer-card {
             background: rgba(30, 41, 59, 0.5);
@@ -4279,9 +4275,8 @@
                             <th class="col-mp">Pazaryeri</th>
                             <th class="col-sec">Bölüm</th>
                             <th class="col-action">Aksiyon</th>
-                            <th class="col-cmd">Örnek Komut</th>
                             <th class="col-type">Hata Tipi</th>
-                            <th class="col-reason">Tespit Edilen Hata Açıklaması</th>
+                            <th class="col-reason">Hata Açıklaması</th>
                         </tr>
                     </thead>
                     <tbody id="failTableBody">
@@ -4296,7 +4291,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Asistan Kontrol</td>
                             <td class="col-action"><strong>Okumayı durdurma</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Dur, Sus"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-audio"><span class="ftype-icon">🎙️</span><span>Audio / STT / Hardware Issue</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>asistan konuşurken mikrofondan gelen tepkileri duymuyor</td>
                         </tr>
@@ -4306,14 +4300,13 @@
                             data-section="Asistan Kontrol" 
                             data-ftype="Audio / STT / Hardware Issue" 
                             data-crit="Low" 
-                            data-search="1.7 Okumaya devam etme Devam et İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Asistan Kontrol Audio / STT / Hardware Issue">
+                            data-search="1.7 Okumaya devam etme Devam et Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Asistan Kontrol Audio / STT / Hardware Issue">
                             <td class="col-id"><span class="test-id-pill">#1.7</span></td>
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Asistan Kontrol</td>
                             <td class="col-action"><strong>Okumaya devam etme</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Devam et"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-audio"><span class="ftype-icon">🎙️</span><span>Audio / STT / Hardware Issue</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="1.8" 
@@ -4326,7 +4319,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Asistan Kontrol</td>
                             <td class="col-action"><strong>Konuşma hızı ayarı</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Daha yavaş konuş, Hızlandır"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-tts"><span class="ftype-icon">🗣️</span><span>Speech Synthesis (TTS) / Prompt Error</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>hızı değiştiriyor, uygun mu diye sormuyor</td>
                         </tr>
@@ -4341,7 +4333,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Asistan Kontrol</td>
                             <td class="col-action"><strong>Ses seviyesi ayarı</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Sesi aç, Sesi kıs"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-audio"><span class="ftype-icon">🎙️</span><span>Audio / STT / Hardware Issue</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>ses seviyesinde değişim olmuyor</td>
                         </tr>
@@ -4356,7 +4347,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Asistan Kontrol</td>
                             <td class="col-action"><strong>Geri alma</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Geri al, Son yaptığını iptal et"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-context"><span class="ftype-icon">🧠</span><span>Context / Reference Error</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>son yaptığını iptal etmek yerine bir önceki sayfaya gidiyor</td>
                         </tr>
@@ -4371,7 +4361,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Navigasyon</td>
                             <td class="col-action"><strong>Kategoriye gitme</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Gıda kategorisine git, Kozmetik ürünlerini göster"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-content"><span class="ftype-icon">📄</span><span>Missing Content / UI Failure</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>kategoriye gidiyor ürünleri görmüyor</td>
                         </tr>
@@ -4386,7 +4375,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Navigasyon</td>
                             <td class="col-action"><strong>Alt kategoriye inme</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Vegan peynirler"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-content"><span class="ftype-icon">📄</span><span>Missing Content / UI Failure</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>alt kategorilerin tamamını okumuyor</td>
                         </tr>
@@ -4401,7 +4389,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Navigasyon</td>
                             <td class="col-action"><strong>İletişim/yardım sayfası</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Müşteri hizmetlerine git"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>yardım sayfasına gidiyor, soru cevap işlemi yapmıyor</td>
                         </tr>
@@ -4416,7 +4403,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Arama ve Keşif</td>
                             <td class="col-action"><strong>Barkod/kod ile arama</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Ürün kodu 12345'i bul"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-filter"><span class="ftype-icon">🔍</span><span>Filter / Search Error</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>kodu verilen ürünü bulamıyor</td>
                         </tr>
@@ -4431,7 +4417,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ürün Detay</td>
                             <td class="col-action"><strong>Görsel betimleme</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Ürün nasıl görünüyor?, Görseli anlat"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-visual"><span class="ftype-icon">👁️</span><span>Visual / Multimodal AI Error</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>birden fazla görselden sadece birini görüyor, betimliyor</td>
                         </tr>
@@ -4446,7 +4431,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ürün Detay</td>
                             <td class="col-action"><strong>Diğer görseller</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Başka görsel var mı?, Sonraki fotoğraf"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-visual"><span class="ftype-icon">👁️</span><span>Visual / Multimodal AI Error</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>sonraki görselleri göremiyor</td>
                         </tr>
@@ -4461,7 +4445,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ürün Detay</td>
                             <td class="col-action"><strong>Yorumları okuma</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Yorumları oku"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-content"><span class="ftype-icon">📄</span><span>Missing Content / UI Failure</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>ürünün yorumlarını görmüyor veya eksik görüyor</td>
                         </tr>
@@ -4476,7 +4459,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ürün Detay</td>
                             <td class="col-action"><strong>Yorum filtreleme</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Sadece olumsuz yorumları oku, 1 yıldızlıları oku"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-filter"><span class="ftype-icon">🔍</span><span>Filter / Search Error</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>ürünün olumsuz yorumu olmasına rağmen olumsuz yorum yapılmamıştır diyor</td>
                         </tr>
@@ -4491,7 +4473,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ürün Detay</td>
                             <td class="col-action"><strong>Yorum özeti</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Yorumları özetle, İnsanlar genel olarak ne diyor?"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-content"><span class="ftype-icon">📄</span><span>Missing Content / UI Failure</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>sadece yorumları görebildiğinde başarılı özet yapıyor</td>
                         </tr>
@@ -4506,7 +4487,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ürün Detay</td>
                             <td class="col-action"><strong>Puan dağılımı</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Kaç kişi 5 yıldız vermiş?"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-content"><span class="ftype-icon">📄</span><span>Missing Content / UI Failure</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>ürünün yorumlarını görmediği için puanı yok diyor</td>
                         </tr>
@@ -4521,7 +4501,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ürün Detay</td>
                             <td class="col-action"><strong>Soru-cevapları okuma</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Ürünle ilgili sorulan sorular neler?"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>soru olmasına rağmen ürünle ilgili soru bulunmuyor diyor</td>
                         </tr>
@@ -4536,7 +4515,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ürün Detay</td>
                             <td class="col-action"><strong>Satıcıya soru sorma</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Satıcıya soru sormak istiyorum"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>satıcıya soru sorma mevcut değil diyor</td>
                         </tr>
@@ -4551,7 +4529,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ürün Detay</td>
                             <td class="col-action"><strong>Beden tablosu</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Beden tablosunu oku, 80 kilo için hangi beden?"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-variant"><span class="ftype-icon">🎨</span><span>Variant / Parameter Not Detected</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>beden tablosunu açıyor, öneri yapmıyor</td>
                         </tr>
@@ -4566,7 +4543,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ürün Detay</td>
                             <td class="col-action"><strong>Kargo bilgisi</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Kargo ne zaman gelir?, Kargo ücreti ne kadar?"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>kargo ücreti hakkında bilgi veriyor, süreyi hesaplayamıyor</td>
                         </tr>
@@ -4581,7 +4557,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ürün Detay</td>
                             <td class="col-action"><strong>İade koşulları</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"İade edebilir miyim?"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-content"><span class="ftype-icon">📄</span><span>Missing Content / UI Failure</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>ürünün sayfasındaki iade bilgisini göremiyor</td>
                         </tr>
@@ -4596,7 +4571,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ürün Detay</td>
                             <td class="col-action"><strong>Ürünü paylaşma</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Bu ürünün linkini kopyala/paylaş"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-content"><span class="ftype-icon">📄</span><span>Missing Content / UI Failure</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>ürün bağlantısı kopyalıyor, diğer seçenekleri de sayıyor ama platformlara yönlendirmiyor</td>
                         </tr>
@@ -4611,7 +4585,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ürün Detay</td>
                             <td class="col-action"><strong>Alerjen/içerik sorgusu</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"İçinde fındık var mı?, Glutensiz mi?"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-content"><span class="ftype-icon">📄</span><span>Missing Content / UI Failure</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>içerik bilgisi bulunmasına rağmen göremiyor</td>
                         </tr>
@@ -4626,7 +4599,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Yorum ve Soru-Cevap</td>
                             <td class="col-action"><strong>Yorumu faydalı bulma</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Bu yorumu faydalı olarak işaretle, Beğendim"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-content"><span class="ftype-icon">📄</span><span>Missing Content / UI Failure</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>ilgili yorum bulunamadı</td>
                         </tr>
@@ -4641,7 +4613,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Yorum ve Soru-Cevap</td>
                             <td class="col-action"><strong>Faydalı oyunu geri alma</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Faydalı işaretini kaldır"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-content"><span class="ftype-icon">📄</span><span>Missing Content / UI Failure</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>ilgili yorum bulunamadı</td>
                         </tr>
@@ -4656,7 +4627,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Yorum ve Soru-Cevap</td>
                             <td class="col-action"><strong>Fotoğraflı yorumları filtreleme</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Sadece fotoğraflı yorumları oku"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-visual"><span class="ftype-icon">👁️</span><span>Visual / Multimodal AI Error</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>şu an için sadece fotoğraflı yorumları filtreleyip okuma özelliğim bulunmuyor diyor</td>
                         </tr>
@@ -4671,7 +4641,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Yorum ve Soru-Cevap</td>
                             <td class="col-action"><strong>Yorum fotoğrafını betimleme</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Bu yorumdaki fotoğrafı anlat"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-visual"><span class="ftype-icon">👁️</span><span>Visual / Multimodal AI Error</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>görsel betimleme mevcut değil</td>
                         </tr>
@@ -4686,7 +4655,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Yorum ve Soru-Cevap</td>
                             <td class="col-action"><strong>Yorumu şikayet etme</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Bu yorumu şikayet et, Uygunsuz"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Şu an yorum şikayet etme özelliğim bulunmuyor diyor</td>
                         </tr>
@@ -4701,7 +4669,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Yorum ve Soru-Cevap</td>
                             <td class="col-action"><strong>Soru sorma (ürün Q&A)</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Bu ürün hakkında soru sor: Kaç ay bebek için uygun?"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>trendyol iletişim sayfasına atıyor</td>
                         </tr>
@@ -4716,7 +4683,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Yorum ve Soru-Cevap</td>
                             <td class="col-action"><strong>Başkasının sorusunu takip etme</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Bu soruya cevap gelince bana da haber ver"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-content"><span class="ftype-icon">📄</span><span>Missing Content / UI Failure</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>başkasının sorularını görmüyor</td>
                         </tr>
@@ -4726,14 +4692,13 @@
                             data-section="Yorum ve Soru-Cevap" 
                             data-ftype="Action Not Executed / Flow Block" 
                             data-crit="Low" 
-                            data-search="4A.16 Satıcı mağazasına gitme Satıcının mağazasına git, Diğer ürünlerini göster İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Yorum ve Soru-Cevap Action Not Executed / Flow Block">
+                            data-search="4A.16 Satıcı mağazasına gitme Satıcının mağazasına git, Diğer ürünlerini göster Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Yorum ve Soru-Cevap Action Not Executed / Flow Block">
                             <td class="col-id"><span class="test-id-pill">#4A.16</span></td>
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Yorum ve Soru-Cevap</td>
                             <td class="col-action"><strong>Satıcı mağazasına gitme</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Satıcının mağazasına git, Diğer ürünlerini göster"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="4A.17" 
@@ -4746,7 +4711,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Yorum ve Soru-Cevap</td>
                             <td class="col-action"><strong>Satıcıyı takip etme / bırakma</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Bu satıcıyı takip et"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Bu işelim şu anda gerçekleştiremiyorum diyor</td>
                         </tr>
@@ -4761,7 +4725,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Yorum ve Soru-Cevap</td>
                             <td class="col-action"><strong>Satıcı değerlendirmelerini okuma</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Satıcının yorumları nasıl?"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-content"><span class="ftype-icon">📄</span><span>Missing Content / UI Failure</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>yorumları görmüyor</td>
                         </tr>
@@ -4776,7 +4739,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Sepet Aksiyonları</td>
                             <td class="col-action"><strong>Sepete ekleme</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Sepete ekle, Bundan 2 tane ekle"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-cart"><span class="ftype-icon">🛒</span><span>Cart / Checkout Error</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>sadece 1 adet sepete ekliyor</td>
                         </tr>
@@ -4791,7 +4753,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Sepet Aksiyonları</td>
                             <td class="col-action"><strong>Kupon uygulama</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"İNDİRİM20 kuponunu uygula"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-cart"><span class="ftype-icon">🛒</span><span>Cart / Checkout Error</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>applyCoupon: kupon alanı bulunamadı hatası veriyor</td>
                         </tr>
@@ -4801,14 +4762,13 @@
                             data-section="Sepet Aksiyonları" 
                             data-ftype="Cart / Checkout Error" 
                             data-crit="Low" 
-                            data-search="5.10 Kupon kaldırma Kuponu kaldır İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Sepet Aksiyonları Cart / Checkout Error">
+                            data-search="5.10 Kupon kaldırma Kuponu kaldır Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Sepet Aksiyonları Cart / Checkout Error">
                             <td class="col-id"><span class="test-id-pill">#5.10</span></td>
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Sepet Aksiyonları</td>
                             <td class="col-action"><strong>Kupon kaldırma</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Kuponu kaldır"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-cart"><span class="ftype-icon">🛒</span><span>Cart / Checkout Error</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="5.11" 
@@ -4816,14 +4776,13 @@
                             data-section="Sepet Aksiyonları" 
                             data-ftype="Cart / Checkout Error" 
                             data-crit="Low" 
-                            data-search="5.11 Kuponlarımı sorma Kullanabileceğim kupon var mı? İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Sepet Aksiyonları Cart / Checkout Error">
+                            data-search="5.11 Kuponlarımı sorma Kullanabileceğim kupon var mı? Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Sepet Aksiyonları Cart / Checkout Error">
                             <td class="col-id"><span class="test-id-pill">#5.11</span></td>
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Sepet Aksiyonları</td>
                             <td class="col-action"><strong>Kuponlarımı sorma</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Kullanabileceğim kupon var mı?"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-cart"><span class="ftype-icon">🛒</span><span>Cart / Checkout Error</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="6.3" 
@@ -4836,7 +4795,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ödeme (Checkout)</td>
                             <td class="col-action"><strong>Yeni adres ekleme</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Yeni adres ekle"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-cart"><span class="ftype-icon">🛒</span><span>Cart / Checkout Error</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>adres kayıt ekranını açıyorum diyor ekranı açıyor ve susuyor.</td>
                         </tr>
@@ -4846,14 +4804,13 @@
                             data-section="Ödeme (Checkout)" 
                             data-ftype="Cart / Checkout Error" 
                             data-crit="Low" 
-                            data-search="6.4 Fatura adresi Fatura adresi farklı olsun, Kurumsal fatura İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Ödeme (Checkout) Cart / Checkout Error">
+                            data-search="6.4 Fatura adresi Fatura adresi farklı olsun, Kurumsal fatura Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Ödeme (Checkout) Cart / Checkout Error">
                             <td class="col-id"><span class="test-id-pill">#6.4</span></td>
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ödeme (Checkout)</td>
                             <td class="col-action"><strong>Fatura adresi</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Fatura adresi farklı olsun, Kurumsal fatura"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-cart"><span class="ftype-icon">🛒</span><span>Cart / Checkout Error</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="6.5" 
@@ -4861,14 +4818,13 @@
                             data-section="Ödeme (Checkout)" 
                             data-ftype="Cart / Checkout Error" 
                             data-crit="Low" 
-                            data-search="6.5 Kargo firması seçme Kargo seçeneklerini oku, Hızlı kargo İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Ödeme (Checkout) Cart / Checkout Error">
+                            data-search="6.5 Kargo firması seçme Kargo seçeneklerini oku, Hızlı kargo Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Ödeme (Checkout) Cart / Checkout Error">
                             <td class="col-id"><span class="test-id-pill">#6.5</span></td>
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ödeme (Checkout)</td>
                             <td class="col-action"><strong>Kargo firması seçme</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Kargo seçeneklerini oku, Hızlı kargo"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-cart"><span class="ftype-icon">🛒</span><span>Cart / Checkout Error</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="6.6" 
@@ -4876,14 +4832,13 @@
                             data-section="Ödeme (Checkout)" 
                             data-ftype="Cart / Checkout Error" 
                             data-crit="Low" 
-                            data-search="6.6 Teslimat zamanı seçme Yarın teslim olsun, Teslimat saatlerini oku İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Ödeme (Checkout) Cart / Checkout Error">
+                            data-search="6.6 Teslimat zamanı seçme Yarın teslim olsun, Teslimat saatlerini oku Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Ödeme (Checkout) Cart / Checkout Error">
                             <td class="col-id"><span class="test-id-pill">#6.6</span></td>
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ödeme (Checkout)</td>
                             <td class="col-action"><strong>Teslimat zamanı seçme</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Yarın teslim olsun, Teslimat saatlerini oku"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-cart"><span class="ftype-icon">🛒</span><span>Cart / Checkout Error</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="6.7" 
@@ -4891,14 +4846,13 @@
                             data-section="Ödeme (Checkout)" 
                             data-ftype="Cart / Checkout Error" 
                             data-crit="Low" 
-                            data-search="6.7 Teslimat noktası (PUDO) Kargomatik/mağazadan teslim alayım İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Ödeme (Checkout) Cart / Checkout Error">
+                            data-search="6.7 Teslimat noktası (PUDO) Kargomatik/mağazadan teslim alayım Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Ödeme (Checkout) Cart / Checkout Error">
                             <td class="col-id"><span class="test-id-pill">#6.7</span></td>
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ödeme (Checkout)</td>
                             <td class="col-action"><strong>Teslimat noktası (PUDO)</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Kargomatik/mağazadan teslim alayım"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-cart"><span class="ftype-icon">🛒</span><span>Cart / Checkout Error</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="6.9" 
@@ -4911,7 +4865,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ödeme (Checkout)</td>
                             <td class="col-action"><strong>Kayıtlı kart seçme</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Sonu 1234 olan kartımı kullan"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-cart"><span class="ftype-icon">🛒</span><span>Cart / Checkout Error</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Kart bilgileri kısmı ayrı bir sekme gibi olduğu için aynı sayfada 2 tane ayrı asistan çıkıyor.</td>
                         </tr>
@@ -4926,7 +4879,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ödeme (Checkout)</td>
                             <td class="col-action"><strong>Yeni kart ekleme</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Yeni kart ekle"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-cart"><span class="ftype-icon">🛒</span><span>Cart / Checkout Error</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Adres ekleme formunu açıyor</td>
                         </tr>
@@ -4941,7 +4893,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ödeme (Checkout)</td>
                             <td class="col-action"><strong>Taksit seçme</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"3 taksit yap"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-cart"><span class="ftype-icon">🛒</span><span>Cart / Checkout Error</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>”3 taksit yap” diyince taksiti ayrı bir ödeme yöntemi olarak algılıyor.</td>
                         </tr>
@@ -4951,14 +4902,13 @@
                             data-section="Ödeme (Checkout)" 
                             data-ftype="Cart / Checkout Error" 
                             data-crit="Low" 
-                            data-search="6.12 Cüzdan/puan kullanma Puanlarımı kullan, Cüzdanımda ne kadar var? İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Ödeme (Checkout) Cart / Checkout Error">
+                            data-search="6.12 Cüzdan/puan kullanma Puanlarımı kullan, Cüzdanımda ne kadar var? Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Ödeme (Checkout) Cart / Checkout Error">
                             <td class="col-id"><span class="test-id-pill">#6.12</span></td>
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ödeme (Checkout)</td>
                             <td class="col-action"><strong>Cüzdan/puan kullanma</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Puanlarımı kullan, Cüzdanımda ne kadar var?"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-cart"><span class="ftype-icon">🛒</span><span>Cart / Checkout Error</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="6.13" 
@@ -4966,14 +4916,13 @@
                             data-section="Ödeme (Checkout)" 
                             data-ftype="Cart / Checkout Error" 
                             data-crit="Low" 
-                            data-search="6.13 Sipariş özeti okuma Siparişi özetle İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Ödeme (Checkout) Cart / Checkout Error">
+                            data-search="6.13 Sipariş özeti okuma Siparişi özetle Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Ödeme (Checkout) Cart / Checkout Error">
                             <td class="col-id"><span class="test-id-pill">#6.13</span></td>
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ödeme (Checkout)</td>
                             <td class="col-action"><strong>Sipariş özeti okuma</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Siparişi özetle"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-cart"><span class="ftype-icon">🛒</span><span>Cart / Checkout Error</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="6.14" 
@@ -4981,14 +4930,13 @@
                             data-section="Ödeme (Checkout)" 
                             data-ftype="Cart / Checkout Error" 
                             data-crit="Low" 
-                            data-search="6.14 Sözleşme okuma Mesafeli satış sözleşmesini oku/özetle İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Ödeme (Checkout) Cart / Checkout Error">
+                            data-search="6.14 Sözleşme okuma Mesafeli satış sözleşmesini oku/özetle Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Ödeme (Checkout) Cart / Checkout Error">
                             <td class="col-id"><span class="test-id-pill">#6.14</span></td>
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ödeme (Checkout)</td>
                             <td class="col-action"><strong>Sözleşme okuma</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Mesafeli satış sözleşmesini oku/özetle"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-cart"><span class="ftype-icon">🛒</span><span>Cart / Checkout Error</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="6.15" 
@@ -4996,14 +4944,13 @@
                             data-section="Ödeme (Checkout)" 
                             data-ftype="Cart / Checkout Error" 
                             data-crit="Low" 
-                            data-search="6.15 Siparişi onaylama Onaylıyorum, Ödemeyi tamamla İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Ödeme (Checkout) Cart / Checkout Error">
+                            data-search="6.15 Siparişi onaylama Onaylıyorum, Ödemeyi tamamla Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Ödeme (Checkout) Cart / Checkout Error">
                             <td class="col-id"><span class="test-id-pill">#6.15</span></td>
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ödeme (Checkout)</td>
                             <td class="col-action"><strong>Siparişi onaylama</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Onaylıyorum, Ödemeyi tamamla"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-cart"><span class="ftype-icon">🛒</span><span>Cart / Checkout Error</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="6.16" 
@@ -5011,14 +4958,13 @@
                             data-section="Ödeme (Checkout)" 
                             data-ftype="Cart / Checkout Error" 
                             data-crit="Low" 
-                            data-search="6.16 3D Secure doğrulama SMS kodu geldi İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Ödeme (Checkout) Cart / Checkout Error">
+                            data-search="6.16 3D Secure doğrulama SMS kodu geldi Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Ödeme (Checkout) Cart / Checkout Error">
                             <td class="col-id"><span class="test-id-pill">#6.16</span></td>
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ödeme (Checkout)</td>
                             <td class="col-action"><strong>3D Secure doğrulama</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"SMS kodu geldi"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-cart"><span class="ftype-icon">🛒</span><span>Cart / Checkout Error</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="6.17" 
@@ -5026,14 +4972,13 @@
                             data-section="Ödeme (Checkout)" 
                             data-ftype="Cart / Checkout Error" 
                             data-crit="Critical" 
-                            data-search="6.17 Ödeme başarılı Sonuç İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Ödeme (Checkout) Cart / Checkout Error">
+                            data-search="6.17 Ödeme başarılı Sonuç Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Ödeme (Checkout) Cart / Checkout Error">
                             <td class="col-id"><span class="test-id-pill">#6.17</span></td>
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ödeme (Checkout)</td>
                             <td class="col-action"><strong>Ödeme başarılı</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Sonuç"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-cart"><span class="ftype-icon">🛒</span><span>Cart / Checkout Error</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="6.18" 
@@ -5041,14 +4986,13 @@
                             data-section="Ödeme (Checkout)" 
                             data-ftype="Cart / Checkout Error" 
                             data-crit="Critical" 
-                            data-search="6.18 Ödeme reddedildi Hata İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Ödeme (Checkout) Cart / Checkout Error">
+                            data-search="6.18 Ödeme reddedildi Hata Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Ödeme (Checkout) Cart / Checkout Error">
                             <td class="col-id"><span class="test-id-pill">#6.18</span></td>
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ödeme (Checkout)</td>
                             <td class="col-action"><strong>Ödeme reddedildi</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Hata"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-cart"><span class="ftype-icon">🛒</span><span>Cart / Checkout Error</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="6.19" 
@@ -5056,14 +5000,13 @@
                             data-section="Ödeme (Checkout)" 
                             data-ftype="Cart / Checkout Error" 
                             data-crit="Low" 
-                            data-search="6.19 Checkout'tan çıkma İptal et, Sepete geri dön İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Ödeme (Checkout) Cart / Checkout Error">
+                            data-search="6.19 Checkout'tan çıkma İptal et, Sepete geri dön Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Ödeme (Checkout) Cart / Checkout Error">
                             <td class="col-id"><span class="test-id-pill">#6.19</span></td>
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ödeme (Checkout)</td>
                             <td class="col-action"><strong>Checkout'tan çıkma</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"İptal et, Sepete geri dön"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-cart"><span class="ftype-icon">🛒</span><span>Cart / Checkout Error</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="6.20" 
@@ -5071,14 +5014,13 @@
                             data-section="Ödeme (Checkout)" 
                             data-ftype="Cart / Checkout Error" 
                             data-crit="Critical" 
-                            data-search="6.20 Hediye kartı ile ödeme Hediye kartı kodum var İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Ödeme (Checkout) Cart / Checkout Error">
+                            data-search="6.20 Hediye kartı ile ödeme Hediye kartı kodum var Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Ödeme (Checkout) Cart / Checkout Error">
                             <td class="col-id"><span class="test-id-pill">#6.20</span></td>
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ödeme (Checkout)</td>
                             <td class="col-action"><strong>Hediye kartı ile ödeme</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Hediye kartı kodum var"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-cart"><span class="ftype-icon">🛒</span><span>Cart / Checkout Error</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="7.3" 
@@ -5091,7 +5033,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Hesap ve Kimlik</td>
                             <td class="col-action"><strong>Kayıt olma</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Üye ol"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-context"><span class="ftype-icon">🧠</span><span>Context / Reference Error</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>arama çubuğuna “Üye ol” yazıp arıyor</td>
                         </tr>
@@ -5106,7 +5047,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Hesap ve Kimlik</td>
                             <td class="col-action"><strong>Şifre sıfırlama</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Şifremi unuttum"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-context"><span class="ftype-icon">🧠</span><span>Context / Reference Error</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>arama çubuğuna “sifrenizi mi unuttunuz?” yazıp arama yapıyor</td>
                         </tr>
@@ -5121,7 +5061,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Hesap ve Kimlik</td>
                             <td class="col-action"><strong>Adres yönetimi</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Adreslerimi listele, İş adresimi sil"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-content"><span class="ftype-icon">📄</span><span>Missing Content / UI Failure</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Kayıtlı adresi görüyor ama düzenleme ve silme butonlarını bulamıyor</td>
                         </tr>
@@ -5131,14 +5070,13 @@
                             data-section="Hesap ve Kimlik" 
                             data-ftype="Missing Content / UI Failure" 
                             data-crit="Critical" 
-                            data-search="7.9 Kayıtlı kart yönetimi Kartlarımı listele, Sonu 1234'ü sil İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Hesap ve Kimlik Missing Content / UI Failure">
+                            data-search="7.9 Kayıtlı kart yönetimi Kartlarımı listele, Sonu 1234'ü sil Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Hesap ve Kimlik Missing Content / UI Failure">
                             <td class="col-id"><span class="test-id-pill">#7.9</span></td>
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Hesap ve Kimlik</td>
                             <td class="col-action"><strong>Kayıtlı kart yönetimi</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Kartlarımı listele, Sonu 1234'ü sil"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-content"><span class="ftype-icon">📄</span><span>Missing Content / UI Failure</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="7.10" 
@@ -5151,7 +5089,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Hesap ve Kimlik</td>
                             <td class="col-action"><strong>Bildirim tercihleri</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Kampanya e-postalarını kapat"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-content"><span class="ftype-icon">📄</span><span>Missing Content / UI Failure</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>form alanı bulunamadı hatası veriyor</td>
                         </tr>
@@ -5161,14 +5098,13 @@
                             data-section="Hesap ve Kimlik" 
                             data-ftype="Missing Content / UI Failure" 
                             data-crit="Low" 
-                            data-search="7.11 Kişisel verileri sorma Hakkımda hangi veriler var? (KVKK) İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Hesap ve Kimlik Missing Content / UI Failure">
+                            data-search="7.11 Kişisel verileri sorma Hakkımda hangi veriler var? (KVKK) Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Hesap ve Kimlik Missing Content / UI Failure">
                             <td class="col-id"><span class="test-id-pill">#7.11</span></td>
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Hesap ve Kimlik</td>
                             <td class="col-action"><strong>Kişisel verileri sorma</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Hakkımda hangi veriler var? (KVKK)"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-content"><span class="ftype-icon">📄</span><span>Missing Content / UI Failure</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="7.12" 
@@ -5181,7 +5117,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Hesap ve Kimlik</td>
                             <td class="col-action"><strong>Hesap silme</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Hesabımı sil"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>siparişlerim kısmına yönlendiriyor</td>
                         </tr>
@@ -5196,7 +5131,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Sipariş Yönetimi</td>
                             <td class="col-action"><strong>Fatura isteme</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Faturamı e-postama gönder, Faturayı indir"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>cevap bile vermiyor</td>
                         </tr>
@@ -5211,7 +5145,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Favoriler ve Listeler</td>
                             <td class="col-action"><strong>Favorilere ekleme</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Bunu favorilere ekle, Beğendim"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Favorilere ekle dendiğinde favorilerim sayfasına yönlendiriyor</td>
                         </tr>
@@ -5226,7 +5159,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Favoriler ve Listeler</td>
                             <td class="col-action"><strong>Liste oluşturma</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Doğum günü listesi oluştur"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>böyle bir özellik bulunmuyor diyor</td>
                         </tr>
@@ -5236,14 +5168,13 @@
                             data-section="Favoriler ve Listeler" 
                             data-ftype="Action Not Executed / Flow Block" 
                             data-crit="Low" 
-                            data-search="9.5 Listeye ekleme Bunu doğum günü listeme ekle İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Favoriler ve Listeler Action Not Executed / Flow Block">
+                            data-search="9.5 Listeye ekleme Bunu doğum günü listeme ekle Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Favoriler ve Listeler Action Not Executed / Flow Block">
                             <td class="col-id"><span class="test-id-pill">#9.5</span></td>
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Favoriler ve Listeler</td>
                             <td class="col-action"><strong>Listeye ekleme</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Bunu doğum günü listeme ekle"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="9.6" 
@@ -5251,14 +5182,13 @@
                             data-section="Favoriler ve Listeler" 
                             data-ftype="Action Not Executed / Flow Block" 
                             data-crit="Low" 
-                            data-search="9.6 Liste paylaşma Listemi paylaş İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Favoriler ve Listeler Action Not Executed / Flow Block">
+                            data-search="9.6 Liste paylaşma Listemi paylaş Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Favoriler ve Listeler Action Not Executed / Flow Block">
                             <td class="col-id"><span class="test-id-pill">#9.6</span></td>
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Favoriler ve Listeler</td>
                             <td class="col-action"><strong>Liste paylaşma</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Listemi paylaş"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="11.2" 
@@ -5271,7 +5201,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Müşteri Hizmetleri</td>
                             <td class="col-action"><strong>Canlı desteğe bağlanma</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Canlı destek, Bir insanla görüşmek istiyorum"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-content"><span class="ftype-icon">📄</span><span>Missing Content / UI Failure</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>canlı destek butonunu bulamadı</td>
                         </tr>
@@ -5286,7 +5215,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Müşteri Hizmetleri</td>
                             <td class="col-action"><strong>Destek talebi oluşturma</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Şikayet oluşturmak istiyorum"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>şikayet oluşturmak için nereye gitmesi gerektiğini bilmiyor</td>
                         </tr>
@@ -5296,14 +5224,13 @@
                             data-section="Müşteri Hizmetleri" 
                             data-ftype="Action Not Executed / Flow Block" 
                             data-crit="Low" 
-                            data-search="11.4 Talep durumu sorma Şikayetim ne oldu? İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Müşteri Hizmetleri Action Not Executed / Flow Block">
+                            data-search="11.4 Talep durumu sorma Şikayetim ne oldu? Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Müşteri Hizmetleri Action Not Executed / Flow Block">
                             <td class="col-id"><span class="test-id-pill">#11.4</span></td>
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Müşteri Hizmetleri</td>
                             <td class="col-action"><strong>Talep durumu sorma</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Şikayetim ne oldu?"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="12.2" 
@@ -5316,7 +5243,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Erişilebilirlik</td>
                             <td class="col-action"><strong>Görsel betimleme (genel)</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Bu görselde ne var?"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-visual"><span class="ftype-icon">👁️</span><span>Visual / Multimodal AI Error</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Görsel betimleme mevcut değil diyor</td>
                         </tr>
@@ -5331,7 +5257,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Erişilebilirlik</td>
                             <td class="col-action"><strong>Ekran okuyucu uyumu</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Ekran okuyucu uyumu"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-a11y"><span class="ftype-icon">♿</span><span>Accessibility / Screen Reader Collision</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Çakışma mevcut</td>
                         </tr>
@@ -5346,7 +5271,6 @@
                             <td class="col-mp"><span class="mp-badge mp-trendyol"><span class="mp-icon">🛒</span><span>Trendyol</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Hata ve İstisna Akışları</td>
                             <td class="col-action"><strong>Seçilen varyant yok</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"42 numara mavi kalmamış"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-variant"><span class="ftype-icon">🎨</span><span>Variant / Parameter Not Detected</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Varyantları görmüyor</td>
                         </tr>
@@ -5356,14 +5280,13 @@
                             data-section="Asistan Kontrol" 
                             data-ftype="Audio / STT / Hardware Issue" 
                             data-crit="Low" 
-                            data-search="1.6 Okumayı durdurma Dur, Sus İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Asistan Kontrol Audio / STT / Hardware Issue">
+                            data-search="1.6 Okumayı durdurma Dur, Sus Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Asistan Kontrol Audio / STT / Hardware Issue">
                             <td class="col-id"><span class="test-id-pill">#1.6</span></td>
                             <td class="col-mp"><span class="mp-badge mp-vegan"><span class="mp-icon">🌱</span><span>Vegan Pazaryeri</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Asistan Kontrol</td>
                             <td class="col-action"><strong>Okumayı durdurma</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Dur, Sus"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-audio"><span class="ftype-icon">🎙️</span><span>Audio / STT / Hardware Issue</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="1.7" 
@@ -5371,14 +5294,13 @@
                             data-section="Asistan Kontrol" 
                             data-ftype="Audio / STT / Hardware Issue" 
                             data-crit="Low" 
-                            data-search="1.7 Okumaya devam etme Devam et İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Asistan Kontrol Audio / STT / Hardware Issue">
+                            data-search="1.7 Okumaya devam etme Devam et Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Asistan Kontrol Audio / STT / Hardware Issue">
                             <td class="col-id"><span class="test-id-pill">#1.7</span></td>
                             <td class="col-mp"><span class="mp-badge mp-vegan"><span class="mp-icon">🌱</span><span>Vegan Pazaryeri</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Asistan Kontrol</td>
                             <td class="col-action"><strong>Okumaya devam etme</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Devam et"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-audio"><span class="ftype-icon">🎙️</span><span>Audio / STT / Hardware Issue</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="1.8" 
@@ -5391,7 +5313,6 @@
                             <td class="col-mp"><span class="mp-badge mp-vegan"><span class="mp-icon">🌱</span><span>Vegan Pazaryeri</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Asistan Kontrol</td>
                             <td class="col-action"><strong>Konuşma hızı ayarı</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Daha yavaş konuş, Hızlandır"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-tts"><span class="ftype-icon">🗣️</span><span>Speech Synthesis (TTS) / Prompt Error</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>hızı değiştiriyor, uyun mu diye sormuyor</td>
                         </tr>
@@ -5406,7 +5327,6 @@
                             <td class="col-mp"><span class="mp-badge mp-vegan"><span class="mp-icon">🌱</span><span>Vegan Pazaryeri</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Asistan Kontrol</td>
                             <td class="col-action"><strong>Ses seviyesi ayarı</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Sesi aç, Sesi kıs"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-audio"><span class="ftype-icon">🎙️</span><span>Audio / STT / Hardware Issue</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>ses seviyesinde değişim olmuyor</td>
                         </tr>
@@ -5416,14 +5336,13 @@
                             data-section="Asistan Kontrol" 
                             data-ftype="Speech Synthesis (TTS) / Prompt Error" 
                             data-crit="Low" 
-                            data-search="1.10 Geri alma Geri al, Son yaptığını iptal et İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Asistan Kontrol Speech Synthesis (TTS) / Prompt Error">
+                            data-search="1.10 Geri alma Geri al, Son yaptığını iptal et Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Asistan Kontrol Speech Synthesis (TTS) / Prompt Error">
                             <td class="col-id"><span class="test-id-pill">#1.10</span></td>
                             <td class="col-mp"><span class="mp-badge mp-vegan"><span class="mp-icon">🌱</span><span>Vegan Pazaryeri</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Asistan Kontrol</td>
                             <td class="col-action"><strong>Geri alma</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Geri al, Son yaptığını iptal et"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-tts"><span class="ftype-icon">🗣️</span><span>Speech Synthesis (TTS) / Prompt Error</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="3.3" 
@@ -5436,7 +5355,6 @@
                             <td class="col-mp"><span class="mp-badge mp-vegan"><span class="mp-icon">🌱</span><span>Vegan Pazaryeri</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Arama ve Keşif</td>
                             <td class="col-action"><strong>Aramayı daraltma</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Sadece 42 numara olanlar, 500 TL altındakiler"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-filter"><span class="ftype-icon">🔍</span><span>Filter / Search Error</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>sadece stokta olmama filtresini ve sıralamayı doğru yapıyor, bunun dışındakileri yapmıyor (fiyat/marka/puan gibi)</td>
                         </tr>
@@ -5451,7 +5369,6 @@
                             <td class="col-mp"><span class="mp-badge mp-vegan"><span class="mp-icon">🌱</span><span>Vegan Pazaryeri</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Arama ve Keşif</td>
                             <td class="col-action"><strong>Filtreleme (çoklu)</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Siyah renk ve 4 yıldız üstü"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-filter"><span class="ftype-icon">🔍</span><span>Filter / Search Error</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>stokta olmama filtresini ve sıralamyı aynı anda ekleyip kaldırabiliyor, bunun dışındakileri yapmıyor (fiyat/marka/puan gibi)</td>
                         </tr>
@@ -5466,7 +5383,6 @@
                             <td class="col-mp"><span class="mp-badge mp-vegan"><span class="mp-icon">🌱</span><span>Vegan Pazaryeri</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Arama ve Keşif</td>
                             <td class="col-action"><strong>Aktif filtreleri sorma</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Hangi filtreler aktif?"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-tts"><span class="ftype-icon">🗣️</span><span>Speech Synthesis (TTS) / Prompt Error</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>stokta olmama filtresi ve sıralama yapılmış olsa da bunları söylemiyor ve fiyat filtresini yapamadığı halde var olarak söylüyor</td>
                         </tr>
@@ -5481,7 +5397,6 @@
                             <td class="col-mp"><span class="mp-badge mp-vegan"><span class="mp-icon">🌱</span><span>Vegan Pazaryeri</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ürün Detay</td>
                             <td class="col-action"><strong>Fiyat sorma</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Fiyatı ne kadar?, İndirimli mi?"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-content"><span class="ftype-icon">📄</span><span>Missing Content / UI Failure</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>indirim olduğunu söylüyor fakat kullanıcıya özel fiyat olduğunda belirtmiyor</td>
                         </tr>
@@ -5496,7 +5411,6 @@
                             <td class="col-mp"><span class="mp-badge mp-vegan"><span class="mp-icon">🌱</span><span>Vegan Pazaryeri</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ürün Detay</td>
                             <td class="col-action"><strong>Yorumları okuma</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Yorumları oku"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-content"><span class="ftype-icon">📄</span><span>Missing Content / UI Failure</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>yorum fazla uzunsa tamamını okumuyor</td>
                         </tr>
@@ -5511,7 +5425,6 @@
                             <td class="col-mp"><span class="mp-badge mp-vegan"><span class="mp-icon">🌱</span><span>Vegan Pazaryeri</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ürün Detay</td>
                             <td class="col-action"><strong>Kargo bilgisi</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Kargo ne zaman gelir?, Kargo ücreti ne kadar?"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>kargo ücreti hakkında bilgi veriyor, süreyi hesaplayamıyor</td>
                         </tr>
@@ -5526,7 +5439,6 @@
                             <td class="col-mp"><span class="mp-badge mp-vegan"><span class="mp-icon">🌱</span><span>Vegan Pazaryeri</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Yorum ve Soru-Cevap</td>
                             <td class="col-action"><strong>Soru sorma (ürün Q&A)</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Bu ürün hakkında soru sor: Kaç ay bebek için uygun?"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>soru cevap özelliği olmamasına rağmen soru cevap formu açmayı soruyor, sonrasında soru cevap özelliği yok diyor</td>
                         </tr>
@@ -5541,7 +5453,6 @@
                             <td class="col-mp"><span class="mp-badge mp-vegan"><span class="mp-icon">🌱</span><span>Vegan Pazaryeri</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Yorum ve Soru-Cevap</td>
                             <td class="col-action"><strong>Satıcı mağazasına gitme</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Satıcının mağazasına git, Diğer ürünlerini göster"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-content"><span class="ftype-icon">📄</span><span>Missing Content / UI Failure</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>ürünün detayına girdikten sonra yanıt vermiyor</td>
                         </tr>
@@ -5556,7 +5467,6 @@
                             <td class="col-mp"><span class="mp-badge mp-vegan"><span class="mp-icon">🌱</span><span>Vegan Pazaryeri</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Müşteri Hizmetleri</td>
                             <td class="col-action"><strong>Destek talebi oluşturma</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Şikayet oluşturmak istiyorum"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-context"><span class="ftype-icon">🧠</span><span>Context / Reference Error</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>arama kısmına müşteri hizmetleri yazıyor</td>
                         </tr>
@@ -5571,7 +5481,6 @@
                             <td class="col-mp"><span class="mp-badge mp-vegan"><span class="mp-icon">🌱</span><span>Vegan Pazaryeri</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Müşteri Hizmetleri</td>
                             <td class="col-action"><strong>Geri bildirim verme</strong></td>
-                            <td class="col-cmd" style="font-size: 0.82rem; color: var(--accent-blue);"><em>"Site hakkında geri bildirim vereceğim"</em></td>
                             <td class="col-type"><span class="ftype-tag ftype-context"><span class="ftype-icon">🧠</span><span>Context / Reference Error</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>arama kısmına müşteri hizmetleri yazıyor</td>
                         </tr>
