@@ -693,7 +693,7 @@
                 <a href="#stats-overview" class="nav-link">📊 Özet</a>
                 <a href="#marketplaces-section" class="nav-link">🛒 Pazaryerleri</a>
                 <a href="#edge-cases-section" class="nav-link highlight">⚡ Edge Cases (21)</a>
-                <a href="#fail-cases-section" class="nav-link">🚨 Hata Gezgini (166)</a>
+                <a href="#fail-cases-section" class="nav-link">🚨 Hata Gezgini (160)</a>
                 <a href="#category-section" class="nav-link">📁 Kategoriler</a>
             </div>
         </nav>
@@ -703,7 +703,7 @@
                 <h1>🤖 Guidami Test Analiz & LLM Evaluation Dashboard</h1>
                 <p>Kapsam: Trendyol, Hepsiburada, Vegan Pazaryeri | Bağımsız Kullanıcı Deneyimi Simülasyonu & Uç Senaryolar</p>
             </div>
-            <div class="badge">Genel Başarı: %60.48</div>
+            <div class="badge">Genel Başarı: %61.9</div>
         </div>
 
         <div class="stats-grid" id="stats-overview">
@@ -713,11 +713,11 @@
             </div>
             <div class="card" style="margin-bottom: 0;">
                 <div class="card-title">Başarılı (PASS)</div>
-                <div class="card-value green">254</div>
+                <div class="card-value green">260</div>
             </div>
             <div class="card" style="margin-bottom: 0;">
                 <div class="card-title">Başarısız (FAIL)</div>
-                <div class="card-value red">166</div>
+                <div class="card-value red">160</div>
             </div>
             <div class="card" style="margin-bottom: 0;">
                 <div class="card-title">Atlanan (SKIP)</div>
@@ -725,8 +725,8 @@
             </div>
             <div class="card" style="margin-bottom: 0; border: 1px solid rgba(56, 189, 248, 0.35); background: linear-gradient(135deg, rgba(56, 189, 248, 0.08), rgba(21, 30, 50, 1));">
                 <div class="card-title" style="color: var(--accent-blue);">🎯 Genel Başarı</div>
-                <div class="card-value" style="color: var(--accent-blue);">%60.48</div>
-                <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.35rem;">254 PASS / 420 Değerlendirilen</div>
+                <div class="card-value" style="color: var(--accent-blue);">%61.9</div>
+                <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.35rem;">260 PASS / 420 Değerlendirilen</div>
             </div>
         </div>
 
@@ -756,10 +756,10 @@
                             </div>
                         </td>
                         <td>188</td>
-                        <td style="color: var(--accent-green); font-weight: 600;">82</td>
-                        <td style="color: var(--accent-red); font-weight: 600;">80</td>
+                        <td style="color: var(--accent-green); font-weight: 600;">88</td>
+                        <td style="color: var(--accent-red); font-weight: 600;">74</td>
                         <td>26</td>
-                        <td><strong>%50.62</strong></td>
+                        <td><strong>%54.32</strong></td>
                     </tr>
                     <tr id="details-hepsiburada" class="details-row">
                         <td colspan="6" style="padding: 0; background: rgba(0,0,0,0.15);">
@@ -781,27 +781,11 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><strong>Ödeme (Checkout)</strong></td>
-                                            <td>20</td>
-                                            <td style="color: var(--accent-green); font-weight: 600;">0</td>
-                                            <td style="color: var(--accent-red); font-weight: 600;">20</td>
-                                            <td>0</td>
-                                            <td><strong style="color: var(--accent-red);">%0.0</strong></td>
-                                        </tr>
-                                        <tr>
                                             <td><strong>Bildirim ve Takip</strong></td>
                                             <td>4</td>
                                             <td style="color: var(--accent-green); font-weight: 600;">0</td>
                                             <td style="color: var(--accent-red); font-weight: 600;">0</td>
                                             <td>4</td>
-                                            <td><strong style="color: var(--accent-red);">%0.0</strong></td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Müşteri Hizmetleri</strong></td>
-                                            <td>5</td>
-                                            <td style="color: var(--accent-green); font-weight: 600;">0</td>
-                                            <td style="color: var(--accent-red); font-weight: 600;">5</td>
-                                            <td>0</td>
                                             <td><strong style="color: var(--accent-red);">%0.0</strong></td>
                                         </tr>
                                         <tr>
@@ -813,6 +797,14 @@
                                             <td><strong style="color: var(--accent-red);">%0.0</strong></td>
                                         </tr>
                                         <tr>
+                                            <td><strong>Ödeme (Checkout)</strong></td>
+                                            <td>20</td>
+                                            <td style="color: var(--accent-green); font-weight: 600;">1</td>
+                                            <td style="color: var(--accent-red); font-weight: 600;">19</td>
+                                            <td>0</td>
+                                            <td><strong style="color: var(--accent-red);">%5.0</strong></td>
+                                        </tr>
+                                        <tr>
                                             <td><strong>Sipariş Yönetimi</strong></td>
                                             <td>13</td>
                                             <td style="color: var(--accent-green); font-weight: 600;">2</td>
@@ -821,20 +813,12 @@
                                             <td><strong style="color: var(--accent-red);">%15.38</strong></td>
                                         </tr>
                                         <tr>
-                                            <td><strong>Hesap ve Kimlik</strong></td>
-                                            <td>12</td>
-                                            <td style="color: var(--accent-green); font-weight: 600;">3</td>
-                                            <td style="color: var(--accent-red); font-weight: 600;">8</td>
-                                            <td>1</td>
-                                            <td><strong style="color: var(--accent-red);">%27.27</strong></td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Erişilebilirlik</strong></td>
-                                            <td>9</td>
-                                            <td style="color: var(--accent-green); font-weight: 600;">3</td>
-                                            <td style="color: var(--accent-red); font-weight: 600;">6</td>
+                                            <td><strong>Müşteri Hizmetleri</strong></td>
+                                            <td>5</td>
+                                            <td style="color: var(--accent-green); font-weight: 600;">2</td>
+                                            <td style="color: var(--accent-red); font-weight: 600;">3</td>
                                             <td>0</td>
-                                            <td><strong style="color: var(--accent-red);">%33.33</strong></td>
+                                            <td><strong style="color: var(--accent-red);">%40.0</strong></td>
                                         </tr>
                                         <tr>
                                             <td><strong>Favoriler ve Listeler</strong></td>
@@ -843,6 +827,22 @@
                                             <td style="color: var(--accent-red); font-weight: 600;">4</td>
                                             <td>0</td>
                                             <td><strong style="color: var(--accent-red);">%42.86</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Erişilebilirlik</strong></td>
+                                            <td>9</td>
+                                            <td style="color: var(--accent-green); font-weight: 600;">4</td>
+                                            <td style="color: var(--accent-red); font-weight: 600;">5</td>
+                                            <td>0</td>
+                                            <td><strong style="color: var(--accent-red);">%44.44</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Hesap ve Kimlik</strong></td>
+                                            <td>12</td>
+                                            <td style="color: var(--accent-green); font-weight: 600;">5</td>
+                                            <td style="color: var(--accent-red); font-weight: 600;">6</td>
+                                            <td>1</td>
+                                            <td><strong style="color: var(--accent-red);">%45.45</strong></td>
                                         </tr>
                                         <tr>
                                             <td><strong>Sepet Aksiyonları</strong></td>
@@ -1900,14 +1900,6 @@
                         <td><strong style="color: var(--accent-red);">%0.0</strong></td>
                     </tr>
                     <tr>
-                        <td><strong>Müşteri Hizmetleri</strong></td>
-                        <td>15</td>
-                        <td style="color: var(--accent-green);">0</td>
-                        <td style="color: var(--accent-red);">10</td>
-                        <td>5</td>
-                        <td><strong style="color: var(--accent-red);">%0.0</strong></td>
-                    </tr>
-                    <tr>
                         <td><strong>Hata ve İstisna Akışları</strong></td>
                         <td>36</td>
                         <td style="color: var(--accent-green);">0</td>
@@ -1916,12 +1908,20 @@
                         <td><strong style="color: var(--accent-red);">%0.0</strong></td>
                     </tr>
                     <tr>
+                        <td><strong>Müşteri Hizmetleri</strong></td>
+                        <td>15</td>
+                        <td style="color: var(--accent-green);">2</td>
+                        <td style="color: var(--accent-red);">8</td>
+                        <td>5</td>
+                        <td><strong style="color: var(--accent-red);">%20.0</strong></td>
+                    </tr>
+                    <tr>
                         <td><strong>Ödeme (Checkout)</strong></td>
                         <td>60</td>
-                        <td style="color: var(--accent-green);">13</td>
-                        <td style="color: var(--accent-red);">37</td>
+                        <td style="color: var(--accent-green);">14</td>
+                        <td style="color: var(--accent-red);">36</td>
                         <td>10</td>
-                        <td><strong style="color: var(--accent-red);">%26.0</strong></td>
+                        <td><strong style="color: var(--accent-red);">%28.0</strong></td>
                     </tr>
                     <tr>
                         <td><strong>Yorum ve Soru-Cevap</strong></td>
@@ -1932,20 +1932,20 @@
                         <td><strong style="color: var(--accent-red);">%30.77</strong></td>
                     </tr>
                     <tr>
-                        <td><strong>Hesap ve Kimlik</strong></td>
-                        <td>36</td>
-                        <td style="color: var(--accent-green);">15</td>
-                        <td style="color: var(--accent-red);">15</td>
-                        <td>6</td>
-                        <td><strong style="color: var(--accent-amber);">%50.0</strong></td>
-                    </tr>
-                    <tr>
                         <td><strong>Sipariş Yönetimi</strong></td>
                         <td>39</td>
                         <td style="color: var(--accent-green);">13</td>
                         <td style="color: var(--accent-red);">12</td>
                         <td>14</td>
                         <td><strong style="color: var(--accent-amber);">%52.0</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hesap ve Kimlik</strong></td>
+                        <td>36</td>
+                        <td style="color: var(--accent-green);">17</td>
+                        <td style="color: var(--accent-red);">13</td>
+                        <td>6</td>
+                        <td><strong style="color: var(--accent-amber);">%56.67</strong></td>
                     </tr>
                     <tr>
                         <td><strong>Favoriler ve Listeler</strong></td>
@@ -1974,10 +1974,10 @@
                     <tr>
                         <td><strong>Erişilebilirlik</strong></td>
                         <td>27</td>
-                        <td style="color: var(--accent-green);">16</td>
-                        <td style="color: var(--accent-red);">8</td>
+                        <td style="color: var(--accent-green);">17</td>
+                        <td style="color: var(--accent-red);">7</td>
                         <td>3</td>
-                        <td><strong style="color: var(--accent-amber);">%66.67</strong></td>
+                        <td><strong style="color: var(--accent-amber);">%70.83</strong></td>
                     </tr>
                     <tr>
                         <td><strong>Ürün Detay</strong></td>
@@ -2009,7 +2009,7 @@
 
         <!-- 🚨 FAIL CASES EXPLORER -->
         <div class="card" id="fail-cases-section">
-            <h2>🚨 Başarısız Test Senaryoları & Kök Neden Analizi (166 Fail Case)</h2>
+            <h2>🚨 Başarısız Test Senaryoları & Kök Neden Analizi (160 Fail Case)</h2>
             <div class="card-hint">
                 <span>🔍</span> <span>Tüm pazaryerlerindeki test dokümanlarında tespit edilen hata notları, davranış sapmaları ve kök neden analizleri.</span>
             </div>
@@ -2019,9 +2019,9 @@
                     <input type="text" id="failSearchInput" class="search-input" placeholder="🔍 Test ID, aksiyon adı, sesli komut veya hata notunda ara..." oninput="applyFailFilters()">
                     
                     <div class="segmented-btns">
-                        <button class="seg-btn active" id="btn-mp-all" onclick="setMpFilter('ALL')">Tümü (166)</button>
+                        <button class="seg-btn active" id="btn-mp-all" onclick="setMpFilter('ALL')">Tümü (160)</button>
                         <button class="seg-btn" id="btn-mp-trendyol" onclick="setMpFilter('Trendyol')">Trendyol (71)</button>
-                        <button class="seg-btn" id="btn-mp-hepsi" onclick="setMpFilter('Hepsiburada')">Hepsiburada (80)</button>
+                        <button class="seg-btn" id="btn-mp-hepsi" onclick="setMpFilter('Hepsiburada')">Hepsiburada (74)</button>
                         <button class="seg-btn" id="btn-mp-vegan" onclick="setMpFilter('Vegan Pazaryeri')">Vegan (15)</button>
                     </div>
 
@@ -2076,13 +2076,13 @@
                 <!-- Hızlı Taksonomi Filtre Hapları -->
                 <div class="taxonomy-chips">
                     <span style="font-size: 0.78rem; color: var(--text-muted); align-self: center; margin-right: 0.25rem;">Hızlı Filtre:</span>
-                    <button class="tax-chip" data-ftype="Cart / Checkout Error" onclick="toggleTaxChip(this, 'Cart / Checkout Error')">Cart / Checkout Error <span class="chip-count">48</span></button>
-                    <button class="tax-chip" data-ftype="Action Not Executed / Flow Block" onclick="toggleTaxChip(this, 'Action Not Executed / Flow Block')">Action Not Executed / Flow Block <span class="chip-count">47</span></button>
-                    <button class="tax-chip" data-ftype="Missing Content / UI Failure" onclick="toggleTaxChip(this, 'Missing Content / UI Failure')">Missing Content / UI Failure <span class="chip-count">26</span></button>
-                    <button class="tax-chip" data-ftype="Visual / Multimodal AI Error" onclick="toggleTaxChip(this, 'Visual / Multimodal AI Error')">Visual / Multimodal AI Error <span class="chip-count">10</span></button>
+                    <button class="tax-chip" data-ftype="Cart / Checkout Error" onclick="toggleTaxChip(this, 'Cart / Checkout Error')">Cart / Checkout Error <span class="chip-count">46</span></button>
+                    <button class="tax-chip" data-ftype="Action Not Executed / Flow Block" onclick="toggleTaxChip(this, 'Action Not Executed / Flow Block')">Action Not Executed / Flow Block <span class="chip-count">42</span></button>
+                    <button class="tax-chip" data-ftype="Missing Content / UI Failure" onclick="toggleTaxChip(this, 'Missing Content / UI Failure')">Missing Content / UI Failure <span class="chip-count">29</span></button>
                     <button class="tax-chip" data-ftype="Audio / STT / Hardware Issue" onclick="toggleTaxChip(this, 'Audio / STT / Hardware Issue')">Audio / STT / Hardware Issue <span class="chip-count">9</span></button>
-                    <button class="tax-chip" data-ftype="Context / Reference Error" onclick="toggleTaxChip(this, 'Context / Reference Error')">Context / Reference Error <span class="chip-count">8</span></button>
+                    <button class="tax-chip" data-ftype="Context / Reference Error" onclick="toggleTaxChip(this, 'Context / Reference Error')">Context / Reference Error <span class="chip-count">9</span></button>
                     <button class="tax-chip" data-ftype="Speech Synthesis (TTS) / Prompt Error" onclick="toggleTaxChip(this, 'Speech Synthesis (TTS) / Prompt Error')">Speech Synthesis (TTS) / Prompt Error <span class="chip-count">7</span></button>
+                    <button class="tax-chip" data-ftype="Visual / Multimodal AI Error" onclick="toggleTaxChip(this, 'Visual / Multimodal AI Error')">Visual / Multimodal AI Error <span class="chip-count">7</span></button>
                     <button class="tax-chip" data-ftype="Filter / Search Error" onclick="toggleTaxChip(this, 'Filter / Search Error')">Filter / Search Error <span class="chip-count">6</span></button>
                     <button class="tax-chip" data-ftype="Variant / Parameter Not Detected" onclick="toggleTaxChip(this, 'Variant / Parameter Not Detected')">Variant / Parameter Not Detected <span class="chip-count">3</span></button>
                     <button class="tax-chip" data-ftype="Accessibility / Screen Reader Collision" onclick="toggleTaxChip(this, 'Accessibility / Screen Reader Collision')">Accessibility / Screen Reader Collision <span class="chip-count">2</span></button>
@@ -2091,7 +2091,7 @@
 
             <!-- Sonuç Sayacı -->
             <div style="display: flex; justify-content: space-between; align-items: center; margin: 1rem 0 0.5rem 0; font-size: 0.88rem; color: var(--text-muted);">
-                <div>Gösterilen Hata Sayısı: <strong id="visibleCount" style="color: #fff;">166</strong> / 166</div>
+                <div>Gösterilen Hata Sayısı: <strong id="visibleCount" style="color: #fff;">160</strong> / 160</div>
             </div>
 
             <!-- 1. KART GÖRÜNÜMÜ -->
@@ -2246,7 +2246,7 @@
                      data-section="Navigasyon" 
                      data-ftype="Context / Reference Error" 
                      data-crit="Low" 
-                     data-search="2.1 Ana sayfaya gitme Ana sayfaya git giriş yapmadan gidilen bir sayfadan anasayfaya geri dön dendiğinde giriş yap/üye ol sayfasını yeniden yüklüyor. Eğer giriş yapılmışsa sorunsuz çalışıyor. Navigasyon Context / Reference Error">
+                     data-search="2.1 Ana sayfaya gitme Ana sayfaya git giriş yapmadan gidilen bir sayfadan (örneğin siparişlerim) anasayfaya geri dön dendiğinde giriş yap/üye ol sayfasını yeniden yüklüyor. Eğer giriş yapılmışsa sorunsuz çalışıyor. Navigasyon Context / Reference Error">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -2269,7 +2269,7 @@
                         <div class="reason-header">
                             <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
                         </div>
-                        <div class="reason-text">"giriş yapmadan gidilen bir sayfadan anasayfaya geri dön dendiğinde giriş yap/üye ol sayfasını yeniden yüklüyor. Eğer giriş yapılmışsa sorunsuz çalışıyor."</div>
+                        <div class="reason-text">"giriş yapmadan gidilen bir sayfadan (örneğin siparişlerim) anasayfaya geri dön dendiğinde giriş yap/üye ol sayfasını yeniden yüklüyor. Eğer giriş yapılmışsa sorunsuz çalışıyor."</div>
                     </div>
 
                     <div class="card-footer">
@@ -2282,7 +2282,7 @@
                      data-section="Navigasyon" 
                      data-ftype="Missing Content / UI Failure" 
                      data-crit="Low" 
-                     data-search="2.3 Alt kategoriye inme Vegan peynirler Alt kategorileri listelerken hepsini listeleyemiyor. Saymadığı alt kategorilere yönlendiremiyor görebildiklerine yönlendirebiliyor Navigasyon Missing Content / UI Failure">
+                     data-search="2.3 Alt kategoriye inme Vegan peynirler Alt kategorileri listelerken hepsini listeleyemiyor. Saymadığı alt kategorilere yönlendiremiyor, görebildiklerine yönlendirebiliyor Navigasyon Missing Content / UI Failure">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -2305,7 +2305,7 @@
                         <div class="reason-header">
                             <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
                         </div>
-                        <div class="reason-text">"Alt kategorileri listelerken hepsini listeleyemiyor. Saymadığı alt kategorilere yönlendiremiyor görebildiklerine yönlendirebiliyor"</div>
+                        <div class="reason-text">"Alt kategorileri listelerken hepsini listeleyemiyor. Saymadığı alt kategorilere yönlendiremiyor, görebildiklerine yönlendirebiliyor"</div>
                     </div>
 
                     <div class="card-footer">
@@ -2390,7 +2390,7 @@
                      data-section="Ürün Detay" 
                      data-ftype="Action Not Executed / Flow Block" 
                      data-crit="Medium" 
-                     data-search="4.12 Satıcıya soru sorma Satıcıya soru sormak istiyorum soru cevap kısmını açıyor ama soru sorma kısmına yönlendirmiyor Ürün Detay Action Not Executed / Flow Block">
+                     data-search="4.12 Satıcıya soru sorma Satıcıya soru sormak istiyorum: Bu ürün glutensiz mi? soru cevap kısmını açıyor ama soru sorma kısmına yönlendirmiyor Ürün Detay Action Not Executed / Flow Block">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -2406,7 +2406,7 @@
                     </div>
 
                     <div class="command-box">
-                        <span>🎙️</span> <span><strong>Komut:</strong> <em>"Satıcıya soru sormak istiyorum"</em></span>
+                        <span>🎙️</span> <span><strong>Komut:</strong> <em>"Satıcıya soru sormak istiyorum: Bu ürün glutensiz mi?"</em></span>
                     </div>
 
                     <div class="reason-box">
@@ -2498,7 +2498,7 @@
                      data-section="Yorum ve Soru-Cevap" 
                      data-ftype="Missing Content / UI Failure" 
                      data-crit="Low" 
-                     data-search="4A.2 Faydalı oyunu geri alma Faydalı işaretini kaldır yorumu faydalı veya faydasız bulunca teşekkür ederiz yazısı çıkıp butonlar gittiği için göremiyor Yorum ve Soru-Cevap Missing Content / UI Failure">
+                     data-search="4A.2 Faydalı oyunu geri alma Faydalı işaretini kaldır yorumu faydalı veya faydasız bulunca teşekkür ederiz yazısı çıkıp butonlar gittiği için muhtemelen göremiyor Yorum ve Soru-Cevap Missing Content / UI Failure">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -2521,7 +2521,7 @@
                         <div class="reason-header">
                             <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
                         </div>
-                        <div class="reason-text">"yorumu faydalı veya faydasız bulunca teşekkür ederiz yazısı çıkıp butonlar gittiği için göremiyor"</div>
+                        <div class="reason-text">"yorumu faydalı veya faydasız bulunca teşekkür ederiz yazısı çıkıp butonlar gittiği için muhtemelen göremiyor"</div>
                     </div>
 
                     <div class="card-footer">
@@ -2678,7 +2678,7 @@
                      data-section="Yorum ve Soru-Cevap" 
                      data-ftype="Missing Content / UI Failure" 
                      data-crit="Medium" 
-                     data-search="4A.11 Soru sorma (ürün Q&A) Bu ürün hakkında soru sor: Kaç ay bebek için uygun? soru-cevap kısmına gidiyor satıcıya soru sorma formunu açmıyor sormak istediğin soruyu alıyor aldıktan sonra form alanı bulunamadı diyor Yorum ve Soru-Cevap Missing Content / UI Failure">
+                     data-search="4A.11 Soru sorma (ürün Q&A) Bu ürün hakkında soru sor: Kaç ay bebek için uygun? soru-cevap kısmına gidiyor, satıcıya soru sorma formunu açmıyor, yine de sormak istediğin soruyu alıyor, aldıktan sonra form alanı bulunamadı diyor Yorum ve Soru-Cevap Missing Content / UI Failure">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -2701,7 +2701,7 @@
                         <div class="reason-header">
                             <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
                         </div>
-                        <div class="reason-text">"soru-cevap kısmına gidiyor satıcıya soru sorma formunu açmıyor sormak istediğin soruyu alıyor aldıktan sonra form alanı bulunamadı diyor"</div>
+                        <div class="reason-text">"soru-cevap kısmına gidiyor, satıcıya soru sorma formunu açmıyor, yine de sormak istediğin soruyu alıyor, aldıktan sonra form alanı bulunamadı diyor"</div>
                     </div>
 
                     <div class="card-footer">
@@ -2714,7 +2714,7 @@
                      data-section="Sepet Aksiyonları" 
                      data-ftype="Cart / Checkout Error" 
                      data-crit="Critical" 
-                     data-search="5.7 Sepeti boşaltma Sepeti boşalt sepeti boşaltmayı onayladığım halde sadece bir ürünü çıkarıyor ve kalan ürünler olmasına rağmen sepet boş diyor Sepet Aksiyonları Cart / Checkout Error">
+                     data-search="5.7 Sepeti boşaltma Sepeti boşalt sepeti boşaltmayı onayladığım halde sadece bir ürünü çıkarıyor ve kalan ürünler olmasına rağmen sepet boş diyor. Sepet Aksiyonları Cart / Checkout Error">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -2737,7 +2737,7 @@
                         <div class="reason-header">
                             <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
                         </div>
-                        <div class="reason-text">"sepeti boşaltmayı onayladığım halde sadece bir ürünü çıkarıyor ve kalan ürünler olmasına rağmen sepet boş diyor"</div>
+                        <div class="reason-text">"sepeti boşaltmayı onayladığım halde sadece bir ürünü çıkarıyor ve kalan ürünler olmasına rağmen sepet boş diyor."</div>
                     </div>
 
                     <div class="card-footer">
@@ -2822,7 +2822,7 @@
                      data-section="Sepet Aksiyonları" 
                      data-ftype="Cart / Checkout Error" 
                      data-crit="Low" 
-                     data-search="5.12 Hediye paketi Hediye paketi olsun, Hediye notu ekle İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Sepet Aksiyonları Cart / Checkout Error">
+                     data-search="5.12 Hediye paketi Hediye paketi olsun, Hediye notu ekle: ... İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Sepet Aksiyonları Cart / Checkout Error">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -2838,7 +2838,7 @@
                     </div>
 
                     <div class="command-box">
-                        <span>🎙️</span> <span><strong>Komut:</strong> <em>"Hediye paketi olsun, Hediye notu ekle"</em></span>
+                        <span>🎙️</span> <span><strong>Komut:</strong> <em>"Hediye paketi olsun, Hediye notu ekle: ..."</em></span>
                     </div>
 
                     <div class="reason-box">
@@ -2858,7 +2858,7 @@
                      data-section="Sepet Aksiyonları" 
                      data-ftype="Cart / Checkout Error" 
                      data-crit="Low" 
-                     data-search="5.13 Kargo eşiği sorgusu Bedava kargoya ne kadar kaldı? kargo bedava olmadığı ve ücreti sorunca doğru söylediği halde eşiği sorunca kargo zaten ücretsiz diyor Sepet Aksiyonları Cart / Checkout Error">
+                     data-search="5.13 Kargo eşiği sorgusu Bedava kargoya ne kadar kaldı? kargo bedava olmadığı ve ücreti sorunca doğru söylediği halde eşiği sorunca kargo zaten ücretsiz diyor. Sepet Aksiyonları Cart / Checkout Error">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -2881,7 +2881,7 @@
                         <div class="reason-header">
                             <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
                         </div>
-                        <div class="reason-text">"kargo bedava olmadığı ve ücreti sorunca doğru söylediği halde eşiği sorunca kargo zaten ücretsiz diyor"</div>
+                        <div class="reason-text">"kargo bedava olmadığı ve ücreti sorunca doğru söylediği halde eşiği sorunca kargo zaten ücretsiz diyor."</div>
                     </div>
 
                     <div class="card-footer">
@@ -2894,7 +2894,7 @@
                      data-section="Sepet Aksiyonları" 
                      data-ftype="Cart / Checkout Error" 
                      data-crit="Medium" 
-                     data-search="5.14 Sepetteki fiyat değişikliği Otomatik bildirim İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Sepet Aksiyonları Cart / Checkout Error">
+                     data-search="5.14 Sepetteki fiyat değişikliği Otomatik İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Sepet Aksiyonları Cart / Checkout Error">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -2910,7 +2910,7 @@
                     </div>
 
                     <div class="command-box">
-                        <span>🎙️</span> <span><strong>Komut:</strong> <em>"Otomatik bildirim"</em></span>
+                        <span>🎙️</span> <span><strong>Komut:</strong> <em>"Otomatik"</em></span>
                     </div>
 
                     <div class="reason-box">
@@ -2930,7 +2930,7 @@
                      data-section="Sepet Aksiyonları" 
                      data-ftype="Cart / Checkout Error" 
                      data-crit="Low" 
-                     data-search="5.15 Stok tükenmesi uyarısı Otomatik uyarı İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Sepet Aksiyonları Cart / Checkout Error">
+                     data-search="5.15 Stok tükenmesi uyarısı Otomatik İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Sepet Aksiyonları Cart / Checkout Error">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -2946,7 +2946,7 @@
                     </div>
 
                     <div class="command-box">
-                        <span>🎙️</span> <span><strong>Komut:</strong> <em>"Otomatik uyarı"</em></span>
+                        <span>🎙️</span> <span><strong>Komut:</strong> <em>"Otomatik"</em></span>
                     </div>
 
                     <div class="reason-box">
@@ -2966,7 +2966,7 @@
                      data-section="Ödeme (Checkout)" 
                      data-ftype="Cart / Checkout Error" 
                      data-crit="Critical" 
-                     data-search="6.1 Ödemeye geçme Ödeme yap, Satın al, Siparişi tamamla ödemeye geçmek için onaylanması gereken durumları söylüyor fakat onaylayınca sürekli anlayamadım tekrar eder misiniz diyor Ödeme (Checkout) Cart / Checkout Error">
+                     data-search="6.1 Ödemeye geçme Ödeme yap, Satın al, Siparişi tamamla ödemeye geçmek için onaylanması gereken durumları söylüyor fakat onaylayınca sürekli anlayamadım, tekrar eder misiniz? diyor. Ödeme (Checkout) Cart / Checkout Error">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -2989,7 +2989,7 @@
                         <div class="reason-header">
                             <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
                         </div>
-                        <div class="reason-text">"ödemeye geçmek için onaylanması gereken durumları söylüyor fakat onaylayınca sürekli anlayamadım tekrar eder misiniz diyor"</div>
+                        <div class="reason-text">"ödemeye geçmek için onaylanması gereken durumları söylüyor fakat onaylayınca sürekli anlayamadım, tekrar eder misiniz? diyor."</div>
                     </div>
 
                     <div class="card-footer">
@@ -3000,9 +3000,9 @@
                      data-id="6.2" 
                      data-mp="Hepsiburada" 
                      data-section="Ödeme (Checkout)" 
-                     data-ftype="Cart / Checkout Error" 
+                     data-ftype="Missing Content / UI Failure" 
                      data-crit="Low" 
-                     data-search="6.2 Teslimat adresi seçme Ev adresimi seç, Kayıtlı adreslerimi oku İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Ödeme (Checkout) Cart / Checkout Error">
+                     data-search="6.2 Teslimat adresi seçme Ev adresimi seç, Kayıtlı adreslerimi oku kayıtlı adresi göremiyor Ödeme (Checkout) Missing Content / UI Failure">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -3025,11 +3025,11 @@
                         <div class="reason-header">
                             <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
                         </div>
-                        <div class="reason-text">"İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı."</div>
+                        <div class="reason-text">"kayıtlı adresi göremiyor"</div>
                     </div>
 
                     <div class="card-footer">
-                        <span class="ftype-tag ftype-cart"><span class="ftype-icon">🛒</span><span>Cart / Checkout Error</span></span>
+                        <span class="ftype-tag ftype-content"><span class="ftype-icon">📄</span><span>Missing Content / UI Failure</span></span>
                     </div>
                 </div>
                 <div class="fail-card" 
@@ -3163,42 +3163,6 @@
 
                     <div class="command-box">
                         <span>🎙️</span> <span><strong>Komut:</strong> <em>"Yarın teslim olsun, Teslimat saatlerini oku"</em></span>
-                    </div>
-
-                    <div class="reason-box">
-                        <div class="reason-header">
-                            <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
-                        </div>
-                        <div class="reason-text">"İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı."</div>
-                    </div>
-
-                    <div class="card-footer">
-                        <span class="ftype-tag ftype-cart"><span class="ftype-icon">🛒</span><span>Cart / Checkout Error</span></span>
-                    </div>
-                </div>
-                <div class="fail-card" 
-                     data-id="6.7" 
-                     data-mp="Hepsiburada" 
-                     data-section="Ödeme (Checkout)" 
-                     data-ftype="Cart / Checkout Error" 
-                     data-crit="Low" 
-                     data-search="6.7 Teslimat noktası (PUDO) Kargomatik/mağazadan teslim alayım İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Ödeme (Checkout) Cart / Checkout Error">
-                    
-                    <div class="card-top-bar">
-                        <div style="display: flex; align-items: center; gap: 0.5rem;">
-                            <span class="test-id-pill">#6.7</span>
-                            <span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span>
-                        </div>
-                        <span class="crit-badge crit-low">● Low</span>
-                    </div>
-
-                    <div>
-                        <div class="card-section-name">📁 Ödeme (Checkout)</div>
-                        <h3 class="card-action-title">Teslimat noktası (PUDO)</h3>
-                    </div>
-
-                    <div class="command-box">
-                        <span>🎙️</span> <span><strong>Komut:</strong> <em>"Kargomatik/mağazadan teslim alayım"</em></span>
                     </div>
 
                     <div class="reason-box">
@@ -3506,7 +3470,7 @@
                      data-section="Ödeme (Checkout)" 
                      data-ftype="Cart / Checkout Error" 
                      data-crit="Low" 
-                     data-search="6.16 3D Secure doğrulama SMS kodu geldi İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Ödeme (Checkout) Cart / Checkout Error">
+                     data-search="6.16 3D Secure doğrulama Otomatik akış İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Ödeme (Checkout) Cart / Checkout Error">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -3522,7 +3486,7 @@
                     </div>
 
                     <div class="command-box">
-                        <span>🎙️</span> <span><strong>Komut:</strong> <em>"SMS kodu geldi"</em></span>
+                        <span>🎙️</span> <span><strong>Komut:</strong> <em>"Otomatik akış"</em></span>
                     </div>
 
                     <div class="reason-box">
@@ -3686,7 +3650,7 @@
                      data-section="Hesap ve Kimlik" 
                      data-ftype="Action Not Executed / Flow Block" 
                      data-crit="Low" 
-                     data-search="7.3 Kayıt olma Üye ol yönlendiriyor ama giriş yap ve üye ol kısımlarını ayırt edemiyor sonrasına yönlendiremiyor Hesap ve Kimlik Action Not Executed / Flow Block">
+                     data-search="7.3 Kayıt olma Üye ol yönlendiriyor ama giriş yap ve üye ol kısımlarını ayırt edemiyor yönlendiremiyor sonrasına Hesap ve Kimlik Action Not Executed / Flow Block">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -3709,7 +3673,7 @@
                         <div class="reason-header">
                             <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
                         </div>
-                        <div class="reason-text">"yönlendiriyor ama giriş yap ve üye ol kısımlarını ayırt edemiyor sonrasına yönlendiremiyor"</div>
+                        <div class="reason-text">"yönlendiriyor ama giriş yap ve üye ol kısımlarını ayırt edemiyor yönlendiremiyor sonrasına"</div>
                     </div>
 
                     <div class="card-footer">
@@ -3758,7 +3722,7 @@
                      data-section="Hesap ve Kimlik" 
                      data-ftype="Action Not Executed / Flow Block" 
                      data-crit="Low" 
-                     data-search="7.7 Profil güncelleme Telefon numaramı değiştir doğrudan ben yapamam diyor ve görme engellinin yapamayacağı şekilde sayfadaki ad alanını bulup yazın önerisi veriyor. Doğum tarihini güncellemediği halde güncelledim diyor Hesap ve Kimlik Action Not Executed / Flow Block">
+                     data-search="7.7 Profil güncelleme Telefon numaramı değiştir yapabiliyordu bozulmuş doğrudan ben yapamam diyor ve bir görme engelli kullanıcının yapamayacağı bir şey öneriyor: Adınızı Yavuz olarak güncellemek için profil bilgilerinizi düzenlemeniz gerekiyor. Lütfen sayfadaki Ad alanını bulup Yavuz yazın ve ardından Kaydet butonuna basın. Ben doğrudan profil bilgilerinizi sistem üzerinden değiştiremiyorum. / doğum tarihini güncellemediği halde güncellemiş gibi söylüyor Hesap ve Kimlik Action Not Executed / Flow Block">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -3781,7 +3745,7 @@
                         <div class="reason-header">
                             <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
                         </div>
-                        <div class="reason-text">"doğrudan ben yapamam diyor ve görme engellinin yapamayacağı şekilde sayfadaki ad alanını bulup yazın önerisi veriyor. Doğum tarihini güncellemediği halde güncelledim diyor"</div>
+                        <div class="reason-text">"yapabiliyordu bozulmuş doğrudan ben yapamam diyor ve bir görme engelli kullanıcının yapamayacağı bir şey öneriyor: Adınızı Yavuz olarak güncellemek için profil bilgilerinizi düzenlemeniz gerekiyor. Lütfen sayfadaki Ad alanını bulup Yavuz yazın ve ardından Kaydet butonuna basın. Ben doğrudan profil bilgilerinizi sistem üzerinden değiştiremiyorum. / doğum tarihini güncellemediği halde güncellemiş gibi söylüyor"</div>
                     </div>
 
                     <div class="card-footer">
@@ -3792,9 +3756,9 @@
                      data-id="7.8" 
                      data-mp="Hepsiburada" 
                      data-section="Hesap ve Kimlik" 
-                     data-ftype="Action Not Executed / Flow Block" 
+                     data-ftype="Missing Content / UI Failure" 
                      data-crit="Low" 
-                     data-search="7.8 Adres yönetimi Adreslerimi listele, İş adresimi sil İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Hesap ve Kimlik Action Not Executed / Flow Block">
+                     data-search="7.8 Adres yönetimi Adreslerimi listele, İş adresimi sil kayıtlı olarak görünen adresi göremedi ve yeni adres formunu da açamadı. Hesap ve Kimlik Missing Content / UI Failure">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -3817,43 +3781,7 @@
                         <div class="reason-header">
                             <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
                         </div>
-                        <div class="reason-text">"İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı."</div>
-                    </div>
-
-                    <div class="card-footer">
-                        <span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span>
-                    </div>
-                </div>
-                <div class="fail-card" 
-                     data-id="7.9" 
-                     data-mp="Hepsiburada" 
-                     data-section="Hesap ve Kimlik" 
-                     data-ftype="Missing Content / UI Failure" 
-                     data-crit="Critical" 
-                     data-search="7.9 Kayıtlı kart yönetimi Kartlarımı listele, Sonu 1234'ü sil İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Hesap ve Kimlik Missing Content / UI Failure">
-                    
-                    <div class="card-top-bar">
-                        <div style="display: flex; align-items: center; gap: 0.5rem;">
-                            <span class="test-id-pill">#7.9</span>
-                            <span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span>
-                        </div>
-                        <span class="crit-badge crit-critical">● Critical</span>
-                    </div>
-
-                    <div>
-                        <div class="card-section-name">📁 Hesap ve Kimlik</div>
-                        <h3 class="card-action-title">Kayıtlı kart yönetimi</h3>
-                    </div>
-
-                    <div class="command-box">
-                        <span>🎙️</span> <span><strong>Komut:</strong> <em>"Kartlarımı listele, Sonu 1234'ü sil"</em></span>
-                    </div>
-
-                    <div class="reason-box">
-                        <div class="reason-header">
-                            <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
-                        </div>
-                        <div class="reason-text">"İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı."</div>
+                        <div class="reason-text">"kayıtlı olarak görünen adresi göremedi ve yeni adres formunu da açamadı."</div>
                     </div>
 
                     <div class="card-footer">
@@ -3866,7 +3794,7 @@
                      data-section="Hesap ve Kimlik" 
                      data-ftype="Action Not Executed / Flow Block" 
                      data-crit="Low" 
-                     data-search="7.10 Bildirim tercihleri Kampanya e-postalarını kapat İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Hesap ve Kimlik Action Not Executed / Flow Block">
+                     data-search="7.10 Bildirim tercihleri Kampanya e-postalarını kapat iletişim seçeneklerim sayfasında değilken bunu istediğimde e-posta maddesini inaktif yaptı ama iletişim seçeneklerim sayfasındayken bu ayarları düzenlemeye erişimim yok dedi. Hesap ve Kimlik Action Not Executed / Flow Block">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -3889,47 +3817,11 @@
                         <div class="reason-header">
                             <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
                         </div>
-                        <div class="reason-text">"İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı."</div>
+                        <div class="reason-text">"iletişim seçeneklerim sayfasında değilken bunu istediğimde e-posta maddesini inaktif yaptı ama iletişim seçeneklerim sayfasındayken bu ayarları düzenlemeye erişimim yok dedi."</div>
                     </div>
 
                     <div class="card-footer">
                         <span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span>
-                    </div>
-                </div>
-                <div class="fail-card" 
-                     data-id="7.11" 
-                     data-mp="Hepsiburada" 
-                     data-section="Hesap ve Kimlik" 
-                     data-ftype="Missing Content / UI Failure" 
-                     data-crit="Low" 
-                     data-search="7.11 Kişisel verileri sorma Hakkımda hangi veriler var? (KVKK) İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Hesap ve Kimlik Missing Content / UI Failure">
-                    
-                    <div class="card-top-bar">
-                        <div style="display: flex; align-items: center; gap: 0.5rem;">
-                            <span class="test-id-pill">#7.11</span>
-                            <span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span>
-                        </div>
-                        <span class="crit-badge crit-low">● Low</span>
-                    </div>
-
-                    <div>
-                        <div class="card-section-name">📁 Hesap ve Kimlik</div>
-                        <h3 class="card-action-title">Kişisel verileri sorma</h3>
-                    </div>
-
-                    <div class="command-box">
-                        <span>🎙️</span> <span><strong>Komut:</strong> <em>"Hakkımda hangi veriler var? (KVKK)"</em></span>
-                    </div>
-
-                    <div class="reason-box">
-                        <div class="reason-header">
-                            <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
-                        </div>
-                        <div class="reason-text">"İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı."</div>
-                    </div>
-
-                    <div class="card-footer">
-                        <span class="ftype-tag ftype-content"><span class="ftype-icon">📄</span><span>Missing Content / UI Failure</span></span>
                     </div>
                 </div>
                 <div class="fail-card" 
@@ -3974,7 +3866,7 @@
                      data-section="Sipariş Yönetimi" 
                      data-ftype="Action Not Executed / Flow Block" 
                      data-crit="Low" 
-                     data-search="8.2 Kargo takibi Kargom nerede?, 78901 numaralı siparişi takip et test edemedim Sipariş Yönetimi Action Not Executed / Flow Block">
+                     data-search="8.2 Kargo takibi Kargom nerede?, 78901 numaralı siparişi takip et kargo takibi sayfasını açıyor, şuanki güncel durum dışındaki bilgileri doğru söylüyor. Güncel durum olarak kargoya verildi görünmesine rağmen transfer sürecinde olduğunu söyledi Sipariş Yönetimi Action Not Executed / Flow Block">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -3997,7 +3889,7 @@
                         <div class="reason-header">
                             <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
                         </div>
-                        <div class="reason-text">"test edemedim"</div>
+                        <div class="reason-text">"kargo takibi sayfasını açıyor, şuanki güncel durum dışındaki bilgileri doğru söylüyor. Güncel durum olarak kargoya verildi görünmesine rağmen transfer sürecinde olduğunu söyledi"</div>
                     </div>
 
                     <div class="card-footer">
@@ -4046,7 +3938,7 @@
                      data-section="Sipariş Yönetimi" 
                      data-ftype="Action Not Executed / Flow Block" 
                      data-crit="Low" 
-                     data-search="8.5 İade başlatma Bu ürünü iade etmek istiyorum sipariş detayındaki o tuşa tıklayamıyor Sipariş Yönetimi Action Not Executed / Flow Block">
+                     data-search="8.5 İade başlatma Bu ürünü iade etmek istiyorum o tuşa tıklayamıyor sipariş detayındaki Sipariş Yönetimi Action Not Executed / Flow Block">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -4069,7 +3961,7 @@
                         <div class="reason-header">
                             <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
                         </div>
-                        <div class="reason-text">"sipariş detayındaki o tuşa tıklayamıyor"</div>
+                        <div class="reason-text">"o tuşa tıklayamıyor sipariş detayındaki"</div>
                     </div>
 
                     <div class="card-footer">
@@ -4082,7 +3974,7 @@
                      data-section="Sipariş Yönetimi" 
                      data-ftype="Action Not Executed / Flow Block" 
                      data-crit="Low" 
-                     data-search="8.6 Değişim talebi Bedenini değiştirmek istiyorum İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Sipariş Yönetimi Action Not Executed / Flow Block">
+                     data-search="8.6 Değişim talebi Bedenini değiştirmek istiyorum iade ve diğer işlemler kısmına gidemediği için yine önce siparişin detayını açın diyor, açık olduğu halde. Sipariş Yönetimi Action Not Executed / Flow Block">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -4105,7 +3997,7 @@
                         <div class="reason-header">
                             <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
                         </div>
-                        <div class="reason-text">"İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı."</div>
+                        <div class="reason-text">"iade ve diğer işlemler kısmına gidemediği için yine önce siparişin detayını açın diyor, açık olduğu halde."</div>
                     </div>
 
                     <div class="card-footer">
@@ -4118,7 +4010,7 @@
                      data-section="Sipariş Yönetimi" 
                      data-ftype="Action Not Executed / Flow Block" 
                      data-crit="Low" 
-                     data-search="8.7 İade durumu sorma İadem ne durumda?, Param ne zaman yatar? İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Sipariş Yönetimi Action Not Executed / Flow Block">
+                     data-search="8.7 İade durumu sorma İadem ne durumda?, Param ne zaman yatar? test edemedim Sipariş Yönetimi Action Not Executed / Flow Block">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -4141,7 +4033,7 @@
                         <div class="reason-header">
                             <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
                         </div>
-                        <div class="reason-text">"İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı."</div>
+                        <div class="reason-text">"test edemedim"</div>
                     </div>
 
                     <div class="card-footer">
@@ -4154,7 +4046,7 @@
                      data-section="Sipariş Yönetimi" 
                      data-ftype="Action Not Executed / Flow Block" 
                      data-crit="Low" 
-                     data-search="8.8 Fatura isteme Faturamı e-postama gönder, Faturayı indir faturayı mail olarak isteme akışı çalışmıyor Sipariş Yönetimi Action Not Executed / Flow Block">
+                     data-search="8.8 Fatura isteme Faturamı e-postama gönder, Faturayı indir bence mail olarak yapmayalım bunu - fatura bilgisini açıyor fakat bu ekranda ek bir asistan çıkıyor ve dönüşümlü olarak sürekli dinliyor stage’inde kalıyorlar. Sipariş Yönetimi Action Not Executed / Flow Block">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -4177,7 +4069,7 @@
                         <div class="reason-header">
                             <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
                         </div>
-                        <div class="reason-text">"faturayı mail olarak isteme akışı çalışmıyor"</div>
+                        <div class="reason-text">"bence mail olarak yapmayalım bunu - fatura bilgisini açıyor fakat bu ekranda ek bir asistan çıkıyor ve dönüşümlü olarak sürekli dinliyor stage’inde kalıyorlar."</div>
                     </div>
 
                     <div class="card-footer">
@@ -4190,7 +4082,7 @@
                      data-section="Sipariş Yönetimi" 
                      data-ftype="Action Not Executed / Flow Block" 
                      data-crit="Low" 
-                     data-search="8.9 Tekrar satın alma Geçen ayki siparişimin aynısını ver accountAction: sipariş işlemi bu sayfada yok diyor. Tekrar al seçeneği sipariş detay sayfasında var bunu kullanması gerekiyor Sipariş Yönetimi Action Not Executed / Flow Block">
+                     data-search="8.9 Tekrar satın alma Geçen ayki siparişimin aynısını ver accountAction: sipariş işlemi bu sayfada yok diyor. Tekrar al seçeneği var sipariş detay sayfasında bunu kullanması gerekiyor. Sipariş Yönetimi Action Not Executed / Flow Block">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -4213,7 +4105,7 @@
                         <div class="reason-header">
                             <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
                         </div>
-                        <div class="reason-text">"accountAction: sipariş işlemi bu sayfada yok diyor. Tekrar al seçeneği sipariş detay sayfasında var bunu kullanması gerekiyor"</div>
+                        <div class="reason-text">"accountAction: sipariş işlemi bu sayfada yok diyor. Tekrar al seçeneği var sipariş detay sayfasında bunu kullanması gerekiyor."</div>
                     </div>
 
                     <div class="card-footer">
@@ -4226,7 +4118,7 @@
                      data-section="Sipariş Yönetimi" 
                      data-ftype="Action Not Executed / Flow Block" 
                      data-crit="Low" 
-                     data-search="8.10 Ürün değerlendirme Bu ürüne 5 yıldız ver, Yorum yaz: çok memnun kaldım Sipariş detay sayfasında Ürünü değerlendir tuşu var onunla yapılmalı Sipariş Yönetimi Action Not Executed / Flow Block">
+                     data-search="8.10 Ürün değerlendirme Bu ürüne 5 yıldız ver, Yorum yaz: çok memnun kaldım Sipariş detay sayfasında Ürünü değerlendir tuşu var onunla yapılmalı. Sipariş Yönetimi Action Not Executed / Flow Block">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -4249,7 +4141,7 @@
                         <div class="reason-header">
                             <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
                         </div>
-                        <div class="reason-text">"Sipariş detay sayfasında Ürünü değerlendir tuşu var onunla yapılmalı"</div>
+                        <div class="reason-text">"Sipariş detay sayfasında Ürünü değerlendir tuşu var onunla yapılmalı."</div>
                     </div>
 
                     <div class="card-footer">
@@ -4262,7 +4154,7 @@
                      data-section="Sipariş Yönetimi" 
                      data-ftype="Action Not Executed / Flow Block" 
                      data-crit="Low" 
-                     data-search="8.11 Satıcıyı değerlendirme Satıcıya puan ver İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Sipariş Yönetimi Action Not Executed / Flow Block">
+                     data-search="8.11 Satıcıyı değerlendirme Satıcıya puan ver satıcı profiline gidiyor, değerlendirmeleri ve bilgileri doğru şekilde söylüyor ama puan vermek istiyorum dediğimde doğrudan bir puan verme veya yıldız verme işlemini gerçekleştiremiyorum diyor. Sipariş Yönetimi Action Not Executed / Flow Block">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -4285,7 +4177,7 @@
                         <div class="reason-header">
                             <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
                         </div>
-                        <div class="reason-text">"İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı."</div>
+                        <div class="reason-text">"satıcı profiline gidiyor, değerlendirmeleri ve bilgileri doğru şekilde söylüyor ama puan vermek istiyorum dediğimde doğrudan bir puan verme veya yıldız verme işlemini gerçekleştiremiyorum diyor."</div>
                     </div>
 
                     <div class="card-footer">
@@ -4296,9 +4188,9 @@
                      data-id="8.12" 
                      data-mp="Hepsiburada" 
                      data-section="Sipariş Yönetimi" 
-                     data-ftype="Action Not Executed / Flow Block" 
+                     data-ftype="Missing Content / UI Failure" 
                      data-crit="Medium" 
-                     data-search="8.12 Teslimat sorunu bildirme Kargom gelmedi, Ürün hasarlı geldi İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Sipariş Yönetimi Action Not Executed / Flow Block">
+                     data-search="8.12 Teslimat sorunu bildirme Kargom gelmedi, Ürün hasarlı geldi ilgili ürünün sipariş detayı açık olduğu halde önce detayını açın diyor ayrıca iade ve diğer talepler göremiyor ve açamıyor. Sipariş Yönetimi Missing Content / UI Failure">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -4321,20 +4213,20 @@
                         <div class="reason-header">
                             <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
                         </div>
-                        <div class="reason-text">"İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı."</div>
+                        <div class="reason-text">"ilgili ürünün sipariş detayı açık olduğu halde önce detayını açın diyor ayrıca iade ve diğer talepler göremiyor ve açamıyor."</div>
                     </div>
 
                     <div class="card-footer">
-                        <span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span>
+                        <span class="ftype-tag ftype-content"><span class="ftype-icon">📄</span><span>Missing Content / UI Failure</span></span>
                     </div>
                 </div>
                 <div class="fail-card" 
                      data-id="8.13" 
                      data-mp="Hepsiburada" 
                      data-section="Sipariş Yönetimi" 
-                     data-ftype="Action Not Executed / Flow Block" 
+                     data-ftype="Missing Content / UI Failure" 
                      data-crit="Low" 
-                     data-search="8.13 Eksik/yanlış ürün bildirimi Yanlış ürün gelmiş İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Sipariş Yönetimi Action Not Executed / Flow Block">
+                     data-search="8.13 Eksik/yanlış ürün bildirimi Yanlış ürün gelmiş ilgili ürünün sipariş detayı açık olduğu halde iade ve diğer talepler göremiyor ve açamıyor. Sipariş Yönetimi Missing Content / UI Failure">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -4357,11 +4249,11 @@
                         <div class="reason-header">
                             <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
                         </div>
-                        <div class="reason-text">"İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı."</div>
+                        <div class="reason-text">"ilgili ürünün sipariş detayı açık olduğu halde iade ve diğer talepler göremiyor ve açamıyor."</div>
                     </div>
 
                     <div class="card-footer">
-                        <span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span>
+                        <span class="ftype-tag ftype-content"><span class="ftype-icon">📄</span><span>Missing Content / UI Failure</span></span>
                     </div>
                 </div>
                 <div class="fail-card" 
@@ -4406,7 +4298,7 @@
                      data-section="Favoriler ve Listeler" 
                      data-ftype="Action Not Executed / Flow Block" 
                      data-crit="Low" 
-                     data-search="9.4 Liste oluşturma Doğum günü listesi oluştur sayfaya gitsek bile liste oluşturamıyor Favoriler ve Listeler Action Not Executed / Flow Block">
+                     data-search="9.4 Liste oluşturma Doğum günü listesi oluştur yapamıyor sayfaya gitsek bile oluşturamıyor. Favoriler ve Listeler Action Not Executed / Flow Block">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -4429,7 +4321,7 @@
                         <div class="reason-header">
                             <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
                         </div>
-                        <div class="reason-text">"sayfaya gitsek bile liste oluşturamıyor"</div>
+                        <div class="reason-text">"yapamıyor sayfaya gitsek bile oluşturamıyor."</div>
                     </div>
 
                     <div class="card-footer">
@@ -4442,7 +4334,7 @@
                      data-section="Favoriler ve Listeler" 
                      data-ftype="Action Not Executed / Flow Block" 
                      data-crit="Low" 
-                     data-search="9.5 Listeye ekleme Bunu doğum günü listeme ekle liste oluşturulamadığı için eklenemiyor Favoriler ve Listeler Action Not Executed / Flow Block">
+                     data-search="9.5 Listeye ekleme Bunu doğum günü listeme ekle liste oluşturamadık Favoriler ve Listeler Action Not Executed / Flow Block">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -4465,7 +4357,7 @@
                         <div class="reason-header">
                             <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
                         </div>
-                        <div class="reason-text">"liste oluşturulamadığı için eklenemiyor"</div>
+                        <div class="reason-text">"liste oluşturamadık"</div>
                     </div>
 
                     <div class="card-footer">
@@ -4478,7 +4370,7 @@
                      data-section="Favoriler ve Listeler" 
                      data-ftype="Action Not Executed / Flow Block" 
                      data-crit="Low" 
-                     data-search="9.6 Liste paylaşma Listemi paylaş liste oluşturulamadığı için paylaşılamıyor Favoriler ve Listeler Action Not Executed / Flow Block">
+                     data-search="9.6 Liste paylaşma Listemi paylaş liste oluşturamadık Favoriler ve Listeler Action Not Executed / Flow Block">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -4501,79 +4393,7 @@
                         <div class="reason-header">
                             <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
                         </div>
-                        <div class="reason-text">"liste oluşturulamadığı için paylaşılamıyor"</div>
-                    </div>
-
-                    <div class="card-footer">
-                        <span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span>
-                    </div>
-                </div>
-                <div class="fail-card" 
-                     data-id="11.1" 
-                     data-mp="Hepsiburada" 
-                     data-section="Müşteri Hizmetleri" 
-                     data-ftype="Action Not Executed / Flow Block" 
-                     data-crit="Low" 
-                     data-search="11.1 SSS sorgulama Kargo kaç günde gelir?, İade süresi ne kadar? ürün sayfasında kargo bilgisi var aslında teslimat seçenekleri kısmında okuyamıyor Müşteri Hizmetleri Action Not Executed / Flow Block">
-                    
-                    <div class="card-top-bar">
-                        <div style="display: flex; align-items: center; gap: 0.5rem;">
-                            <span class="test-id-pill">#11.1</span>
-                            <span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span>
-                        </div>
-                        <span class="crit-badge crit-low">● Low</span>
-                    </div>
-
-                    <div>
-                        <div class="card-section-name">📁 Müşteri Hizmetleri</div>
-                        <h3 class="card-action-title">SSS sorgulama</h3>
-                    </div>
-
-                    <div class="command-box">
-                        <span>🎙️</span> <span><strong>Komut:</strong> <em>"Kargo kaç günde gelir?, İade süresi ne kadar?"</em></span>
-                    </div>
-
-                    <div class="reason-box">
-                        <div class="reason-header">
-                            <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
-                        </div>
-                        <div class="reason-text">"ürün sayfasında kargo bilgisi var aslında teslimat seçenekleri kısmında okuyamıyor"</div>
-                    </div>
-
-                    <div class="card-footer">
-                        <span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span>
-                    </div>
-                </div>
-                <div class="fail-card" 
-                     data-id="11.2" 
-                     data-mp="Hepsiburada" 
-                     data-section="Müşteri Hizmetleri" 
-                     data-ftype="Action Not Executed / Flow Block" 
-                     data-crit="Low" 
-                     data-search="11.2 Canlı desteğe bağlanma Canlı destek, Bir insanla görüşmek istiyorum satıcıyla iletişime yönlendiriyorum dedi yönlendirmedi Müşteri Hizmetleri Action Not Executed / Flow Block">
-                    
-                    <div class="card-top-bar">
-                        <div style="display: flex; align-items: center; gap: 0.5rem;">
-                            <span class="test-id-pill">#11.2</span>
-                            <span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span>
-                        </div>
-                        <span class="crit-badge crit-low">● Low</span>
-                    </div>
-
-                    <div>
-                        <div class="card-section-name">📁 Müşteri Hizmetleri</div>
-                        <h3 class="card-action-title">Canlı desteğe bağlanma</h3>
-                    </div>
-
-                    <div class="command-box">
-                        <span>🎙️</span> <span><strong>Komut:</strong> <em>"Canlı destek, Bir insanla görüşmek istiyorum"</em></span>
-                    </div>
-
-                    <div class="reason-box">
-                        <div class="reason-header">
-                            <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
-                        </div>
-                        <div class="reason-text">"satıcıyla iletişime yönlendiriyorum dedi yönlendirmedi"</div>
+                        <div class="reason-text">"liste oluşturamadık"</div>
                     </div>
 
                     <div class="card-footer">
@@ -4584,9 +4404,9 @@
                      data-id="11.3" 
                      data-mp="Hepsiburada" 
                      data-section="Müşteri Hizmetleri" 
-                     data-ftype="Action Not Executed / Flow Block" 
+                     data-ftype="Context / Reference Error" 
                      data-crit="Low" 
-                     data-search="11.3 Destek talebi oluşturma Şikayet oluşturmak istiyorum yönlendiriyorum dedi yönlendirmedi. Tam nereye yönlendireceğini bilemiyor Müşteri Hizmetleri Action Not Executed / Flow Block">
+                     data-search="11.3 Destek talebi oluşturma Şikayet oluşturmak istiyorum şikayet için iptal/iade ve diğer talepler sayfasına yönlendirmem gerekiyor dedi ama sonra bunu arama çubuğuna yazıp ürünleri okudu Müşteri Hizmetleri Context / Reference Error">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -4609,11 +4429,11 @@
                         <div class="reason-header">
                             <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
                         </div>
-                        <div class="reason-text">"yönlendiriyorum dedi yönlendirmedi. Tam nereye yönlendireceğini bilemiyor"</div>
+                        <div class="reason-text">"şikayet için iptal/iade ve diğer talepler sayfasına yönlendirmem gerekiyor dedi ama sonra bunu arama çubuğuna yazıp ürünleri okudu"</div>
                     </div>
 
                     <div class="card-footer">
-                        <span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span>
+                        <span class="ftype-tag ftype-context"><span class="ftype-icon">🧠</span><span>Context / Reference Error</span></span>
                     </div>
                 </div>
                 <div class="fail-card" 
@@ -4658,7 +4478,7 @@
                      data-section="Müşteri Hizmetleri" 
                      data-ftype="Action Not Executed / Flow Block" 
                      data-crit="Low" 
-                     data-search="11.5 Geri bildirim verme Site hakkında geri bildirim vereceğim İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı. Müşteri Hizmetleri Action Not Executed / Flow Block">
+                     data-search="11.5 Geri bildirim verme Site hakkında geri bildirim vereceğim site hakkında geri bildirim vereceğim dediğimde soru ve taleplerim kısmına götürdü fakat sonra yeni bir talep oluşturmak istiyorum dediğimde tekrar aynı yeri açtı. Müşteri Hizmetleri Action Not Executed / Flow Block">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -4681,7 +4501,7 @@
                         <div class="reason-header">
                             <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
                         </div>
-                        <div class="reason-text">"İşlem gerçekleştirilemedi / beklenen akış tamamlanamadı."</div>
+                        <div class="reason-text">"site hakkında geri bildirim vereceğim dediğimde soru ve taleplerim kısmına götürdü fakat sonra yeni bir talep oluşturmak istiyorum dediğimde tekrar aynı yeri açtı."</div>
                     </div>
 
                     <div class="card-footer">
@@ -4692,9 +4512,9 @@
                      data-id="12.1" 
                      data-mp="Hepsiburada" 
                      data-section="Erişilebilirlik" 
-                     data-ftype="Visual / Multimodal AI Error" 
+                     data-ftype="Missing Content / UI Failure" 
                      data-crit="Low" 
-                     data-search="12.1 Sayfa yapısını okuma Sayfayı tarif et tüm kısımları okuyamıyor sayfaya tam hakimiyeti yok burada manuel fix geçelim Erişilebilirlik Visual / Multimodal AI Error">
+                     data-search="12.1 Sayfa yapısını okuma Sayfayı tarif et çoğu bilgiyi doğru söylüyor ama kargo firması ve sağ üstte yer alan kampanyaları (premium, 300tl üzeri kargo bedava gibi) göremiyor Erişilebilirlik Missing Content / UI Failure">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -4717,47 +4537,11 @@
                         <div class="reason-header">
                             <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
                         </div>
-                        <div class="reason-text">"tüm kısımları okuyamıyor sayfaya tam hakimiyeti yok burada manuel fix geçelim"</div>
+                        <div class="reason-text">"çoğu bilgiyi doğru söylüyor ama kargo firması ve sağ üstte yer alan kampanyaları (premium, 300tl üzeri kargo bedava gibi) göremiyor"</div>
                     </div>
 
                     <div class="card-footer">
-                        <span class="ftype-tag ftype-visual"><span class="ftype-icon">👁️</span><span>Visual / Multimodal AI Error</span></span>
-                    </div>
-                </div>
-                <div class="fail-card" 
-                     data-id="12.2" 
-                     data-mp="Hepsiburada" 
-                     data-section="Erişilebilirlik" 
-                     data-ftype="Visual / Multimodal AI Error" 
-                     data-crit="Low" 
-                     data-search="12.2 Görsel betimleme (genel) Bu görselde ne var? değerlendirmelerim kısmına götürüyor. Bu görselin betimlemesi bulunmuyor diyor Erişilebilirlik Visual / Multimodal AI Error">
-                    
-                    <div class="card-top-bar">
-                        <div style="display: flex; align-items: center; gap: 0.5rem;">
-                            <span class="test-id-pill">#12.2</span>
-                            <span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span>
-                        </div>
-                        <span class="crit-badge crit-low">● Low</span>
-                    </div>
-
-                    <div>
-                        <div class="card-section-name">📁 Erişilebilirlik</div>
-                        <h3 class="card-action-title">Görsel betimleme (genel)</h3>
-                    </div>
-
-                    <div class="command-box">
-                        <span>🎙️</span> <span><strong>Komut:</strong> <em>"Bu görselde ne var?"</em></span>
-                    </div>
-
-                    <div class="reason-box">
-                        <div class="reason-header">
-                            <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
-                        </div>
-                        <div class="reason-text">"değerlendirmelerim kısmına götürüyor. Bu görselin betimlemesi bulunmuyor diyor"</div>
-                    </div>
-
-                    <div class="card-footer">
-                        <span class="ftype-tag ftype-visual"><span class="ftype-icon">👁️</span><span>Visual / Multimodal AI Error</span></span>
+                        <span class="ftype-tag ftype-content"><span class="ftype-icon">📄</span><span>Missing Content / UI Failure</span></span>
                     </div>
                 </div>
                 <div class="fail-card" 
@@ -4766,7 +4550,7 @@
                      data-section="Erişilebilirlik" 
                      data-ftype="Visual / Multimodal AI Error" 
                      data-crit="Low" 
-                     data-search="12.4 Onay modu ayarı Her şeyi onaylatma, Sadece ödemede sor Yaparım diyor ama onay istedi yine Erişilebilirlik Visual / Multimodal AI Error">
+                     data-search="12.4 Onay modu ayarı Her şeyi onaylatma, sadece ödemede sor Yaparım diyor ama onay istedi yine Erişilebilirlik Visual / Multimodal AI Error">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -4782,7 +4566,7 @@
                     </div>
 
                     <div class="command-box">
-                        <span>🎙️</span> <span><strong>Komut:</strong> <em>"Her şeyi onaylatma, Sadece ödemede sor"</em></span>
+                        <span>🎙️</span> <span><strong>Komut:</strong> <em>"Her şeyi onaylatma, sadece ödemede sor"</em></span>
                     </div>
 
                     <div class="reason-box">
@@ -4800,9 +4584,9 @@
                      data-id="12.5" 
                      data-mp="Hepsiburada" 
                      data-section="Erişilebilirlik" 
-                     data-ftype="Visual / Multimodal AI Error" 
+                     data-ftype="Action Not Executed / Flow Block" 
                      data-crit="Low" 
-                     data-search="12.5 Yazı boyutu/kontrast Yazıları büyüt, Yüksek kontrast aç sadece yazı boyutunu değiştirebiliyor Erişilebilirlik Visual / Multimodal AI Error">
+                     data-search="12.5 Yazı boyutu/kontrast Yazıları büyüt, Yüksek kontrast aç yazı boyutunu, gece modunu ve yüksek kontrastı açıp kapatabiliyor, bunların dışındakileri yapamıyor Erişilebilirlik Action Not Executed / Flow Block">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -4825,11 +4609,11 @@
                         <div class="reason-header">
                             <span>🚨</span> <span>Tespit Edilen Hata Açıklaması:</span>
                         </div>
-                        <div class="reason-text">"sadece yazı boyutunu değiştirebiliyor"</div>
+                        <div class="reason-text">"yazı boyutunu, gece modunu ve yüksek kontrastı açıp kapatabiliyor, bunların dışındakileri yapamıyor"</div>
                     </div>
 
                     <div class="card-footer">
-                        <span class="ftype-tag ftype-visual"><span class="ftype-icon">👁️</span><span>Visual / Multimodal AI Error</span></span>
+                        <span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span>
                     </div>
                 </div>
                 <div class="fail-card" 
@@ -4874,7 +4658,7 @@
                      data-section="Erişilebilirlik" 
                      data-ftype="Audio / STT / Hardware Issue" 
                      data-crit="Low" 
-                     data-search="12.7 Sesli dikte düzeltme Hayır, kablo değil kakao dedim araya girip söyleyemiyoruz cevabın bitmesini beklememiz gerekiyor Erişilebilirlik Audio / STT / Hardware Issue">
+                     data-search="12.7 Sesli dikte düzeltme Hayır, 'kablo' değil 'kakao' dedim araya girip söyleyemiyoruz cevabın bitmesini beklememiz gerekiyor Erişilebilirlik Audio / STT / Hardware Issue">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -4890,7 +4674,7 @@
                     </div>
 
                     <div class="command-box">
-                        <span>🎙️</span> <span><strong>Komut:</strong> <em>"Hayır, kablo değil kakao dedim"</em></span>
+                        <span>🎙️</span> <span><strong>Komut:</strong> <em>"Hayır, 'kablo' değil 'kakao' dedim"</em></span>
                     </div>
 
                     <div class="reason-box">
@@ -4946,7 +4730,7 @@
                      data-section="Hata ve İstisna Akışları" 
                      data-ftype="Action Not Executed / Flow Block" 
                      data-crit="Low" 
-                     data-search="13.2 Seçilen varyant yok 42 numara mavi kalmamış Ürünün kalmadığını anlamadı ama seçebildi Hata ve İstisna Akışları Action Not Executed / Flow Block">
+                     data-search="13.2 Seçilen varyant yok 42 numara mavi kalmamış, siyahı var Ürünün kalmadığını anlamadı ama seçebildi Hata ve İstisna Akışları Action Not Executed / Flow Block">
                     
                     <div class="card-top-bar">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -4962,7 +4746,7 @@
                     </div>
 
                     <div class="command-box">
-                        <span>🎙️</span> <span><strong>Komut:</strong> <em>"42 numara mavi kalmamış"</em></span>
+                        <span>🎙️</span> <span><strong>Komut:</strong> <em>"42 numara mavi kalmamış, siyahı var"</em></span>
                     </div>
 
                     <div class="reason-box">
@@ -8150,13 +7934,13 @@
                             data-section="Navigasyon" 
                             data-ftype="Context / Reference Error" 
                             data-crit="Low" 
-                            data-search="2.1 Ana sayfaya gitme Ana sayfaya git giriş yapmadan gidilen bir sayfadan anasayfaya geri dön dendiğinde giriş yap/üye ol sayfasını yeniden yüklüyor. Eğer giriş yapılmışsa sorunsuz çalışıyor. Navigasyon Context / Reference Error">
+                            data-search="2.1 Ana sayfaya gitme Ana sayfaya git giriş yapmadan gidilen bir sayfadan (örneğin siparişlerim) anasayfaya geri dön dendiğinde giriş yap/üye ol sayfasını yeniden yüklüyor. Eğer giriş yapılmışsa sorunsuz çalışıyor. Navigasyon Context / Reference Error">
                             <td class="col-id"><span class="test-id-pill">#2.1</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Navigasyon</td>
                             <td class="col-action"><strong>Ana sayfaya gitme</strong></td>
                             <td class="col-type"><span class="ftype-tag ftype-context"><span class="ftype-icon">🧠</span><span>Context / Reference Error</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>giriş yapmadan gidilen bir sayfadan anasayfaya geri dön dendiğinde giriş yap/üye ol sayfasını yeniden yüklüyor. Eğer giriş yapılmışsa sorunsuz çalışıyor.</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>giriş yapmadan gidilen bir sayfadan (örneğin siparişlerim) anasayfaya geri dön dendiğinde giriş yap/üye ol sayfasını yeniden yüklüyor. Eğer giriş yapılmışsa sorunsuz çalışıyor.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="2.3" 
@@ -8164,13 +7948,13 @@
                             data-section="Navigasyon" 
                             data-ftype="Missing Content / UI Failure" 
                             data-crit="Low" 
-                            data-search="2.3 Alt kategoriye inme Vegan peynirler Alt kategorileri listelerken hepsini listeleyemiyor. Saymadığı alt kategorilere yönlendiremiyor görebildiklerine yönlendirebiliyor Navigasyon Missing Content / UI Failure">
+                            data-search="2.3 Alt kategoriye inme Vegan peynirler Alt kategorileri listelerken hepsini listeleyemiyor. Saymadığı alt kategorilere yönlendiremiyor, görebildiklerine yönlendirebiliyor Navigasyon Missing Content / UI Failure">
                             <td class="col-id"><span class="test-id-pill">#2.3</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Navigasyon</td>
                             <td class="col-action"><strong>Alt kategoriye inme</strong></td>
                             <td class="col-type"><span class="ftype-tag ftype-content"><span class="ftype-icon">📄</span><span>Missing Content / UI Failure</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Alt kategorileri listelerken hepsini listeleyemiyor. Saymadığı alt kategorilere yönlendiremiyor görebildiklerine yönlendirebiliyor</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Alt kategorileri listelerken hepsini listeleyemiyor. Saymadığı alt kategorilere yönlendiremiyor, görebildiklerine yönlendirebiliyor</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="3.12" 
@@ -8206,7 +7990,7 @@
                             data-section="Ürün Detay" 
                             data-ftype="Action Not Executed / Flow Block" 
                             data-crit="Medium" 
-                            data-search="4.12 Satıcıya soru sorma Satıcıya soru sormak istiyorum soru cevap kısmını açıyor ama soru sorma kısmına yönlendirmiyor Ürün Detay Action Not Executed / Flow Block">
+                            data-search="4.12 Satıcıya soru sorma Satıcıya soru sormak istiyorum: Bu ürün glutensiz mi? soru cevap kısmını açıyor ama soru sorma kısmına yönlendirmiyor Ürün Detay Action Not Executed / Flow Block">
                             <td class="col-id"><span class="test-id-pill">#4.12</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ürün Detay</td>
@@ -8248,13 +8032,13 @@
                             data-section="Yorum ve Soru-Cevap" 
                             data-ftype="Missing Content / UI Failure" 
                             data-crit="Low" 
-                            data-search="4A.2 Faydalı oyunu geri alma Faydalı işaretini kaldır yorumu faydalı veya faydasız bulunca teşekkür ederiz yazısı çıkıp butonlar gittiği için göremiyor Yorum ve Soru-Cevap Missing Content / UI Failure">
+                            data-search="4A.2 Faydalı oyunu geri alma Faydalı işaretini kaldır yorumu faydalı veya faydasız bulunca teşekkür ederiz yazısı çıkıp butonlar gittiği için muhtemelen göremiyor Yorum ve Soru-Cevap Missing Content / UI Failure">
                             <td class="col-id"><span class="test-id-pill">#4A.2</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Yorum ve Soru-Cevap</td>
                             <td class="col-action"><strong>Faydalı oyunu geri alma</strong></td>
                             <td class="col-type"><span class="ftype-tag ftype-content"><span class="ftype-icon">📄</span><span>Missing Content / UI Failure</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>yorumu faydalı veya faydasız bulunca teşekkür ederiz yazısı çıkıp butonlar gittiği için göremiyor</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>yorumu faydalı veya faydasız bulunca teşekkür ederiz yazısı çıkıp butonlar gittiği için muhtemelen göremiyor</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="4A.4" 
@@ -8318,13 +8102,13 @@
                             data-section="Yorum ve Soru-Cevap" 
                             data-ftype="Missing Content / UI Failure" 
                             data-crit="Medium" 
-                            data-search="4A.11 Soru sorma (ürün Q&A) Bu ürün hakkında soru sor: Kaç ay bebek için uygun? soru-cevap kısmına gidiyor satıcıya soru sorma formunu açmıyor sormak istediğin soruyu alıyor aldıktan sonra form alanı bulunamadı diyor Yorum ve Soru-Cevap Missing Content / UI Failure">
+                            data-search="4A.11 Soru sorma (ürün Q&A) Bu ürün hakkında soru sor: Kaç ay bebek için uygun? soru-cevap kısmına gidiyor, satıcıya soru sorma formunu açmıyor, yine de sormak istediğin soruyu alıyor, aldıktan sonra form alanı bulunamadı diyor Yorum ve Soru-Cevap Missing Content / UI Failure">
                             <td class="col-id"><span class="test-id-pill">#4A.11</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Yorum ve Soru-Cevap</td>
                             <td class="col-action"><strong>Soru sorma (ürün Q&A)</strong></td>
                             <td class="col-type"><span class="ftype-tag ftype-content"><span class="ftype-icon">📄</span><span>Missing Content / UI Failure</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>soru-cevap kısmına gidiyor satıcıya soru sorma formunu açmıyor sormak istediğin soruyu alıyor aldıktan sonra form alanı bulunamadı diyor</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>soru-cevap kısmına gidiyor, satıcıya soru sorma formunu açmıyor, yine de sormak istediğin soruyu alıyor, aldıktan sonra form alanı bulunamadı diyor</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="5.7" 
@@ -8332,13 +8116,13 @@
                             data-section="Sepet Aksiyonları" 
                             data-ftype="Cart / Checkout Error" 
                             data-crit="Critical" 
-                            data-search="5.7 Sepeti boşaltma Sepeti boşalt sepeti boşaltmayı onayladığım halde sadece bir ürünü çıkarıyor ve kalan ürünler olmasına rağmen sepet boş diyor Sepet Aksiyonları Cart / Checkout Error">
+                            data-search="5.7 Sepeti boşaltma Sepeti boşalt sepeti boşaltmayı onayladığım halde sadece bir ürünü çıkarıyor ve kalan ürünler olmasına rağmen sepet boş diyor. Sepet Aksiyonları Cart / Checkout Error">
                             <td class="col-id"><span class="test-id-pill">#5.7</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Sepet Aksiyonları</td>
                             <td class="col-action"><strong>Sepeti boşaltma</strong></td>
                             <td class="col-type"><span class="ftype-tag ftype-cart"><span class="ftype-icon">🛒</span><span>Cart / Checkout Error</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>sepeti boşaltmayı onayladığım halde sadece bir ürünü çıkarıyor ve kalan ürünler olmasına rağmen sepet boş diyor</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>sepeti boşaltmayı onayladığım halde sadece bir ürünü çıkarıyor ve kalan ürünler olmasına rağmen sepet boş diyor.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="5.9" 
@@ -8374,7 +8158,7 @@
                             data-section="Sepet Aksiyonları" 
                             data-ftype="Cart / Checkout Error" 
                             data-crit="Low" 
-                            data-search="5.12 Hediye paketi Hediye paketi olsun, Hediye notu ekle Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Sepet Aksiyonları Cart / Checkout Error">
+                            data-search="5.12 Hediye paketi Hediye paketi olsun, Hediye notu ekle: ... Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Sepet Aksiyonları Cart / Checkout Error">
                             <td class="col-id"><span class="test-id-pill">#5.12</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Sepet Aksiyonları</td>
@@ -8388,13 +8172,13 @@
                             data-section="Sepet Aksiyonları" 
                             data-ftype="Cart / Checkout Error" 
                             data-crit="Low" 
-                            data-search="5.13 Kargo eşiği sorgusu Bedava kargoya ne kadar kaldı? kargo bedava olmadığı ve ücreti sorunca doğru söylediği halde eşiği sorunca kargo zaten ücretsiz diyor Sepet Aksiyonları Cart / Checkout Error">
+                            data-search="5.13 Kargo eşiği sorgusu Bedava kargoya ne kadar kaldı? kargo bedava olmadığı ve ücreti sorunca doğru söylediği halde eşiği sorunca kargo zaten ücretsiz diyor. Sepet Aksiyonları Cart / Checkout Error">
                             <td class="col-id"><span class="test-id-pill">#5.13</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Sepet Aksiyonları</td>
                             <td class="col-action"><strong>Kargo eşiği sorgusu</strong></td>
                             <td class="col-type"><span class="ftype-tag ftype-cart"><span class="ftype-icon">🛒</span><span>Cart / Checkout Error</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>kargo bedava olmadığı ve ücreti sorunca doğru söylediği halde eşiği sorunca kargo zaten ücretsiz diyor</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>kargo bedava olmadığı ve ücreti sorunca doğru söylediği halde eşiği sorunca kargo zaten ücretsiz diyor.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="5.14" 
@@ -8402,7 +8186,7 @@
                             data-section="Sepet Aksiyonları" 
                             data-ftype="Cart / Checkout Error" 
                             data-crit="Medium" 
-                            data-search="5.14 Sepetteki fiyat değişikliği Otomatik bildirim Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Sepet Aksiyonları Cart / Checkout Error">
+                            data-search="5.14 Sepetteki fiyat değişikliği Otomatik Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Sepet Aksiyonları Cart / Checkout Error">
                             <td class="col-id"><span class="test-id-pill">#5.14</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Sepet Aksiyonları</td>
@@ -8416,7 +8200,7 @@
                             data-section="Sepet Aksiyonları" 
                             data-ftype="Cart / Checkout Error" 
                             data-crit="Low" 
-                            data-search="5.15 Stok tükenmesi uyarısı Otomatik uyarı Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Sepet Aksiyonları Cart / Checkout Error">
+                            data-search="5.15 Stok tükenmesi uyarısı Otomatik Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Sepet Aksiyonları Cart / Checkout Error">
                             <td class="col-id"><span class="test-id-pill">#5.15</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Sepet Aksiyonları</td>
@@ -8430,27 +8214,27 @@
                             data-section="Ödeme (Checkout)" 
                             data-ftype="Cart / Checkout Error" 
                             data-crit="Critical" 
-                            data-search="6.1 Ödemeye geçme Ödeme yap, Satın al, Siparişi tamamla ödemeye geçmek için onaylanması gereken durumları söylüyor fakat onaylayınca sürekli anlayamadım tekrar eder misiniz diyor Ödeme (Checkout) Cart / Checkout Error">
+                            data-search="6.1 Ödemeye geçme Ödeme yap, Satın al, Siparişi tamamla ödemeye geçmek için onaylanması gereken durumları söylüyor fakat onaylayınca sürekli anlayamadım, tekrar eder misiniz? diyor. Ödeme (Checkout) Cart / Checkout Error">
                             <td class="col-id"><span class="test-id-pill">#6.1</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ödeme (Checkout)</td>
                             <td class="col-action"><strong>Ödemeye geçme</strong></td>
                             <td class="col-type"><span class="ftype-tag ftype-cart"><span class="ftype-icon">🛒</span><span>Cart / Checkout Error</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>ödemeye geçmek için onaylanması gereken durumları söylüyor fakat onaylayınca sürekli anlayamadım tekrar eder misiniz diyor</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>ödemeye geçmek için onaylanması gereken durumları söylüyor fakat onaylayınca sürekli anlayamadım, tekrar eder misiniz? diyor.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="6.2" 
                             data-mp="Hepsiburada" 
                             data-section="Ödeme (Checkout)" 
-                            data-ftype="Cart / Checkout Error" 
+                            data-ftype="Missing Content / UI Failure" 
                             data-crit="Low" 
-                            data-search="6.2 Teslimat adresi seçme Ev adresimi seç, Kayıtlı adreslerimi oku Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Ödeme (Checkout) Cart / Checkout Error">
+                            data-search="6.2 Teslimat adresi seçme Ev adresimi seç, Kayıtlı adreslerimi oku kayıtlı adresi göremiyor Ödeme (Checkout) Missing Content / UI Failure">
                             <td class="col-id"><span class="test-id-pill">#6.2</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ödeme (Checkout)</td>
                             <td class="col-action"><strong>Teslimat adresi seçme</strong></td>
-                            <td class="col-type"><span class="ftype-tag ftype-cart"><span class="ftype-icon">🛒</span><span>Cart / Checkout Error</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
+                            <td class="col-type"><span class="ftype-tag ftype-content"><span class="ftype-icon">📄</span><span>Missing Content / UI Failure</span></span></td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>kayıtlı adresi göremiyor</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="6.3" 
@@ -8505,20 +8289,6 @@
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ödeme (Checkout)</td>
                             <td class="col-action"><strong>Teslimat zamanı seçme</strong></td>
-                            <td class="col-type"><span class="ftype-tag ftype-cart"><span class="ftype-icon">🛒</span><span>Cart / Checkout Error</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
-                        </tr>
-                        <tr class="fail-table-row" 
-                            data-id="6.7" 
-                            data-mp="Hepsiburada" 
-                            data-section="Ödeme (Checkout)" 
-                            data-ftype="Cart / Checkout Error" 
-                            data-crit="Low" 
-                            data-search="6.7 Teslimat noktası (PUDO) Kargomatik/mağazadan teslim alayım Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Ödeme (Checkout) Cart / Checkout Error">
-                            <td class="col-id"><span class="test-id-pill">#6.7</span></td>
-                            <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
-                            <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ödeme (Checkout)</td>
-                            <td class="col-action"><strong>Teslimat noktası (PUDO)</strong></td>
                             <td class="col-type"><span class="ftype-tag ftype-cart"><span class="ftype-icon">🛒</span><span>Cart / Checkout Error</span></span></td>
                             <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
                         </tr>
@@ -8640,7 +8410,7 @@
                             data-section="Ödeme (Checkout)" 
                             data-ftype="Cart / Checkout Error" 
                             data-crit="Low" 
-                            data-search="6.16 3D Secure doğrulama SMS kodu geldi Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Ödeme (Checkout) Cart / Checkout Error">
+                            data-search="6.16 3D Secure doğrulama Otomatik akış Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Ödeme (Checkout) Cart / Checkout Error">
                             <td class="col-id"><span class="test-id-pill">#6.16</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Ödeme (Checkout)</td>
@@ -8710,13 +8480,13 @@
                             data-section="Hesap ve Kimlik" 
                             data-ftype="Action Not Executed / Flow Block" 
                             data-crit="Low" 
-                            data-search="7.3 Kayıt olma Üye ol yönlendiriyor ama giriş yap ve üye ol kısımlarını ayırt edemiyor sonrasına yönlendiremiyor Hesap ve Kimlik Action Not Executed / Flow Block">
+                            data-search="7.3 Kayıt olma Üye ol yönlendiriyor ama giriş yap ve üye ol kısımlarını ayırt edemiyor yönlendiremiyor sonrasına Hesap ve Kimlik Action Not Executed / Flow Block">
                             <td class="col-id"><span class="test-id-pill">#7.3</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Hesap ve Kimlik</td>
                             <td class="col-action"><strong>Kayıt olma</strong></td>
                             <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>yönlendiriyor ama giriş yap ve üye ol kısımlarını ayırt edemiyor sonrasına yönlendiremiyor</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>yönlendiriyor ama giriş yap ve üye ol kısımlarını ayırt edemiyor yönlendiremiyor sonrasına</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="7.5" 
@@ -8738,41 +8508,27 @@
                             data-section="Hesap ve Kimlik" 
                             data-ftype="Action Not Executed / Flow Block" 
                             data-crit="Low" 
-                            data-search="7.7 Profil güncelleme Telefon numaramı değiştir doğrudan ben yapamam diyor ve görme engellinin yapamayacağı şekilde sayfadaki ad alanını bulup yazın önerisi veriyor. Doğum tarihini güncellemediği halde güncelledim diyor Hesap ve Kimlik Action Not Executed / Flow Block">
+                            data-search="7.7 Profil güncelleme Telefon numaramı değiştir yapabiliyordu bozulmuş doğrudan ben yapamam diyor ve bir görme engelli kullanıcının yapamayacağı bir şey öneriyor: Adınızı Yavuz olarak güncellemek için profil bilgilerinizi düzenlemeniz gerekiyor. Lütfen sayfadaki Ad alanını bulup Yavuz yazın ve ardından Kaydet butonuna basın. Ben doğrudan profil bilgilerinizi sistem üzerinden değiştiremiyorum. / doğum tarihini güncellemediği halde güncellemiş gibi söylüyor Hesap ve Kimlik Action Not Executed / Flow Block">
                             <td class="col-id"><span class="test-id-pill">#7.7</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Hesap ve Kimlik</td>
                             <td class="col-action"><strong>Profil güncelleme</strong></td>
                             <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>doğrudan ben yapamam diyor ve görme engellinin yapamayacağı şekilde sayfadaki ad alanını bulup yazın önerisi veriyor. Doğum tarihini güncellemediği halde güncelledim diyor</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>yapabiliyordu bozulmuş doğrudan ben yapamam diyor ve bir görme engelli kullanıcının yapamayacağı bir şey öneriyor: Adınızı Yavuz olarak güncellemek için profil bilgilerinizi düzenlemeniz gerekiyor. Lütfen sayfadaki Ad alanını bulup Yavuz yazın ve ardından Kaydet butonuna basın. Ben doğrudan profil bilgilerinizi sistem üzerinden değiştiremiyorum. / doğum tarihini güncellemediği halde güncellemiş gibi söylüyor</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="7.8" 
                             data-mp="Hepsiburada" 
                             data-section="Hesap ve Kimlik" 
-                            data-ftype="Action Not Executed / Flow Block" 
+                            data-ftype="Missing Content / UI Failure" 
                             data-crit="Low" 
-                            data-search="7.8 Adres yönetimi Adreslerimi listele, İş adresimi sil Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Hesap ve Kimlik Action Not Executed / Flow Block">
+                            data-search="7.8 Adres yönetimi Adreslerimi listele, İş adresimi sil kayıtlı olarak görünen adresi göremedi ve yeni adres formunu da açamadı. Hesap ve Kimlik Missing Content / UI Failure">
                             <td class="col-id"><span class="test-id-pill">#7.8</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Hesap ve Kimlik</td>
                             <td class="col-action"><strong>Adres yönetimi</strong></td>
-                            <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
-                        </tr>
-                        <tr class="fail-table-row" 
-                            data-id="7.9" 
-                            data-mp="Hepsiburada" 
-                            data-section="Hesap ve Kimlik" 
-                            data-ftype="Missing Content / UI Failure" 
-                            data-crit="Critical" 
-                            data-search="7.9 Kayıtlı kart yönetimi Kartlarımı listele, Sonu 1234'ü sil Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Hesap ve Kimlik Missing Content / UI Failure">
-                            <td class="col-id"><span class="test-id-pill">#7.9</span></td>
-                            <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
-                            <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Hesap ve Kimlik</td>
-                            <td class="col-action"><strong>Kayıtlı kart yönetimi</strong></td>
                             <td class="col-type"><span class="ftype-tag ftype-content"><span class="ftype-icon">📄</span><span>Missing Content / UI Failure</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>kayıtlı olarak görünen adresi göremedi ve yeni adres formunu da açamadı.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="7.10" 
@@ -8780,27 +8536,13 @@
                             data-section="Hesap ve Kimlik" 
                             data-ftype="Action Not Executed / Flow Block" 
                             data-crit="Low" 
-                            data-search="7.10 Bildirim tercihleri Kampanya e-postalarını kapat Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Hesap ve Kimlik Action Not Executed / Flow Block">
+                            data-search="7.10 Bildirim tercihleri Kampanya e-postalarını kapat iletişim seçeneklerim sayfasında değilken bunu istediğimde e-posta maddesini inaktif yaptı ama iletişim seçeneklerim sayfasındayken bu ayarları düzenlemeye erişimim yok dedi. Hesap ve Kimlik Action Not Executed / Flow Block">
                             <td class="col-id"><span class="test-id-pill">#7.10</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Hesap ve Kimlik</td>
                             <td class="col-action"><strong>Bildirim tercihleri</strong></td>
                             <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
-                        </tr>
-                        <tr class="fail-table-row" 
-                            data-id="7.11" 
-                            data-mp="Hepsiburada" 
-                            data-section="Hesap ve Kimlik" 
-                            data-ftype="Missing Content / UI Failure" 
-                            data-crit="Low" 
-                            data-search="7.11 Kişisel verileri sorma Hakkımda hangi veriler var? (KVKK) Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Hesap ve Kimlik Missing Content / UI Failure">
-                            <td class="col-id"><span class="test-id-pill">#7.11</span></td>
-                            <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
-                            <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Hesap ve Kimlik</td>
-                            <td class="col-action"><strong>Kişisel verileri sorma</strong></td>
-                            <td class="col-type"><span class="ftype-tag ftype-content"><span class="ftype-icon">📄</span><span>Missing Content / UI Failure</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>iletişim seçeneklerim sayfasında değilken bunu istediğimde e-posta maddesini inaktif yaptı ama iletişim seçeneklerim sayfasındayken bu ayarları düzenlemeye erişimim yok dedi.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="7.12" 
@@ -8822,13 +8564,13 @@
                             data-section="Sipariş Yönetimi" 
                             data-ftype="Action Not Executed / Flow Block" 
                             data-crit="Low" 
-                            data-search="8.2 Kargo takibi Kargom nerede?, 78901 numaralı siparişi takip et test edemedim Sipariş Yönetimi Action Not Executed / Flow Block">
+                            data-search="8.2 Kargo takibi Kargom nerede?, 78901 numaralı siparişi takip et kargo takibi sayfasını açıyor, şuanki güncel durum dışındaki bilgileri doğru söylüyor. Güncel durum olarak kargoya verildi görünmesine rağmen transfer sürecinde olduğunu söyledi Sipariş Yönetimi Action Not Executed / Flow Block">
                             <td class="col-id"><span class="test-id-pill">#8.2</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Sipariş Yönetimi</td>
                             <td class="col-action"><strong>Kargo takibi</strong></td>
                             <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>test edemedim</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>kargo takibi sayfasını açıyor, şuanki güncel durum dışındaki bilgileri doğru söylüyor. Güncel durum olarak kargoya verildi görünmesine rağmen transfer sürecinde olduğunu söyledi</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="8.4" 
@@ -8850,13 +8592,13 @@
                             data-section="Sipariş Yönetimi" 
                             data-ftype="Action Not Executed / Flow Block" 
                             data-crit="Low" 
-                            data-search="8.5 İade başlatma Bu ürünü iade etmek istiyorum sipariş detayındaki o tuşa tıklayamıyor Sipariş Yönetimi Action Not Executed / Flow Block">
+                            data-search="8.5 İade başlatma Bu ürünü iade etmek istiyorum o tuşa tıklayamıyor sipariş detayındaki Sipariş Yönetimi Action Not Executed / Flow Block">
                             <td class="col-id"><span class="test-id-pill">#8.5</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Sipariş Yönetimi</td>
                             <td class="col-action"><strong>İade başlatma</strong></td>
                             <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>sipariş detayındaki o tuşa tıklayamıyor</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>o tuşa tıklayamıyor sipariş detayındaki</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="8.6" 
@@ -8864,13 +8606,13 @@
                             data-section="Sipariş Yönetimi" 
                             data-ftype="Action Not Executed / Flow Block" 
                             data-crit="Low" 
-                            data-search="8.6 Değişim talebi Bedenini değiştirmek istiyorum Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Sipariş Yönetimi Action Not Executed / Flow Block">
+                            data-search="8.6 Değişim talebi Bedenini değiştirmek istiyorum iade ve diğer işlemler kısmına gidemediği için yine önce siparişin detayını açın diyor, açık olduğu halde. Sipariş Yönetimi Action Not Executed / Flow Block">
                             <td class="col-id"><span class="test-id-pill">#8.6</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Sipariş Yönetimi</td>
                             <td class="col-action"><strong>Değişim talebi</strong></td>
                             <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>iade ve diğer işlemler kısmına gidemediği için yine önce siparişin detayını açın diyor, açık olduğu halde.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="8.7" 
@@ -8878,13 +8620,13 @@
                             data-section="Sipariş Yönetimi" 
                             data-ftype="Action Not Executed / Flow Block" 
                             data-crit="Low" 
-                            data-search="8.7 İade durumu sorma İadem ne durumda?, Param ne zaman yatar? Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Sipariş Yönetimi Action Not Executed / Flow Block">
+                            data-search="8.7 İade durumu sorma İadem ne durumda?, Param ne zaman yatar? test edemedim Sipariş Yönetimi Action Not Executed / Flow Block">
                             <td class="col-id"><span class="test-id-pill">#8.7</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Sipariş Yönetimi</td>
                             <td class="col-action"><strong>İade durumu sorma</strong></td>
                             <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>test edemedim</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="8.8" 
@@ -8892,13 +8634,13 @@
                             data-section="Sipariş Yönetimi" 
                             data-ftype="Action Not Executed / Flow Block" 
                             data-crit="Low" 
-                            data-search="8.8 Fatura isteme Faturamı e-postama gönder, Faturayı indir faturayı mail olarak isteme akışı çalışmıyor Sipariş Yönetimi Action Not Executed / Flow Block">
+                            data-search="8.8 Fatura isteme Faturamı e-postama gönder, Faturayı indir bence mail olarak yapmayalım bunu - fatura bilgisini açıyor fakat bu ekranda ek bir asistan çıkıyor ve dönüşümlü olarak sürekli dinliyor stage’inde kalıyorlar. Sipariş Yönetimi Action Not Executed / Flow Block">
                             <td class="col-id"><span class="test-id-pill">#8.8</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Sipariş Yönetimi</td>
                             <td class="col-action"><strong>Fatura isteme</strong></td>
                             <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>faturayı mail olarak isteme akışı çalışmıyor</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>bence mail olarak yapmayalım bunu - fatura bilgisini açıyor fakat bu ekranda ek bir asistan çıkıyor ve dönüşümlü olarak sürekli dinliyor stage’inde kalıyorlar.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="8.9" 
@@ -8906,13 +8648,13 @@
                             data-section="Sipariş Yönetimi" 
                             data-ftype="Action Not Executed / Flow Block" 
                             data-crit="Low" 
-                            data-search="8.9 Tekrar satın alma Geçen ayki siparişimin aynısını ver accountAction: sipariş işlemi bu sayfada yok diyor. Tekrar al seçeneği sipariş detay sayfasında var bunu kullanması gerekiyor Sipariş Yönetimi Action Not Executed / Flow Block">
+                            data-search="8.9 Tekrar satın alma Geçen ayki siparişimin aynısını ver accountAction: sipariş işlemi bu sayfada yok diyor. Tekrar al seçeneği var sipariş detay sayfasında bunu kullanması gerekiyor. Sipariş Yönetimi Action Not Executed / Flow Block">
                             <td class="col-id"><span class="test-id-pill">#8.9</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Sipariş Yönetimi</td>
                             <td class="col-action"><strong>Tekrar satın alma</strong></td>
                             <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>accountAction: sipariş işlemi bu sayfada yok diyor. Tekrar al seçeneği sipariş detay sayfasında var bunu kullanması gerekiyor</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>accountAction: sipariş işlemi bu sayfada yok diyor. Tekrar al seçeneği var sipariş detay sayfasında bunu kullanması gerekiyor.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="8.10" 
@@ -8920,13 +8662,13 @@
                             data-section="Sipariş Yönetimi" 
                             data-ftype="Action Not Executed / Flow Block" 
                             data-crit="Low" 
-                            data-search="8.10 Ürün değerlendirme Bu ürüne 5 yıldız ver, Yorum yaz: çok memnun kaldım Sipariş detay sayfasında Ürünü değerlendir tuşu var onunla yapılmalı Sipariş Yönetimi Action Not Executed / Flow Block">
+                            data-search="8.10 Ürün değerlendirme Bu ürüne 5 yıldız ver, Yorum yaz: çok memnun kaldım Sipariş detay sayfasında Ürünü değerlendir tuşu var onunla yapılmalı. Sipariş Yönetimi Action Not Executed / Flow Block">
                             <td class="col-id"><span class="test-id-pill">#8.10</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Sipariş Yönetimi</td>
                             <td class="col-action"><strong>Ürün değerlendirme</strong></td>
                             <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Sipariş detay sayfasında Ürünü değerlendir tuşu var onunla yapılmalı</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Sipariş detay sayfasında Ürünü değerlendir tuşu var onunla yapılmalı.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="8.11" 
@@ -8934,41 +8676,41 @@
                             data-section="Sipariş Yönetimi" 
                             data-ftype="Action Not Executed / Flow Block" 
                             data-crit="Low" 
-                            data-search="8.11 Satıcıyı değerlendirme Satıcıya puan ver Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Sipariş Yönetimi Action Not Executed / Flow Block">
+                            data-search="8.11 Satıcıyı değerlendirme Satıcıya puan ver satıcı profiline gidiyor, değerlendirmeleri ve bilgileri doğru şekilde söylüyor ama puan vermek istiyorum dediğimde doğrudan bir puan verme veya yıldız verme işlemini gerçekleştiremiyorum diyor. Sipariş Yönetimi Action Not Executed / Flow Block">
                             <td class="col-id"><span class="test-id-pill">#8.11</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Sipariş Yönetimi</td>
                             <td class="col-action"><strong>Satıcıyı değerlendirme</strong></td>
                             <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>satıcı profiline gidiyor, değerlendirmeleri ve bilgileri doğru şekilde söylüyor ama puan vermek istiyorum dediğimde doğrudan bir puan verme veya yıldız verme işlemini gerçekleştiremiyorum diyor.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="8.12" 
                             data-mp="Hepsiburada" 
                             data-section="Sipariş Yönetimi" 
-                            data-ftype="Action Not Executed / Flow Block" 
+                            data-ftype="Missing Content / UI Failure" 
                             data-crit="Medium" 
-                            data-search="8.12 Teslimat sorunu bildirme Kargom gelmedi, Ürün hasarlı geldi Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Sipariş Yönetimi Action Not Executed / Flow Block">
+                            data-search="8.12 Teslimat sorunu bildirme Kargom gelmedi, Ürün hasarlı geldi ilgili ürünün sipariş detayı açık olduğu halde önce detayını açın diyor ayrıca iade ve diğer talepler göremiyor ve açamıyor. Sipariş Yönetimi Missing Content / UI Failure">
                             <td class="col-id"><span class="test-id-pill">#8.12</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Sipariş Yönetimi</td>
                             <td class="col-action"><strong>Teslimat sorunu bildirme</strong></td>
-                            <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
+                            <td class="col-type"><span class="ftype-tag ftype-content"><span class="ftype-icon">📄</span><span>Missing Content / UI Failure</span></span></td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>ilgili ürünün sipariş detayı açık olduğu halde önce detayını açın diyor ayrıca iade ve diğer talepler göremiyor ve açamıyor.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="8.13" 
                             data-mp="Hepsiburada" 
                             data-section="Sipariş Yönetimi" 
-                            data-ftype="Action Not Executed / Flow Block" 
+                            data-ftype="Missing Content / UI Failure" 
                             data-crit="Low" 
-                            data-search="8.13 Eksik/yanlış ürün bildirimi Yanlış ürün gelmiş Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Sipariş Yönetimi Action Not Executed / Flow Block">
+                            data-search="8.13 Eksik/yanlış ürün bildirimi Yanlış ürün gelmiş ilgili ürünün sipariş detayı açık olduğu halde iade ve diğer talepler göremiyor ve açamıyor. Sipariş Yönetimi Missing Content / UI Failure">
                             <td class="col-id"><span class="test-id-pill">#8.13</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Sipariş Yönetimi</td>
                             <td class="col-action"><strong>Eksik/yanlış ürün bildirimi</strong></td>
-                            <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
+                            <td class="col-type"><span class="ftype-tag ftype-content"><span class="ftype-icon">📄</span><span>Missing Content / UI Failure</span></span></td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>ilgili ürünün sipariş detayı açık olduğu halde iade ve diğer talepler göremiyor ve açamıyor.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="9.2" 
@@ -8990,13 +8732,13 @@
                             data-section="Favoriler ve Listeler" 
                             data-ftype="Action Not Executed / Flow Block" 
                             data-crit="Low" 
-                            data-search="9.4 Liste oluşturma Doğum günü listesi oluştur sayfaya gitsek bile liste oluşturamıyor Favoriler ve Listeler Action Not Executed / Flow Block">
+                            data-search="9.4 Liste oluşturma Doğum günü listesi oluştur yapamıyor sayfaya gitsek bile oluşturamıyor. Favoriler ve Listeler Action Not Executed / Flow Block">
                             <td class="col-id"><span class="test-id-pill">#9.4</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Favoriler ve Listeler</td>
                             <td class="col-action"><strong>Liste oluşturma</strong></td>
                             <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>sayfaya gitsek bile liste oluşturamıyor</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>yapamıyor sayfaya gitsek bile oluşturamıyor.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="9.5" 
@@ -9004,13 +8746,13 @@
                             data-section="Favoriler ve Listeler" 
                             data-ftype="Action Not Executed / Flow Block" 
                             data-crit="Low" 
-                            data-search="9.5 Listeye ekleme Bunu doğum günü listeme ekle liste oluşturulamadığı için eklenemiyor Favoriler ve Listeler Action Not Executed / Flow Block">
+                            data-search="9.5 Listeye ekleme Bunu doğum günü listeme ekle liste oluşturamadık Favoriler ve Listeler Action Not Executed / Flow Block">
                             <td class="col-id"><span class="test-id-pill">#9.5</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Favoriler ve Listeler</td>
                             <td class="col-action"><strong>Listeye ekleme</strong></td>
                             <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>liste oluşturulamadığı için eklenemiyor</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>liste oluşturamadık</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="9.6" 
@@ -9018,55 +8760,27 @@
                             data-section="Favoriler ve Listeler" 
                             data-ftype="Action Not Executed / Flow Block" 
                             data-crit="Low" 
-                            data-search="9.6 Liste paylaşma Listemi paylaş liste oluşturulamadığı için paylaşılamıyor Favoriler ve Listeler Action Not Executed / Flow Block">
+                            data-search="9.6 Liste paylaşma Listemi paylaş liste oluşturamadık Favoriler ve Listeler Action Not Executed / Flow Block">
                             <td class="col-id"><span class="test-id-pill">#9.6</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Favoriler ve Listeler</td>
                             <td class="col-action"><strong>Liste paylaşma</strong></td>
                             <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>liste oluşturulamadığı için paylaşılamıyor</td>
-                        </tr>
-                        <tr class="fail-table-row" 
-                            data-id="11.1" 
-                            data-mp="Hepsiburada" 
-                            data-section="Müşteri Hizmetleri" 
-                            data-ftype="Action Not Executed / Flow Block" 
-                            data-crit="Low" 
-                            data-search="11.1 SSS sorgulama Kargo kaç günde gelir?, İade süresi ne kadar? ürün sayfasında kargo bilgisi var aslında teslimat seçenekleri kısmında okuyamıyor Müşteri Hizmetleri Action Not Executed / Flow Block">
-                            <td class="col-id"><span class="test-id-pill">#11.1</span></td>
-                            <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
-                            <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Müşteri Hizmetleri</td>
-                            <td class="col-action"><strong>SSS sorgulama</strong></td>
-                            <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>ürün sayfasında kargo bilgisi var aslında teslimat seçenekleri kısmında okuyamıyor</td>
-                        </tr>
-                        <tr class="fail-table-row" 
-                            data-id="11.2" 
-                            data-mp="Hepsiburada" 
-                            data-section="Müşteri Hizmetleri" 
-                            data-ftype="Action Not Executed / Flow Block" 
-                            data-crit="Low" 
-                            data-search="11.2 Canlı desteğe bağlanma Canlı destek, Bir insanla görüşmek istiyorum satıcıyla iletişime yönlendiriyorum dedi yönlendirmedi Müşteri Hizmetleri Action Not Executed / Flow Block">
-                            <td class="col-id"><span class="test-id-pill">#11.2</span></td>
-                            <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
-                            <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Müşteri Hizmetleri</td>
-                            <td class="col-action"><strong>Canlı desteğe bağlanma</strong></td>
-                            <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>satıcıyla iletişime yönlendiriyorum dedi yönlendirmedi</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>liste oluşturamadık</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="11.3" 
                             data-mp="Hepsiburada" 
                             data-section="Müşteri Hizmetleri" 
-                            data-ftype="Action Not Executed / Flow Block" 
+                            data-ftype="Context / Reference Error" 
                             data-crit="Low" 
-                            data-search="11.3 Destek talebi oluşturma Şikayet oluşturmak istiyorum yönlendiriyorum dedi yönlendirmedi. Tam nereye yönlendireceğini bilemiyor Müşteri Hizmetleri Action Not Executed / Flow Block">
+                            data-search="11.3 Destek talebi oluşturma Şikayet oluşturmak istiyorum şikayet için iptal/iade ve diğer talepler sayfasına yönlendirmem gerekiyor dedi ama sonra bunu arama çubuğuna yazıp ürünleri okudu Müşteri Hizmetleri Context / Reference Error">
                             <td class="col-id"><span class="test-id-pill">#11.3</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Müşteri Hizmetleri</td>
                             <td class="col-action"><strong>Destek talebi oluşturma</strong></td>
-                            <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>yönlendiriyorum dedi yönlendirmedi. Tam nereye yönlendireceğini bilemiyor</td>
+                            <td class="col-type"><span class="ftype-tag ftype-context"><span class="ftype-icon">🧠</span><span>Context / Reference Error</span></span></td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>şikayet için iptal/iade ve diğer talepler sayfasına yönlendirmem gerekiyor dedi ama sonra bunu arama çubuğuna yazıp ürünleri okudu</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="11.4" 
@@ -9088,41 +8802,27 @@
                             data-section="Müşteri Hizmetleri" 
                             data-ftype="Action Not Executed / Flow Block" 
                             data-crit="Low" 
-                            data-search="11.5 Geri bildirim verme Site hakkında geri bildirim vereceğim Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı. Müşteri Hizmetleri Action Not Executed / Flow Block">
+                            data-search="11.5 Geri bildirim verme Site hakkında geri bildirim vereceğim site hakkında geri bildirim vereceğim dediğimde soru ve taleplerim kısmına götürdü fakat sonra yeni bir talep oluşturmak istiyorum dediğimde tekrar aynı yeri açtı. Müşteri Hizmetleri Action Not Executed / Flow Block">
                             <td class="col-id"><span class="test-id-pill">#11.5</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Müşteri Hizmetleri</td>
                             <td class="col-action"><strong>Geri bildirim verme</strong></td>
                             <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>Aksiyon gerçekleştirilemedi / beklenen akış tamamlanamadı.</td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>site hakkında geri bildirim vereceğim dediğimde soru ve taleplerim kısmına götürdü fakat sonra yeni bir talep oluşturmak istiyorum dediğimde tekrar aynı yeri açtı.</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="12.1" 
                             data-mp="Hepsiburada" 
                             data-section="Erişilebilirlik" 
-                            data-ftype="Visual / Multimodal AI Error" 
+                            data-ftype="Missing Content / UI Failure" 
                             data-crit="Low" 
-                            data-search="12.1 Sayfa yapısını okuma Sayfayı tarif et tüm kısımları okuyamıyor sayfaya tam hakimiyeti yok burada manuel fix geçelim Erişilebilirlik Visual / Multimodal AI Error">
+                            data-search="12.1 Sayfa yapısını okuma Sayfayı tarif et çoğu bilgiyi doğru söylüyor ama kargo firması ve sağ üstte yer alan kampanyaları (premium, 300tl üzeri kargo bedava gibi) göremiyor Erişilebilirlik Missing Content / UI Failure">
                             <td class="col-id"><span class="test-id-pill">#12.1</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Erişilebilirlik</td>
                             <td class="col-action"><strong>Sayfa yapısını okuma</strong></td>
-                            <td class="col-type"><span class="ftype-tag ftype-visual"><span class="ftype-icon">👁️</span><span>Visual / Multimodal AI Error</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>tüm kısımları okuyamıyor sayfaya tam hakimiyeti yok burada manuel fix geçelim</td>
-                        </tr>
-                        <tr class="fail-table-row" 
-                            data-id="12.2" 
-                            data-mp="Hepsiburada" 
-                            data-section="Erişilebilirlik" 
-                            data-ftype="Visual / Multimodal AI Error" 
-                            data-crit="Low" 
-                            data-search="12.2 Görsel betimleme (genel) Bu görselde ne var? değerlendirmelerim kısmına götürüyor. Bu görselin betimlemesi bulunmuyor diyor Erişilebilirlik Visual / Multimodal AI Error">
-                            <td class="col-id"><span class="test-id-pill">#12.2</span></td>
-                            <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
-                            <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Erişilebilirlik</td>
-                            <td class="col-action"><strong>Görsel betimleme (genel)</strong></td>
-                            <td class="col-type"><span class="ftype-tag ftype-visual"><span class="ftype-icon">👁️</span><span>Visual / Multimodal AI Error</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>değerlendirmelerim kısmına götürüyor. Bu görselin betimlemesi bulunmuyor diyor</td>
+                            <td class="col-type"><span class="ftype-tag ftype-content"><span class="ftype-icon">📄</span><span>Missing Content / UI Failure</span></span></td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>çoğu bilgiyi doğru söylüyor ama kargo firması ve sağ üstte yer alan kampanyaları (premium, 300tl üzeri kargo bedava gibi) göremiyor</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="12.4" 
@@ -9130,7 +8830,7 @@
                             data-section="Erişilebilirlik" 
                             data-ftype="Visual / Multimodal AI Error" 
                             data-crit="Low" 
-                            data-search="12.4 Onay modu ayarı Her şeyi onaylatma, Sadece ödemede sor Yaparım diyor ama onay istedi yine Erişilebilirlik Visual / Multimodal AI Error">
+                            data-search="12.4 Onay modu ayarı Her şeyi onaylatma, sadece ödemede sor Yaparım diyor ama onay istedi yine Erişilebilirlik Visual / Multimodal AI Error">
                             <td class="col-id"><span class="test-id-pill">#12.4</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Erişilebilirlik</td>
@@ -9142,15 +8842,15 @@
                             data-id="12.5" 
                             data-mp="Hepsiburada" 
                             data-section="Erişilebilirlik" 
-                            data-ftype="Visual / Multimodal AI Error" 
+                            data-ftype="Action Not Executed / Flow Block" 
                             data-crit="Low" 
-                            data-search="12.5 Yazı boyutu/kontrast Yazıları büyüt, Yüksek kontrast aç sadece yazı boyutunu değiştirebiliyor Erişilebilirlik Visual / Multimodal AI Error">
+                            data-search="12.5 Yazı boyutu/kontrast Yazıları büyüt, Yüksek kontrast aç yazı boyutunu, gece modunu ve yüksek kontrastı açıp kapatabiliyor, bunların dışındakileri yapamıyor Erişilebilirlik Action Not Executed / Flow Block">
                             <td class="col-id"><span class="test-id-pill">#12.5</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Erişilebilirlik</td>
                             <td class="col-action"><strong>Yazı boyutu/kontrast</strong></td>
-                            <td class="col-type"><span class="ftype-tag ftype-visual"><span class="ftype-icon">👁️</span><span>Visual / Multimodal AI Error</span></span></td>
-                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>sadece yazı boyutunu değiştirebiliyor</td>
+                            <td class="col-type"><span class="ftype-tag ftype-action"><span class="ftype-icon">🚫</span><span>Action Not Executed / Flow Block</span></span></td>
+                            <td class="col-reason" style="color: #fda4af; font-weight: 500; line-height: 1.45;"><span style="margin-right: 0.35rem;">🚨</span>yazı boyutunu, gece modunu ve yüksek kontrastı açıp kapatabiliyor, bunların dışındakileri yapamıyor</td>
                         </tr>
                         <tr class="fail-table-row" 
                             data-id="12.6" 
@@ -9172,7 +8872,7 @@
                             data-section="Erişilebilirlik" 
                             data-ftype="Audio / STT / Hardware Issue" 
                             data-crit="Low" 
-                            data-search="12.7 Sesli dikte düzeltme Hayır, kablo değil kakao dedim araya girip söyleyemiyoruz cevabın bitmesini beklememiz gerekiyor Erişilebilirlik Audio / STT / Hardware Issue">
+                            data-search="12.7 Sesli dikte düzeltme Hayır, 'kablo' değil 'kakao' dedim araya girip söyleyemiyoruz cevabın bitmesini beklememiz gerekiyor Erişilebilirlik Audio / STT / Hardware Issue">
                             <td class="col-id"><span class="test-id-pill">#12.7</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Erişilebilirlik</td>
@@ -9200,7 +8900,7 @@
                             data-section="Hata ve İstisna Akışları" 
                             data-ftype="Action Not Executed / Flow Block" 
                             data-crit="Low" 
-                            data-search="13.2 Seçilen varyant yok 42 numara mavi kalmamış Ürünün kalmadığını anlamadı ama seçebildi Hata ve İstisna Akışları Action Not Executed / Flow Block">
+                            data-search="13.2 Seçilen varyant yok 42 numara mavi kalmamış, siyahı var Ürünün kalmadığını anlamadı ama seçebildi Hata ve İstisna Akışları Action Not Executed / Flow Block">
                             <td class="col-id"><span class="test-id-pill">#13.2</span></td>
                             <td class="col-mp"><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
                             <td class="col-sec" style="color: var(--text-muted); font-size: 0.82rem; font-weight: 500;">Hata ve İstisna Akışları</td>
