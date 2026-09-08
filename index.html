@@ -723,10 +723,10 @@
                 <div class="card-title">Atlanan (SKIP)</div>
                 <div class="card-value blue">144</div>
             </div>
-            <div class="card" style="margin-bottom: 0; border: 1px solid rgba(245, 158, 11, 0.35); background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(21, 30, 50, 1));">
-                <div class="card-title" style="color: #fbbf24;">⚡ Edge Cases Başarısı</div>
-                <div class="card-value amber">%85.71</div>
-                <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.35rem;">18 PASS / 21 Toplam</div>
+            <div class="card" style="margin-bottom: 0; border: 1px solid rgba(56, 189, 248, 0.35); background: linear-gradient(135deg, rgba(56, 189, 248, 0.08), rgba(21, 30, 50, 1));">
+                <div class="card-title" style="color: var(--accent-blue);">🎯 Genel Başarı</div>
+                <div class="card-value" style="color: var(--accent-blue);">%60.48</div>
+                <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.35rem;">254 PASS / 420 Değerlendirilen</div>
             </div>
         </div>
 
@@ -2076,16 +2076,16 @@
                 <!-- Hızlı Taksonomi Filtre Hapları -->
                 <div class="taxonomy-chips">
                     <span style="font-size: 0.78rem; color: var(--text-muted); align-self: center; margin-right: 0.25rem;">Hızlı Filtre:</span>
-                    <button class="tax-chip" onclick="toggleTaxChip(this, 'Cart / Checkout Error')">Cart / Checkout Error <span class="chip-count">48</span></button>
-                    <button class="tax-chip" onclick="toggleTaxChip(this, 'Action Not Executed / Flow Block')">Action Not Executed / Flow Block <span class="chip-count">47</span></button>
-                    <button class="tax-chip" onclick="toggleTaxChip(this, 'Missing Content / UI Failure')">Missing Content / UI Failure <span class="chip-count">27</span></button>
-                    <button class="tax-chip" onclick="toggleTaxChip(this, 'Visual / Multimodal AI Error')">Visual / Multimodal AI Error <span class="chip-count">10</span></button>
-                    <button class="tax-chip" onclick="toggleTaxChip(this, 'Audio / STT / Hardware Issue')">Audio / STT / Hardware Issue <span class="chip-count">9</span></button>
-                    <button class="tax-chip" onclick="toggleTaxChip(this, 'Speech Synthesis (TTS) / Prompt Error')">Speech Synthesis (TTS) / Prompt Error <span class="chip-count">7</span></button>
-                    <button class="tax-chip" onclick="toggleTaxChip(this, 'Context / Reference Error')">Context / Reference Error <span class="chip-count">7</span></button>
-                    <button class="tax-chip" onclick="toggleTaxChip(this, 'Filter / Search Error')">Filter / Search Error <span class="chip-count">6</span></button>
-                    <button class="tax-chip" onclick="toggleTaxChip(this, 'Variant / Parameter Not Detected')">Variant / Parameter Not Detected <span class="chip-count">3</span></button>
-                    <button class="tax-chip" onclick="toggleTaxChip(this, 'Accessibility / Screen Reader Collision')">Accessibility / Screen Reader Collision <span class="chip-count">2</span></button>
+                    <button class="tax-chip" data-ftype="Cart / Checkout Error" onclick="toggleTaxChip(this, 'Cart / Checkout Error')">Cart / Checkout Error <span class="chip-count">48</span></button>
+                    <button class="tax-chip" data-ftype="Action Not Executed / Flow Block" onclick="toggleTaxChip(this, 'Action Not Executed / Flow Block')">Action Not Executed / Flow Block <span class="chip-count">47</span></button>
+                    <button class="tax-chip" data-ftype="Missing Content / UI Failure" onclick="toggleTaxChip(this, 'Missing Content / UI Failure')">Missing Content / UI Failure <span class="chip-count">27</span></button>
+                    <button class="tax-chip" data-ftype="Visual / Multimodal AI Error" onclick="toggleTaxChip(this, 'Visual / Multimodal AI Error')">Visual / Multimodal AI Error <span class="chip-count">10</span></button>
+                    <button class="tax-chip" data-ftype="Audio / STT / Hardware Issue" onclick="toggleTaxChip(this, 'Audio / STT / Hardware Issue')">Audio / STT / Hardware Issue <span class="chip-count">9</span></button>
+                    <button class="tax-chip" data-ftype="Speech Synthesis (TTS) / Prompt Error" onclick="toggleTaxChip(this, 'Speech Synthesis (TTS) / Prompt Error')">Speech Synthesis (TTS) / Prompt Error <span class="chip-count">7</span></button>
+                    <button class="tax-chip" data-ftype="Context / Reference Error" onclick="toggleTaxChip(this, 'Context / Reference Error')">Context / Reference Error <span class="chip-count">7</span></button>
+                    <button class="tax-chip" data-ftype="Filter / Search Error" onclick="toggleTaxChip(this, 'Filter / Search Error')">Filter / Search Error <span class="chip-count">6</span></button>
+                    <button class="tax-chip" data-ftype="Variant / Parameter Not Detected" onclick="toggleTaxChip(this, 'Variant / Parameter Not Detected')">Variant / Parameter Not Detected <span class="chip-count">3</span></button>
+                    <button class="tax-chip" data-ftype="Accessibility / Screen Reader Collision" onclick="toggleTaxChip(this, 'Accessibility / Screen Reader Collision')">Accessibility / Screen Reader Collision <span class="chip-count">2</span></button>
                 </div>
             </div>
 
@@ -10436,9 +10436,10 @@
             const icon = document.getElementById('icon-' + slug);
             if (!detailsRow) return;
 
-            const isHidden = detailsRow.style.display === 'none' || detailsRow.style.display === '';
+            const isHidden = window.getComputedStyle(detailsRow).display === 'none';
             if (isHidden) {
                 detailsRow.style.display = 'table-row';
+                detailsRow.classList.add('active');
                 if (icon) {
                     icon.style.transform = 'rotate(180deg)';
                     icon.style.background = 'rgba(56, 189, 248, 0.35)';
@@ -10446,6 +10447,7 @@
                 }
             } else {
                 detailsRow.style.display = 'none';
+                detailsRow.classList.remove('active');
                 if (icon) {
                     icon.style.transform = 'rotate(0deg)';
                     icon.style.background = 'rgba(56, 189, 248, 0.12)';
@@ -10465,29 +10467,29 @@
             const btnTable = document.getElementById('view-table-btn');
 
             if (mode === 'cards') {
-                cardsGrid.style.display = 'grid';
-                tableView.style.display = 'none';
-                btnCards.classList.add('active');
-                btnTable.classList.remove('active');
+                if (cardsGrid) cardsGrid.style.display = 'grid';
+                if (tableView) tableView.style.display = 'none';
+                if (btnCards) btnCards.classList.add('active');
+                if (btnTable) btnTable.classList.remove('active');
             } else {
-                cardsGrid.style.display = 'none';
-                tableView.style.display = 'block';
-                btnCards.classList.remove('active');
-                btnTable.classList.add('active');
+                if (cardsGrid) cardsGrid.style.display = 'none';
+                if (tableView) tableView.style.display = 'block';
+                if (btnCards) btnCards.classList.remove('active');
+                if (btnTable) btnTable.classList.add('active');
             }
         }
 
         function setMpFilter(mp) {
             currentMpFilter = mp;
             document.querySelectorAll('.segmented-btns .seg-btn').forEach(btn => {
-                if (btn.id.startsWith('btn-mp-')) {
+                if (btn.id && btn.id.startsWith('btn-mp-')) {
                     btn.classList.remove('active');
                 }
             });
-            if (mp === 'ALL') document.getElementById('btn-mp-all').classList.add('active');
-            else if (mp === 'Trendyol') document.getElementById('btn-mp-trendyol').classList.add('active');
-            else if (mp === 'Hepsiburada') document.getElementById('btn-mp-hepsi').classList.add('active');
-            else if (mp === 'Vegan Pazaryeri') document.getElementById('btn-mp-vegan').classList.add('active');
+            if (mp === 'ALL') document.getElementById('btn-mp-all')?.classList.add('active');
+            else if (mp === 'Trendyol') document.getElementById('btn-mp-trendyol')?.classList.add('active');
+            else if (mp === 'Hepsiburada') document.getElementById('btn-mp-hepsi')?.classList.add('active');
+            else if (mp === 'Vegan Pazaryeri') document.getElementById('btn-mp-vegan')?.classList.add('active');
 
             applyFailFilters();
         }
@@ -10497,33 +10499,38 @@
             if (currentTaxChip === chipEl) {
                 chipEl.classList.remove('active');
                 currentTaxChip = null;
-                selectEl.value = 'ALL';
+                if (selectEl) selectEl.value = 'ALL';
             } else {
                 document.querySelectorAll('.tax-chip').forEach(c => c.classList.remove('active'));
                 chipEl.classList.add('active');
                 currentTaxChip = chipEl;
-                selectEl.value = ftype;
+                if (selectEl) selectEl.value = ftype;
             }
             applyFailFilters();
         }
 
         function resetFailFilters() {
-            document.getElementById('failSearchInput').value = '';
-            document.getElementById('secFilter').value = 'ALL';
-            document.getElementById('ftypeFilter').value = 'ALL';
-            document.getElementById('critFilter').value = 'ALL';
+            const searchEl = document.getElementById('failSearchInput');
+            const secEl = document.getElementById('secFilter');
+            const ftypeEl = document.getElementById('ftypeFilter');
+            const critEl = document.getElementById('critFilter');
+            if (searchEl) searchEl.value = '';
+            if (secEl) secEl.value = 'ALL';
+            if (ftypeEl) ftypeEl.value = 'ALL';
+            if (critEl) critEl.value = 'ALL';
             document.querySelectorAll('.tax-chip').forEach(c => c.classList.remove('active'));
             currentTaxChip = null;
             setMpFilter('ALL');
         }
 
         function applyFailFilters() {
-            const searchVal = document.getElementById('failSearchInput').value.trim().toLowerCase();
-            const secVal = document.getElementById('secFilter').value;
-            const ftypeVal = document.getElementById('ftypeFilter').value;
-            const critVal = document.getElementById('critFilter').value;
+            const searchInput = document.getElementById('failSearchInput');
+            const searchVal = (searchInput ? searchInput.value : '').trim().toLowerCase();
+            const secVal = document.getElementById('secFilter')?.value || 'ALL';
+            const ftypeVal = document.getElementById('ftypeFilter')?.value || 'ALL';
+            const critVal = document.getElementById('critFilter')?.value || 'ALL';
 
-            if (currentTaxChip && ftypeVal !== currentTaxChip.textContent.split(' ')[0]) {
+            if (currentTaxChip && ftypeVal !== currentTaxChip.getAttribute('data-ftype')) {
                 document.querySelectorAll('.tax-chip').forEach(c => c.classList.remove('active'));
                 currentTaxChip = null;
             }
@@ -10568,12 +10575,11 @@
                 }
             });
 
-            document.getElementById('visibleCount').textContent = visibleCards;
+            const countEl = document.getElementById('visibleCount');
+            if (countEl) countEl.textContent = visibleCards;
             const noResults = document.getElementById('noResultsMsg');
-            if (visibleCards === 0) {
-                noResults.style.display = 'block';
-            } else {
-                noResults.style.display = 'none';
+            if (noResults) {
+                noResults.style.display = visibleCards === 0 ? 'block' : 'none';
             }
         }
 
@@ -10587,7 +10593,7 @@
             const promptText = document.getElementById('edgePromptText');
             if (!container) return;
 
-            const isHidden = container.style.display === 'none' || container.style.display === '';
+            const isHidden = window.getComputedStyle(container).display === 'none';
             if (isHidden) {
                 container.style.display = 'block';
                 if (icon) {
@@ -10605,7 +10611,7 @@
                     icon.style.color = '#fbbf24';
                 }
                 if (promptIcon) promptIcon.textContent = '▼';
-                if (promptText) promptText.textContent = 'Detaylı Uç Senaryoları Görüntüle (' + ({len(edge_items)}) + ' Madde)';
+                if (promptText) promptText.textContent = 'Detaylı Uç Senaryoları Görüntüle';
             }
         }
 
@@ -10631,15 +10637,16 @@
         function setEdgeStatusFilter(status) {
             currentEdgeStatusFilter = status;
             document.querySelectorAll('.segmented-btns .seg-btn.amber').forEach(btn => btn.classList.remove('active'));
-            if (status === 'ALL') document.getElementById('btn-edge-all').classList.add('active');
-            else if (status === 'PASS') document.getElementById('btn-edge-pass').classList.add('active');
-            else if (status === 'FAIL') document.getElementById('btn-edge-fail').classList.add('active');
+            if (status === 'ALL') document.getElementById('btn-edge-all')?.classList.add('active');
+            else if (status === 'PASS') document.getElementById('btn-edge-pass')?.classList.add('active');
+            else if (status === 'FAIL') document.getElementById('btn-edge-fail')?.classList.add('active');
 
             applyEdgeFilters();
         }
 
         function applyEdgeFilters() {
-            const searchVal = (document.getElementById('edgeSearchInput')?.value || '').trim().toLowerCase();
+            const searchInput = document.getElementById('edgeSearchInput');
+            const searchVal = (searchInput ? searchInput.value : '').trim().toLowerCase();
             const rows = document.querySelectorAll('.edge-row');
             const cards = document.querySelectorAll('.edge-card');
 
