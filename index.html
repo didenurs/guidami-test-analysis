@@ -563,6 +563,15 @@
             border: 1px solid rgba(245, 158, 11, 0.3);
             background: linear-gradient(180deg, rgba(245, 158, 11, 0.04) 0%, rgba(21, 30, 50, 0.95) 100%);
             box-shadow: 0 12px 32px rgba(245, 158, 11, 0.08);
+            transition: border-color 0.25s ease;
+        }
+        .edge-header-interactive {
+            cursor: pointer;
+            user-select: none;
+            transition: opacity 0.2s ease;
+        }
+        .edge-header-interactive:hover {
+            opacity: 0.95;
         }
         .edge-stats-bar {
             display: grid;
@@ -590,6 +599,26 @@
             font-size: 1.6rem;
             font-weight: 800;
             line-height: 1;
+        }
+        .edge-toggle-btn-bar {
+            margin-top: 0.85rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-size: 0.84rem;
+            font-weight: 700;
+            color: #fbbf24;
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px dashed rgba(245, 158, 11, 0.35);
+            border-radius: 0.6rem;
+            padding: 0.6rem 1rem;
+            transition: all 0.2s ease;
+        }
+        .edge-header-interactive:hover .edge-toggle-btn-bar {
+            background: rgba(245, 158, 11, 0.2);
+            border-color: rgba(245, 158, 11, 0.55);
+            color: #fff;
         }
         .edge-table {
             width: 100%;
@@ -1170,66 +1199,78 @@
             </table>
         </div>
 
-        <!-- ⚡ BÖLÜM 6: EDGE CASES EXPLORER -->
+        <!-- ⚡ EDGE CASES ACCORDION SECTION -->
         <div class="card edge-section-card" id="edge-cases-section">
-            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 0.5rem;">
-                <h2>⚡ Bölüm 6: Edge Cases & Uç Senaryolar (Hepsiburada)</h2>
-                <span class="tag tag-warn" style="font-size: 0.85rem;">📦 Hepsiburada Özel (21 Senaryo)</span>
-            </div>
-            <div class="card-hint">
-                <span>🎯</span> <span>Filtre kombinasyonları, sıralama davranışları, sepet doğrulama, satıcı sayfaları ve DOM etkileşimlerine ilişkin kritik uç durum testleri.</span>
-            </div>
-
-            <!-- Edge Cases Mini İstatistik Barı -->
-            <div class="edge-stats-bar">
-                <div class="edge-stat-item">
-                    <span class="edge-stat-label">Toplam Uç Senaryo</span>
-                    <span class="edge-stat-val" style="color: #fff;">21</span>
-                </div>
-                <div class="edge-stat-item">
-                    <span class="edge-stat-label">Başarılı (PASS)</span>
-                    <span class="edge-stat-val" style="color: var(--accent-green);">18</span>
-                </div>
-                <div class="edge-stat-item">
-                    <span class="edge-stat-label">Başarısız (FAIL)</span>
-                    <span class="edge-stat-val" style="color: var(--accent-red);">3</span>
-                </div>
-                <div class="edge-stat-item">
-                    <span class="edge-stat-label">Başarı Oranı</span>
-                    <span class="edge-stat-val" style="color: var(--accent-amber);">%85.71</span>
-                </div>
-            </div>
-
-            <div class="filter-panel" style="border-color: rgba(245, 158, 11, 0.25);">
-                <div class="filter-row">
-                    <input type="text" id="edgeSearchInput" class="search-input" placeholder="🔍 Uç senaryo başlığında, test durumunda veya açıklama notunda ara..." oninput="applyEdgeFilters()">
-                    
-                    <div class="segmented-btns">
-                        <button class="seg-btn amber active" id="btn-edge-all" onclick="setEdgeStatusFilter('ALL')">Tümü (21)</button>
-                        <button class="seg-btn amber" id="btn-edge-pass" onclick="setEdgeStatusFilter('PASS')">🟢 PASS (18)</button>
-                        <button class="seg-btn amber" id="btn-edge-fail" onclick="setEdgeStatusFilter('FAIL')">🔴 FAIL (3)</button>
+            <div class="edge-header-interactive" onclick="toggleEdgeAccordion()" title="Detaylı uç senaryoları açıp kapatmak için tıklayın">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 0.5rem;">
+                    <div style="display: flex; align-items: center; gap: 0.6rem;">
+                        <h2 style="margin: 0;">⚡ Edge Cases (Hepsiburada)</h2>
+                        <span class="expand-icon" id="edge-expand-icon" style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; font-size: 0.7rem; width: 22px; height: 22px;">▼</span>
                     </div>
+                    <span class="tag tag-warn" style="font-size: 0.85rem; border-color: rgba(245, 158, 11, 0.4); color: #fbbf24;">📦 Hepsiburada Özel (21 Senaryo)</span>
+                </div>
+                <div class="card-hint">
+                    <span>🎯</span> <span>Filtre kombinasyonları, sıralama davranışları, sepet doğrulama, satıcı sayfaları ve DOM etkileşimlerine ilişkin kritik uç durum testleri.</span>
+                </div>
 
-                    <div class="segmented-btns">
-                        <button class="seg-btn active" id="edge-view-table-btn" onclick="setEdgeViewMode('table')">📋 Tablo</button>
-                        <button class="seg-btn" id="edge-view-cards-btn" onclick="setEdgeViewMode('cards')">🗂️ Kart</button>
+                <!-- Edge Cases Mini İstatistik Barı -->
+                <div class="edge-stats-bar">
+                    <div class="edge-stat-item">
+                        <span class="edge-stat-label">Toplam Uç Senaryo</span>
+                        <span class="edge-stat-val" style="color: #fff;">21</span>
+                    </div>
+                    <div class="edge-stat-item">
+                        <span class="edge-stat-label">Başarılı (PASS)</span>
+                        <span class="edge-stat-val" style="color: var(--accent-green);">18</span>
+                    </div>
+                    <div class="edge-stat-item">
+                        <span class="edge-stat-label">Başarısız (FAIL)</span>
+                        <span class="edge-stat-val" style="color: var(--accent-red);">3</span>
+                    </div>
+                    <div class="edge-stat-item">
+                        <span class="edge-stat-label">Başarı Oranı</span>
+                        <span class="edge-stat-val" style="color: var(--accent-amber);">%85.71</span>
                     </div>
                 </div>
+
+                <div class="edge-toggle-btn-bar" id="edgeToggleBar">
+                    <span id="edgePromptIcon">▼</span>
+                    <span id="edgePromptText">Detaylı Uç Senaryoları Görüntüle (21 Madde)</span>
+                </div>
             </div>
 
-            <!-- 1. Edge Cases Tablo Görünümü -->
-            <div id="edgeTableView" style="overflow-x: auto;">
-                <table class="edge-table">
-                    <thead>
-                        <tr>
-                            <th style="width: 70px; text-align: center;">ID</th>
-                            <th style="width: 140px;">Pazaryeri</th>
-                            <th style="min-width: 320px;">Edge Case / Test Senaryosu</th>
-                            <th style="width: 110px; text-align: center;">Durum</th>
-                            <th style="min-width: 360px;">Test Sonucu / Gözlem Açıklaması</th>
-                        </tr>
-                    </thead>
-                    <tbody id="edgeTableBody">
+            <!-- Expandable / Collapsible Details Container -->
+            <div id="edgeDetailsContainer" style="display: none; margin-top: 1.25rem; border-top: 1px solid rgba(245, 158, 11, 0.2); padding-top: 1.25rem; animation: fadeIn 0.25s ease-in-out;">
+                <div class="filter-panel" style="border-color: rgba(245, 158, 11, 0.25); background: rgba(11, 15, 25, 0.85);">
+                    <div class="filter-row">
+                        <input type="text" id="edgeSearchInput" class="search-input" placeholder="🔍 Uç senaryo başlığında, test durumunda veya açıklama notunda ara..." oninput="applyEdgeFilters()">
+                        
+                        <div class="segmented-btns">
+                            <button class="seg-btn amber active" id="btn-edge-all" onclick="setEdgeStatusFilter('ALL')">Tümü (21)</button>
+                            <button class="seg-btn amber" id="btn-edge-pass" onclick="setEdgeStatusFilter('PASS')">🟢 PASS (18)</button>
+                            <button class="seg-btn amber" id="btn-edge-fail" onclick="setEdgeStatusFilter('FAIL')">🔴 FAIL (3)</button>
+                        </div>
+
+                        <div class="segmented-btns">
+                            <button class="seg-btn active" id="edge-view-table-btn" onclick="setEdgeViewMode('table')">📋 Tablo</button>
+                            <button class="seg-btn" id="edge-view-cards-btn" onclick="setEdgeViewMode('cards')">🗂️ Kart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 1. Edge Cases Tablo Görünümü -->
+                <div id="edgeTableView" style="overflow-x: auto;">
+                    <table class="edge-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 70px; text-align: center;">ID</th>
+                                <th style="width: 140px;">Pazaryeri</th>
+                                <th style="min-width: 320px;">Edge Case / Test Senaryosu</th>
+                                <th style="width: 110px; text-align: center;">Durum</th>
+                                <th style="min-width: 360px;">Test Sonucu / Gözlem Açıklaması</th>
+                            </tr>
+                        </thead>
+                        <tbody id="edgeTableBody">
                         <tr class="edge-row" data-id="1" data-status="PASS" data-search="1 Hepsiburada Anasayfadayım neyin anasayfasındayım onu söylemedi. Test başarıyla tamamlandı / olağan dışı sapma gözlenmedi.">
                             <td style="text-align: center;"><span class="test-id-pill">#1</span></td>
                             <td><span class="mp-badge mp-hepsi"><span class="mp-icon">📦</span><span>Hepsiburada</span></span></td>
@@ -1829,6 +1870,7 @@
             <div id="noEdgeResultsMsg" style="display: none; text-align: center; padding: 2rem 1rem; color: var(--text-muted);">
                 <div style="font-size: 2rem; margin-bottom: 0.4rem;">🔍</div>
                 <div style="font-size: 1rem; font-weight: 600; color: #cbd5e1;">Aramanızla eşleşen uç senaryo bulunamadı.</div>
+            </div>
             </div>
         </div>
 
@@ -10535,8 +10577,37 @@
             }
         }
 
-        // --- 3. Edge Cases Filtreleme & Görünüm Fonksiyonları ---
+        // --- 3. Edge Cases Akordeon & Filtreleme Fonksiyonları ---
         let currentEdgeStatusFilter = 'ALL';
+
+        function toggleEdgeAccordion() {
+            const container = document.getElementById('edgeDetailsContainer');
+            const icon = document.getElementById('edge-expand-icon');
+            const promptIcon = document.getElementById('edgePromptIcon');
+            const promptText = document.getElementById('edgePromptText');
+            if (!container) return;
+
+            const isHidden = container.style.display === 'none' || container.style.display === '';
+            if (isHidden) {
+                container.style.display = 'block';
+                if (icon) {
+                    icon.style.transform = 'rotate(180deg)';
+                    icon.style.background = 'rgba(245, 158, 11, 0.4)';
+                    icon.style.color = '#fff';
+                }
+                if (promptIcon) promptIcon.textContent = '▲';
+                if (promptText) promptText.textContent = 'Detaylı Uç Senaryoları Gizle';
+            } else {
+                container.style.display = 'none';
+                if (icon) {
+                    icon.style.transform = 'rotate(0deg)';
+                    icon.style.background = 'rgba(245, 158, 11, 0.2)';
+                    icon.style.color = '#fbbf24';
+                }
+                if (promptIcon) promptIcon.textContent = '▼';
+                if (promptText) promptText.textContent = 'Detaylı Uç Senaryoları Görüntüle (' + ({len(edge_items)}) + ' Madde)';
+            }
+        }
 
         function setEdgeViewMode(mode) {
             const tableView = document.getElementById('edgeTableView');
