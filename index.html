@@ -9993,43 +9993,43 @@
         }
 
         // --- 4. PDF Raporu Oluşturma ve İndirme Fonksiyonu ---
-        function showToast(msg, isSuccess = true) {{
+        function showToast(msg, isSuccess = true) {
             let toast = document.getElementById('pdfToast');
-            if (!toast) {{
+            if (!toast) {
                 toast = document.createElement('div');
                 toast.id = 'pdfToast';
                 document.body.appendChild(toast);
-            }}
-            toast.innerHTML = (isSuccess ? '<span>✅</span>' : '<span>⚠️</span>') + `<span>${{msg}}</span>`;
+            }
+            toast.innerHTML = (isSuccess ? '<span>✅</span>' : '<span>⚠️</span>') + `<span>${msg}</span>`;
             toast.style.display = 'flex';
             toast.style.borderColor = isSuccess ? 'rgba(56, 189, 248, 0.4)' : 'rgba(244, 63, 94, 0.5)';
-            setTimeout(() => {{
+            setTimeout(() => {
                 toast.style.display = 'none';
-            }}, 4000);
-        }}
+            }, 4000);
+        }
 
-        function buildReportHtml(mpName, mode = 'fail') {{
+        function buildReportHtml(mpName, mode = 'fail') {
             const isFailOnly = (mode === 'fail');
-            const mpStats = (REPORT_DATA.marketplace_metrics && REPORT_DATA.marketplace_metrics[mpName]) || {{ total: 0, passed: 0, failed: 0, skipped: 0, pass_rate: 0 }};
-            const mpSecBreakdown = (REPORT_DATA.marketplace_section_metrics && REPORT_DATA.marketplace_section_metrics[mpName]) || {{}};
+            const mpStats = (REPORT_DATA.marketplace_metrics && REPORT_DATA.marketplace_metrics[mpName]) || { total: 0, passed: 0, failed: 0, skipped: 0, pass_rate: 0 };
+            const mpSecBreakdown = (REPORT_DATA.marketplace_section_metrics && REPORT_DATA.marketplace_section_metrics[mpName]) || {};
 
             // Filtrelenen veya hedef test vakaları
             let cases = isFailOnly 
                 ? (REPORT_DATA.failed_cases || []).filter(c => c.marketplace === mpName)
                 : (REPORT_DATA.all_cases || []).filter(c => c.marketplace === mpName);
 
-            if (cases.length === 0 && isFailOnly) {{
+            if (cases.length === 0 && isFailOnly) {
                 cases = (REPORT_DATA.all_cases || []).filter(c => c.marketplace === mpName && c.test_result === 'FAIL');
-            }}
+            }
 
             // Kategori bazında sıralama
             const sortedSecs = Object.entries(mpSecBreakdown).sort((a, b) => a[1].pass_rate - b[1].pass_rate);
 
             // Pazaryeri hata tipleri
-            const mpFailTypes = {{}};
-            cases.filter(c => c.failure_type && c.failure_type !== 'None').forEach(c => {{
+            const mpFailTypes = {};
+            cases.filter(c => c.failure_type && c.failure_type !== 'None').forEach(c => {
                 mpFailTypes[c.failure_type] = (mpFailTypes[c.failure_type] || 0) + 1;
-            }});
+            });
             const sortedFailTypes = Object.entries(mpFailTypes).sort((a, b) => b[1] - a[1]);
 
             // Edge cases kontrolü (Hepsiburada için)
@@ -10040,17 +10040,17 @@
                 <div style="border-bottom: 2px solid #2563eb; padding-bottom: 12px; margin-bottom: 18px; display: flex; justify-content: space-between; align-items: flex-start;">
                     <div>
                         <div style="font-size: 10px; font-weight: 800; color: #2563eb; letter-spacing: 0.08em; text-transform: uppercase;">GUIDAMI QA LAB • E-TİCARET ASİSTAN TEST ANALİZİ</div>
-                        <h1 style="font-size: 19px; font-weight: 800; color: #0f172a; margin: 4px 0 0 0;">${{mpName.toUpperCase()}} — ${{isFailOnly ? 'BAŞARISIZLIK (FAIL) & HATA ANALİZ RAPORU' : 'KAPSAMLI TEST & PERFORMANS RAPORU'}}</h1>
+                        <h1 style="font-size: 19px; font-weight: 800; color: #0f172a; margin: 4px 0 0 0;">${mpName.toUpperCase()} — ${isFailOnly ? 'BAŞARISIZLIK (FAIL) & HATA ANALİZ RAPORU' : 'KAPSAMLI TEST & PERFORMANS RAPORU'}</h1>
                         <div style="font-size: 11px; color: #64748b; margin-top: 4px;">
-                            <strong>Metodoloji:</strong> Bağımsız Canlı Simülasyon & Doğrulama • <strong>Kapsam:</strong> ${{mpName}} (${{cases.length}} Senaryo)
+                            <strong>Metodoloji:</strong> Bağımsız Canlı Simülasyon & Doğrulama • <strong>Kapsam:</strong> ${mpName} (${cases.length} Senaryo)
                         </div>
                     </div>
                     <div style="text-align: right;">
                         <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 6px; padding: 5px 10px; font-size: 11px; font-weight: 700; color: #1e293b;">
-                            📅 ${{REPORT_DATA.date}}
+                            📅 ${REPORT_DATA.date}
                         </div>
                         <div style="font-size: 10px; color: #64748b; margin-top: 4px; font-weight: 600;">
-                            ${{isFailOnly ? '🔴 Sadece Hatalı (FAIL) Durumlar' : '📑 Tüm Test Durumları'}}
+                            ${isFailOnly ? '🔴 Sadece Hatalı (FAIL) Durumlar' : '📑 Tüm Test Durumları'}
                         </div>
                     </div>
                 </div>
@@ -10059,29 +10059,29 @@
                 <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-bottom: 18px;">
                     <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 8px; text-align: center;">
                         <div style="font-size: 9px; color: #64748b; font-weight: 700; text-transform: uppercase;">Toplam Test</div>
-                        <div style="font-size: 17px; font-weight: 800; color: #0f172a; margin-top: 2px;">${{mpStats.total || cases.length}}</div>
+                        <div style="font-size: 17px; font-weight: 800; color: #0f172a; margin-top: 2px;">${mpStats.total || cases.length}</div>
                     </div>
                     <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 6px; padding: 8px; text-align: center;">
                         <div style="font-size: 9px; color: #166534; font-weight: 700; text-transform: uppercase;">Başarılı (PASS)</div>
-                        <div style="font-size: 17px; font-weight: 800; color: #16a34a; margin-top: 2px;">${{mpStats.passed || 0}}</div>
+                        <div style="font-size: 17px; font-weight: 800; color: #16a34a; margin-top: 2px;">${mpStats.passed || 0}</div>
                     </div>
                     <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 6px; padding: 8px; text-align: center;">
                         <div style="font-size: 9px; color: #991b1b; font-weight: 700; text-transform: uppercase;">Başarısız (FAIL)</div>
-                        <div style="font-size: 17px; font-weight: 800; color: #dc2626; margin-top: 2px;">${{mpStats.failed || cases.length}}</div>
+                        <div style="font-size: 17px; font-weight: 800; color: #dc2626; margin-top: 2px;">${mpStats.failed || cases.length}</div>
                     </div>
                     <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 8px; text-align: center;">
                         <div style="font-size: 9px; color: #64748b; font-weight: 700; text-transform: uppercase;">Atlanan (SKIP)</div>
-                        <div style="font-size: 17px; font-weight: 800; color: #64748b; margin-top: 2px;">${{mpStats.skipped || 0}}</div>
+                        <div style="font-size: 17px; font-weight: 800; color: #64748b; margin-top: 2px;">${mpStats.skipped || 0}</div>
                     </div>
                     <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 6px; padding: 8px; text-align: center;">
                         <div style="font-size: 9px; color: #1e40af; font-weight: 700; text-transform: uppercase;">Başarı Oranı</div>
-                        <div style="font-size: 17px; font-weight: 800; color: #2563eb; margin-top: 2px;">%${{mpStats.pass_rate || 0}}</div>
+                        <div style="font-size: 17px; font-weight: 800; color: #2563eb; margin-top: 2px;">%${mpStats.pass_rate || 0}</div>
                     </div>
                 </div>
             `;
 
             // Kategori Kırılımı Tablosu
-            if (sortedSecs.length > 0) {{
+            if (sortedSecs.length > 0) {
                 html += `
                 <div style="margin-bottom: 18px; page-break-inside: avoid; break-inside: avoid;">
                     <div style="font-size: 12px; font-weight: 800; color: #1e293b; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.03em;">
@@ -10100,53 +10100,53 @@
                         </thead>
                         <tbody>`;
                 
-                sortedSecs.forEach(([sec, sd]) => {{
+                sortedSecs.forEach(([sec, sd]) => {
                     const rColor = sd.pass_rate >= 80 ? '#16a34a' : (sd.pass_rate >= 50 ? '#d97706' : '#dc2626');
                     html += `
                             <tr style="border-bottom: 1px solid #e2e8f0;">
-                                <td style="padding: 5px 8px; font-weight: 600; color: #1e293b;">${{sec}}</td>
-                                <td style="text-align: center; padding: 5px 8px;">${{sd.total}}</td>
-                                <td style="text-align: center; padding: 5px 8px; color: #16a34a; font-weight: 600;">${{sd.passed}}</td>
-                                <td style="text-align: center; padding: 5px 8px; color: #dc2626; font-weight: 600;">${{sd.failed}}</td>
-                                <td style="text-align: center; padding: 5px 8px; color: #64748b;">${{sd.skipped}}</td>
-                                <td style="text-align: right; padding: 5px 8px; font-weight: 800; color: ${{rColor}};">%${{sd.pass_rate}}</td>
+                                <td style="padding: 5px 8px; font-weight: 600; color: #1e293b;">${sec}</td>
+                                <td style="text-align: center; padding: 5px 8px;">${sd.total}</td>
+                                <td style="text-align: center; padding: 5px 8px; color: #16a34a; font-weight: 600;">${sd.passed}</td>
+                                <td style="text-align: center; padding: 5px 8px; color: #dc2626; font-weight: 600;">${sd.failed}</td>
+                                <td style="text-align: center; padding: 5px 8px; color: #64748b;">${sd.skipped}</td>
+                                <td style="text-align: right; padding: 5px 8px; font-weight: 800; color: ${rColor};">%${sd.pass_rate}</td>
                             </tr>`;
-                }});
+                });
 
                 html += `
                         </tbody>
                     </table>
                 </div>`;
-            }}
+            }
 
             // Hata Taksonomisi Özeti
-            if (sortedFailTypes.length > 0) {{
+            if (sortedFailTypes.length > 0) {
                 html += `
                 <div style="margin-bottom: 18px; page-break-inside: avoid; break-inside: avoid;">
                     <div style="font-size: 12px; font-weight: 800; color: #1e293b; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.03em;">
                         🏷️ Tespit Edilen Hata Türleri Dağılımı
                     </div>
                     <div style="display: flex; flex-wrap: wrap; gap: 6px;">`;
-                sortedFailTypes.forEach(([ft, cnt]) => {{
+                sortedFailTypes.forEach(([ft, cnt]) => {
                     html += `<div style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 4px; padding: 3px 8px; font-size: 10px; font-weight: 600; color: #334155;">
-                        ${{ft}}: <strong style="color: #dc2626;">${{cnt}} adet</strong>
+                        ${ft}: <strong style="color: #dc2626;">${cnt} adet</strong>
                     </div>`;
-                }});
+                });
                 html += `</div>
                 </div>`;
-            }}
+            }
 
             // Detaylı Test Senaryoları Kataloğu
             html += `
                 <div style="margin-top: 14px;">
                     <div style="font-size: 12px; font-weight: 800; color: #1e293b; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.03em; border-bottom: 1px solid #cbd5e1; padding-bottom: 4px;">
-                        🚨 ${{isFailOnly ? 'Başarısız Test Senaryoları & Hata Detayları' : 'Test Senaryoları Detay Listesi'}} (${{cases.length}} Madde)
+                        🚨 ${isFailOnly ? 'Başarısız Test Senaryoları & Hata Detayları' : 'Test Senaryoları Detay Listesi'} (${cases.length} Madde)
                     </div>`;
 
-            if (cases.length === 0) {{
+            if (cases.length === 0) {
                 html += `<div style="padding: 12px; text-align: center; color: #64748b; font-size: 11px;">Bu pazaryeri için kayıtlı test senaryosu bulunmamaktadır.</div>`;
-            }} else {{
-                cases.forEach(item => {{
+            } else {
+                cases.forEach(item => {
                     const status = item.test_result || 'FAIL';
                     const isPass = (status === 'PASS');
                     const borderColor = isPass ? '#16a34a' : '#dc2626';
@@ -10155,45 +10155,45 @@
                     const statusBorder = isPass ? '#bbf7d0' : '#fecaca';
 
                     html += `
-                    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-left: 3.5px solid ${{borderColor}}; border-radius: 6px; padding: 7px 10px; margin-bottom: 7px; page-break-inside: avoid; break-inside: avoid; font-size: 10.5px;">
+                    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-left: 3.5px solid ${borderColor}; border-radius: 6px; padding: 7px 10px; margin-bottom: 7px; page-break-inside: avoid; break-inside: avoid; font-size: 10.5px;">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 3px;">
                             <div>
-                                <span style="font-family: monospace; font-size: 9.5px; font-weight: 800; background: #f1f5f9; padding: 1px 5px; border-radius: 4px; color: #334155; border: 1px solid #e2e8f0;">#${{item.test_id}}</span>
-                                <span style="font-size: 9.5px; font-weight: 700; color: #64748b; margin-left: 5px; text-transform: uppercase;">📁 ${{item.section || 'Genel'}}</span>
+                                <span style="font-family: monospace; font-size: 9.5px; font-weight: 800; background: #f1f5f9; padding: 1px 5px; border-radius: 4px; color: #334155; border: 1px solid #e2e8f0;">#${item.test_id}</span>
+                                <span style="font-size: 9.5px; font-weight: 700; color: #64748b; margin-left: 5px; text-transform: uppercase;">📁 ${item.section || 'Genel'}</span>
                             </div>
-                            <span style="font-size: 9px; font-weight: 800; padding: 1px 6px; border-radius: 4px; background: ${{statusBg}}; color: ${{statusColor}}; border: 1px solid ${{statusBorder}};">${{status}}</span>
+                            <span style="font-size: 9px; font-weight: 800; padding: 1px 6px; border-radius: 4px; background: ${statusBg}; color: ${statusColor}; border: 1px solid ${statusBorder};">${status}</span>
                         </div>
                         
                         <div style="font-size: 11.5px; font-weight: 700; color: #0f172a; margin-bottom: 3px;">
-                            ${{item.action}}
+                            ${item.action}
                         </div>
 
-                        ${{item.example_command ? `
+                        ${item.example_command ? `
                         <div style="font-size: 10.5px; color: #1d4ed8; background: #eff6ff; border-radius: 4px; padding: 3px 6px; margin-bottom: 3px;">
-                            🎙️ <strong>Komut:</strong> <em>"${{item.example_command}}"</em>
-                        </div>` : ''}}
+                            🎙️ <strong>Komut:</strong> <em>"${item.example_command}"</em>
+                        </div>` : ''}
 
-                        ${{item.failure_reason ? `
+                        ${item.failure_reason ? `
                         <div style="font-size: 10.5px; color: #991b1b; background: #fef2f2; border: 1px solid #fee2e2; border-radius: 4px; padding: 4px 6px; margin-bottom: 2px;">
-                            🚨 <strong>Hata Açıklaması:</strong> "${{item.failure_reason}}"
-                        </div>` : ''}}
+                            🚨 <strong>Hata Açıklaması:</strong> "${item.failure_reason}"
+                        </div>` : ''}
 
-                        ${{item.failure_type && item.failure_type !== 'None' ? `
+                        ${item.failure_type && item.failure_type !== 'None' ? `
                         <div style="font-size: 9px; color: #475569; font-weight: 600; margin-top: 2px;">
-                            🏷️ Hata Tipi: <strong>${{item.failure_type}}</strong>
-                        </div>` : ''}}
+                            🏷️ Hata Tipi: <strong>${item.failure_type}</strong>
+                        </div>` : ''}
                     </div>`;
-                }});
-            }}
+                });
+            }
 
             html += `</div>`;
 
             // Edge Cases (Hepsiburada için)
-            if (mpEdgeCases.length > 0) {{
+            if (mpEdgeCases.length > 0) {
                 html += `
                 <div style="margin-top: 18px; page-break-inside: avoid; break-inside: avoid;">
                     <div style="font-size: 12px; font-weight: 800; color: #d97706; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.03em; border-bottom: 1px solid #fde68a; padding-bottom: 4px;">
-                        ⚡ Hepsiburada Özel Uç Senaryolar (Edge Cases) (${{mpEdgeCases.length}} Senaryo)
+                        ⚡ Hepsiburada Özel Uç Senaryolar (Edge Cases) (${mpEdgeCases.length} Senaryo)
                     </div>
                     <table style="width: 100%; border-collapse: collapse; font-size: 10px;">
                         <thead>
@@ -10205,46 +10205,46 @@
                             </tr>
                         </thead>
                         <tbody>`;
-                mpEdgeCases.forEach(e => {{
+                mpEdgeCases.forEach(e => {
                     const eStat = e.status || 'PASS';
                     const isFail = (eStat === 'FAIL');
                     html += `
                             <tr style="border-bottom: 1px solid #fef3c7;">
-                                <td style="text-align: center; padding: 4px; font-family: monospace; font-weight: 700;">#${{e.edge_id}}</td>
-                                <td style="padding: 4px; font-weight: 600; color: #0f172a;">${{e.scenario}}</td>
-                                <td style="text-align: center; padding: 4px; font-weight: 700; color: ${{isFail ? '#dc2626' : '#16a34a'}};">${{eStat}}</td>
-                                <td style="padding: 4px; color: #475569; font-size: 9.5px;">${{e.explanation || '-'}}</td>
+                                <td style="text-align: center; padding: 4px; font-family: monospace; font-weight: 700;">#${e.edge_id}</td>
+                                <td style="padding: 4px; font-weight: 600; color: #0f172a;">${e.scenario}</td>
+                                <td style="text-align: center; padding: 4px; font-weight: 700; color: ${isFail ? '#dc2626' : '#16a34a'};">${eStat}</td>
+                                <td style="padding: 4px; color: #475569; font-size: 9.5px;">${e.explanation || '-'}</td>
                             </tr>`;
-                }});
+                });
                 html += `
                         </tbody>
                     </table>
                 </div>`;
-            }}
+            }
 
             // Altbilgi (Footer)
             html += `
                 <div style="border-top: 1px solid #e2e8f0; padding-top: 8px; margin-top: 18px; font-size: 8.5px; color: #94a3b8; display: flex; justify-content: space-between; page-break-inside: avoid; break-inside: avoid;">
                     <span>Guidami AI QA Framework • Bağımsız E-Ticaret Asistan Analiz Raporu</span>
-                    <span>${{REPORT_DATA.date}}</span>
+                    <span>${REPORT_DATA.date}</span>
                 </div>
             `;
 
-            return {{ html, isFailOnly, casesCount: cases.length }};
-        }}
+            return { html, isFailOnly, casesCount: cases.length };
+        }
 
-        function openPrintWindow(mpName, fileName, contentHtml, isFailOnly) {{
+        function openPrintWindow(mpName, fileName, contentHtml, isFailOnly) {
             const printWindow = window.open('', '_blank');
-            if (!printWindow) {{
+            if (!printWindow) {
                 showToast('⚠️ Açılır pencere (popup) engellendi. Lütfen tarayıcı popup iznini açın.', false);
                 return;
-            }}
-            const title = `Guidami - ${{mpName}} ${{isFailOnly ? 'Fail Raporu' : 'Tam Rapor'}}`;
+            }
+            const title = `Guidami - ${mpName} ${isFailOnly ? 'Fail Raporu' : 'Tam Rapor'}`;
             printWindow.document.write(`<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>${{title}}</title>
+    <title>${title}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -10328,7 +10328,7 @@
 <body>
     <div class="action-bar no-print">
         <div>
-            <div style="font-weight: 800; font-size: 13px; letter-spacing: 0.02em;">📄 ${{title}}</div>
+            <div style="font-weight: 800; font-size: 13px; letter-spacing: 0.02em;">📄 ${title}</div>
             <div style="font-size: 11px; color: #94a3b8; margin-top: 2px;">💡 İpucu: Açılan pencerede Hedef (Destination) kısmından <strong>"PDF Olarak Kaydet" (Save as PDF)</strong> seçebilirsiniz.</div>
         </div>
         <div style="display: flex; gap: 8px; align-items: center;">
@@ -10337,7 +10337,7 @@
         </div>
     </div>
     <div class="paper-sheet">
-        ${{contentHtml}}
+        ${contentHtml}
     </div>
     <script>
         window.addEventListener('load', () => {
@@ -10349,16 +10349,16 @@
 </body>
 </html>`);
             printWindow.document.close();
-            showToast(`✅ ${{mpName}} PDF yazdırma penceresi hazırlandı.`);
-        }}
+            showToast(`✅ ${mpName} PDF yazdırma penceresi hazırlandı.`);
+        }
 
-        function downloadMarketplacePdf(mpName, mode = 'fail') {{
-            showToast(`⏳ ${{mpName}} için PDF raporu hazırlanıyor...`);
+        function downloadMarketplacePdf(mpName, mode = 'fail') {
+            showToast(`⏳ ${mpName} için PDF raporu hazırlanıyor...`);
 
-            const {{ html, isFailOnly, casesCount }} = buildReportHtml(mpName, mode);
+            const { html, isFailOnly, casesCount } = buildReportHtml(mpName, mode);
             const cleanMp = mpName.toLowerCase().replace(/[\s\-_]+/g, '_').replace(/ı/g, 'i').replace(/ğ/g, 'g').replace(/ü/g, 'u').replace(/ş/g, 's').replace(/ö/g, 'o').replace(/ç/g, 'c');
             const dateSuffix = new Date().toISOString().slice(0, 10);
-            const fileName = `Guidami_${{cleanMp}}_${{isFailOnly ? 'Fail_Raporu' : 'Tam_Rapor'}}_${{dateSuffix}}.pdf`;
+            const fileName = `Guidami_${cleanMp}_${isFailOnly ? 'Fail_Raporu' : 'Tam_Rapor'}_${dateSuffix}.pdf`;
 
             // 1. Yazdırma elementini oluştur ve güvenli şekilde görünmez yerleştir
             const printEl = document.createElement('div');
@@ -10378,67 +10378,67 @@
             printEl.innerHTML = html;
             document.body.appendChild(printEl);
 
-            const opt = {{
+            const opt = {
                 margin: [8, 8, 8, 8],
                 filename: fileName,
-                image: {{ type: 'jpeg', quality: 0.95 }},
-                html2canvas: {{ 
+                image: { type: 'jpeg', quality: 0.95 },
+                html2canvas: { 
                     scale: 1.5, 
                     useCORS: true, 
                     logging: false, 
                     scrollX: 0, 
-                    scrollY: 0,
+                    scrollY: 0, 
                     windowWidth: 800
-                }},
-                jsPDF: {{ unit: 'mm', format: 'a4', orientation: 'portrait' }},
-                pagebreak: {{ mode: ['css', 'legacy'] }}
-            }};
+                },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                pagebreak: { mode: ['css', 'legacy'] }
+            };
 
             let finished = false;
 
             // Zaman aşımı sigortası (Eğer html2pdf 3.5 saniyede tamamlanamazsa otomatik olarak A4 Print/PDF penceresini açar)
-            const fallbackTimer = setTimeout(() => {{
-                if (!finished) {{
+            const fallbackTimer = setTimeout(() => {
+                if (!finished) {
                     finished = true;
                     if (printEl.parentNode) printEl.parentNode.removeChild(printEl);
                     openPrintWindow(mpName, fileName, html, isFailOnly);
-                }}
-            }}, 3500);
+                }
+            }, 3500);
 
-            if (typeof html2pdf !== 'undefined') {{
-                try {{
-                    html2pdf().set(opt).from(printEl).save().then(() => {{
-                        if (!finished) {{
+            if (typeof html2pdf !== 'undefined') {
+                try {
+                    html2pdf().set(opt).from(printEl).save().then(() => {
+                        if (!finished) {
                             finished = true;
                             clearTimeout(fallbackTimer);
                             if (printEl.parentNode) printEl.parentNode.removeChild(printEl);
-                            showToast(`✅ ${{mpName}} PDF Raporu (${{fileName}}) başarıyla indirildi!`);
-                        }}
-                    }}).catch(err => {{
+                            showToast(`✅ ${mpName} PDF Raporu (${fileName}) başarıyla indirildi!`);
+                        }
+                    }).catch(err => {
                         console.warn('html2pdf hatası, A4 yazdırma penceresine yönlendiriliyor:', err);
-                        if (!finished) {{
+                        if (!finished) {
                             finished = true;
                             clearTimeout(fallbackTimer);
                             if (printEl.parentNode) printEl.parentNode.removeChild(printEl);
                             openPrintWindow(mpName, fileName, html, isFailOnly);
-                        }}
-                    }});
-                }} catch (e) {{
+                        }
+                    });
+                } catch (e) {
                     console.warn('html2pdf exception:', e);
-                    if (!finished) {{
+                    if (!finished) {
                         finished = true;
                         clearTimeout(fallbackTimer);
                         if (printEl.parentNode) printEl.parentNode.removeChild(printEl);
                         openPrintWindow(mpName, fileName, html, isFailOnly);
-                    }}
-                }}
-            }} else {{
+                    }
+                }
+            } else {
                 finished = true;
                 clearTimeout(fallbackTimer);
                 if (printEl.parentNode) printEl.parentNode.removeChild(printEl);
                 openPrintWindow(mpName, fileName, html, isFailOnly);
-            }}
-        }}
+            }
+        }
     </script>
 </body>
 </html>
